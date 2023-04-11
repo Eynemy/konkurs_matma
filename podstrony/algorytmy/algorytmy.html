@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/patern.css">  <!--DODANIE OGÓLNEGO CSS STRONY-->
+    <link rel="stylesheet" type="text/css" href="/css/algorytmys.css"> <!--DODANIE CSS DLA TEJ PODSTRONY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap" rel="stylesheet"><!--DODANIE CZCIONEK Lato, Nunito, Rubik Maze-->
+    <link rel="shortcut icon" type="image/ico" href="obrazy/test1.svg"> <!--obrazek strony-->
+    <title>Generator fraktali</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="typewriter">
+                <div id="logo">
+                    <!----------------SKRYPT TROJKAT LOGO---------------->
+                    <canvas id="canvas" width="50" height="50"></canvas>
+                    <script src="/skrypty/trojkat.js"></script>
+                    <!--------------KONIEC SKRYPTU TROJKAT LOGO---------->
+                    Geometria fraktalna
+                    </div style="clear: both;"></div><!--WYCZYSZCZENIE STYLI-->
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------POCZĄTEK NAWIGACJI---------------------------------------------------->
+        <div class="nav">
+             <ol>
+                <li><a href="/strona.html"><span class="text-underline">Strona główna</span></a></li> 
+                <li><a href="/strona.html"><span class="text-underline">Teoria</span></a></li>
+                <li><a href="/podstrony/algorytmy/algorytmy.html"><span class="text-underline">Edytor</span></a></li>
+                <li><a href="/podstrony/Zastosowanie/zastosowanie.html"><span class="text-underline">Zastosowanie</span></a></li>
+                <li><a href="/podstrony/informacje/informacje.html"><span class="text-underline">O stronie</span></a></li>
+            </ol>
+        <div style="clear:both"></div><!--WYCZYSZCZENIE STYLI-->
+        </div>
+        <!-------------------------------------------------------------------POCZĄTEK STRONY------------------------------------------------------------>
+        <div id="content">
+            <h2>Wypróbuj sam stworzyć fraktal!</h2>
+            <p>Śnieżynka Kocha</p>
+            <div class="edycja">
+                <iframe scrolling="no" title="Śnieżynka Kocha -ziel" src="https://www.geogebra.org/material/iframe/id/agksry3u/width/710/height/810/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="710px" height="810px" style="border:0px;"> </iframe>
+            </div>
+            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
+        </div>
+        <!-------------------POCZĄTEK FOOTER---------------------->
+        <div id="footer">
+            Mateusz Zimny &copy; 2023
+        </div>
+        <!-------------------KONIEC FOOTER------------------------>
+
+    </div> 
+     
+
+    <script src="/skrypty/jquery.min.js"></script>
+    <script src="/skrypty/stickynav.js"></script>
+    <script src="/skrypty/rozwijane1.js"></script> 
+</body>
+</html>
