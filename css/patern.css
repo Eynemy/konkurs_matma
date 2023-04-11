@@ -182,3 +182,24 @@ body{
     cursor: pointer;
     text-decoration: underline;
 }
+.definition > u{
+    text-decoration: none;
+    color: #3366cc;
+}
+
+
+  
+  .definition::before {
+    content: "?"; /* Symbol, który pojawi się przed tekstem */
+    position: absolute;
+    top: -6px; /* Odległość od góry */
+    right: -6px; /* Odległość od prawej strony */
+    font-size: 12px; /* Rozmiar czcionki */
+    color: #333; /* Kolor symbolu */
+    opacity: 0; /* Początkowa wartość przezroczystości */
+    transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
+  }
+  
+  .definition:hover::before {
+    opacity: 1; /* Przezroczystość przy najechaniu */
+  }

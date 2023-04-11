@@ -99,4 +99,6 @@ img:hover{
 .real > img{
     width: 400px;
     border-radius: 10px;
+    height: 300px;
 }
+
