@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/patern.css"><!--DODANIE OGÓLNEGO CSS STRONY-->
+    <link rel="stylesheet" type="text/css" href="/css/styl1.css"><!--DODANIE CSS DLA TEJ STRONY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap" rel="stylesheet"><!--DODANIE CZCIONEK: Lato, Nunito, Rubik Maze-->
+
+    
+
+    <link rel="shortcut icon" type="image/ico" href="obrazy/test1.svg"> <!--obrazek strony-->
+    <title>Geometria fraktalna</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="typewriter">
+                <div id="logo">
+                    <!----------------SKRYPT TROJKAT LOGO---------------->
+                    <canvas id="canvas" width="50" height="50"></canvas>
+                    <script src="/skrypty/trojkat.js"></script>
+                    <!--------------KONIEC SKRYPTU TROJKAT LOGO---------->
+                    Geometria fraktalna
+                    </div style="clear: both;"></div><!--WYCZYSZCZENIE STYLI-->
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------POCZĄTEK NAWIGACJI---------------------------------------------------->
+        <div class="nav">
+            <ol>
+                <li><a href="/strona.html"><span class="text-underline">Strona główna</span></a></li> 
+                <li><a href="/strona.html"><span class="text-underline">Teoria</span></a></li>
+                <li><a href="/podstrony/algorytmy/algorytmy.html"><span class="text-underline">Edytor</span></a></li>
+                <li><a href="/podstrony/Zastosowanie/zastosowanie.html"><span class="text-underline">Zastosowanie</span></a></li>
+                <li><a href="podstrony/informacje/informacje.html"><span class="text-underline">O stronie</span></a></li>
+            </ol> 
+        <div style="clear:both"></div><!--wyczyszczenie styli-->
+        </div>
+        <!-------------------------------------------------------------------POCZĄTEK STRONY------------------------------------------------------------>
+        <div id="content">
+            <div class="lewo-fraktal">
+                <h2>Czym są fraktale?</h2>
+                <p>Nie istnieje jedna precyzyjna definicja fraktali. W zamian wymienia się cechy obiektów fraktalnych, najważniejsze z nich to:</p>
+                <ul>
+                    <li><b><span class="definition" data-tooltip="oznacza to, że  powiększanie ujawnia kolejne równie skomplikowane formy">Nietrywialna struktura</b></span> w każdej skali,</li>
+                    <li><span class="definition" data-tooltip=" oznacza to że  w skład obiektu wchodzą jego „mniejsze kopie” np. liść paproci,"><b>Samo-podobieństwo</b></span>, jeśli nie w sensie dokładnym, to przybliżonym,</li>
+                    <li>Naturalny „<b>poszarpany</b>”, „<b>kłębiasty</b>”  wygląd,</li>
+                    <li><span class="definition" data-tooltip="oznacza to, że obiekt fraktalny ma wymiar mniejszy od wymiaru przestrzeni, w której się znajduje,"><b>Niecałkowity wymiar fraktalny</b></span>,</li>
+                    <li>struktura ta nie daje się łatwo opisać w języku tradycyjnej <span class="definition" data-tooltip="Geometria euklidesowa to dziedzina matematyki, która bada właściwości figur geometrycznych (np. punktów, linii, płaszczyzn).">geometrii euklidesowej</span>.</li>
+                </ul>
+            </div>
+            <div class="prawo-fraktal">
+                <img src="/obrazy/fraktal-mandelbrot.png" alt="zbiór Mandelbrota " style="border-radius: 10px;"> <!-- dodane style="border-radius: 10px;" do zaokrąglenia zdjęcia -->
+                <h4>(zbiór Mandelbrota)</h4>
+            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
+            <!-----------------------------------------------------------------PRZYKŁADY FRAKTALI - POCZĄTEK------------------------------------------------------------>
+            <h2>Najpopularniejsze przykłady fraktali</h2>
+
+            <!---------------------TRÓJKĄT SIERPIŃSKIEGO - POCZĄTEK----------------------->
+            <div class="triangle">
+                <h3>Trójkąt Sierpińskiego</h3>
+                <p>Trójkąt Sierpińskiego jest jednym z najprostszych fraktali.Konstrukcja tego zbioru została podana przez polskiego matematyka 
+                    <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski.">Wacława Sierpińskiego</span>
+                     w 1915 roku.</p>
+                <p>Tworzy się go  w następujący sposób:</p>
+                <ol>
+                    <li>Narysuj trójkąt równoboczny.</li>
+                    <li>Podziel każdy bok trójkąta na trzy równe części.</li>
+                    <li>Usuń środkowy odcinek każdego boku trójkąta.</li>
+                    <li>Narysuj trójkąty, łącząc końce pozostałych odcinków.</li>
+                    <li>Proces ten należy powtarzać dla każdego z powstałych mniejszych trójkątów, aż do uzyskania pożądanej ilości iteracji.</li>
+                </ol>
+            </div>
+
+            <!---------------------TRÓJKĄT SIERPIŃSKIEGO-ZDJĘCIA----------------------->
+            <div class="triangle-picture">
+                <img src="/obrazy/Sierpinski_triangle.svg" alt="Trójkąt Sierpińskiego" width="350">
+                <h4>Trójkąt Sierpińskiego</h4>
+            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
+            <!-----------------------------------KRZYWA KOCHA/ŚNIEŻYNKA - POCZĄTEK---------------------------------->
+            <div class="Krzywa">
+                <h3>Krzywa Kocha</h3>
+                <p>
+                    Krzywa Kocha to krzywa fraktalna, którą można zdefiniować jako 
+                    <span class="definition" data-tooltip="">atraktor IFS</span>
+                        lub jako 
+                    <span class="definition" data-tooltip="">granicę ciągu krzywych</span>.
+                     Jest nieskończenie długa, ale mieści się na skończonej powierzchni, więc
+                    można narysować jej przybliżenie. Została po raz pierwszy opisana w 1904 roku przez Helgego
+                    von Kocha.
+                </p>
+                <p>Jak stworzyć Krzywą Kocha?</p>
+                <ol>
+                    <li>Podziel odcinek na 3 części</li>
+                    <li>Zastąpienie środkowej ząbkiem (o ramieniu długości równej 1/3 odcinka)</li>
+                    <li>Ustaw te fragmenty taj, żeby wraz z usuwaną częścią tworzy trójkąt równoboczny.</li>
+                    <li>Powtarzaj te kroki w nieskończoność, dla każdego fragmentu odcinka.</li>
+                </ol>
+                <h3>Płatek Kocha</h3>
+                <p>
+                    Płatek Kocha jest jednym z najwcześniejszych fraktali, które zostały opisane. Opiera się na krzywej Kocha, powstaje poprzez połączenie ze sobą 3 Krzywych Kocha.
+                </p>
+            </div>
+            <!-----------------------------------KRZYWA KOCHA/ŚNIEŻYNKA-ZDJĘCIA---------------------------------->
+            <div class="Krzywa-picture">
+                <img src="/obrazy/Koch-Curve.png" alt="Krzywa Kocha">
+                <h4>Krzywa Kocha</h4>
+                <img src="/obrazy/Koch-snowflake.gif" alt="płatek Kocha">   
+                <h4><br>płatek Kocha</h4>
+            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
+            <!---------------------------------------ZBIÓR MANDELBROTA-POCZĄTEK-------------------------------->
+            <div class="Mandelbrot">
+                <h3>Zbiór Mandelbrota</h3>
+                <p>
+                   Zbiór Mandelbrota to podzbiór 
+                   <span class="definition" data-tooltip="Płaszczyzna zespolona to płaszczyzna, na której każdy punkt odpowiada liczbie zespolonej.">płaszczyzny zespolonej</span>, którego 
+                   <span class="definition" data-tooltip="brzeg - zbiór punktów „granicznych” danego zbioru.">brzeg</span>
+                   jest jednym z najbardziej znanych fraktali, „najsłynniejszym obiektem współczesnej matematyki”.Nazwa tego obiektu
+                   pochodzi od jego odkrywcy, matematyka 
+                   <span class="definition" data-tooltip="Benoit Mandelbrot był francusko-amerykańskim matematykiem, który jest znany przede wszystkim jako twórca fraktalnej geometrii. Jego najbardziej znane dzieło to książka: 'Fraktale: kształty, haos i nieustanny świat wzorów', w której przedstawił swoją teorię fraktali oraz zastosowanie fraktalnej geometrii w różnych dziedzinach nauki.">Benoit Mandelbrota</span>.
+                </p>
+                <p>Przydatne pojęcia:</p>
+                <ul>
+                   <li>Liczba zespolona to pojęcie z matematyki, które obejmuje liczby złożone z części rzeczywistej i urojonej, np. a + bi, gdzie a i b są liczbami rzeczywistymi, a i b to części rzeczywista i urojona, a i b mają różne znaki i i to tzw. jednostka urojona, którą definiujemy jako pierwiastek kwadratowy z -1.</li>
+                   <li></li>
+                </ul>
+                <p>Jak stworzyć Zbiór Mandelbrota?</p>
+                <ol>
+                   <li></li>
+                </ol>
+            </div>
+            
+            <!---------------------------------------ZBIÓR MANDELBROTA-ZDJĘCIA-------------------------------->
+            <div class="Mandelbrot-picture">
+            
+                <img src="/obrazy/Mandelset.png" alt="Zbiór Mandelbrota na płaszczyźnie zespolonej" style="border-radius: 10px;">
+                <h4>Zbiór Mandelbrota na płaszczyźnie zespolonej</h4>
+                <img src="/obrazy/fraktal-mandelbrot.png" alt="Zbiór Mandelbrota" style="border-radius: 10px;">
+                <h4>Zbiór Mandelbrota</h4>
+                <img src="/obrazy/tapeta.gif" alt="Zbiór Mandelbrota w przybliżeniu" style="border-radius: 10px;">
+                <h4>Zbiór Mandelbrota w przybliżeniu</h4>
+           
+            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
+            <!------------------------------DRZEWO PITAGOREJSKIE-POCZĄTEK----------------------------->
+            <div class="drzewo">
+                <h3>Drzewo Pitagorejskie</h3>
+                <p>
+                    Drzewo pitagorejskie (także drzewo Pitagorasa) – fraktal zbudowany z kwadratów na
+                     płaszczyźnie, swym kształtem przypominający drzewo. 
+                     Nazwany został od imienia greckiego matematyka i myśliciela Pitagorasa,
+                      gdyż na każdym etapie konstrukcji wymaga rysowania dwóch kwadratów opartych na
+                       odpowiednich bokach trójkąta prostokątnego, których własności stanowią ilustrację
+                        twierdzenia Pitagorasa
+                </p>
+                <p>Jak stworzyć Drzewo Pitagorejskie?</p>
+                <ol>
+                    <li></li>
+                </ol>
+            </div>
+            <div class="drzewo-picture">
+                <img src="/obrazy/Pythagoras_tree_.gif" alt="Drzewo_Pitagorejskie">
+                <h4>Drzewo Pitagorejskie</h4>
+            </div><div style="clear:both"></div><!--WYCZYSZCZENIE STYLI-->
+            <!-------------------------------------DYWAN SIERPIŃSKIEGO------------------------------------->
+            <div class="dywan">
+                <h3>Dywan Sierpińskiego</h3>
+                <p>
+                    Dywan Sierpińskiego – fraktal otrzymany z kwadratu za pomocą podzielenia go na dziewięć (3x3) mniejszych kwadratów,
+                    usunięcia środkowego kwadratu i ponownego rekurencyjnego zastosowania tej samej procedury do każdego z pozostałych ośmiu kwadratów.
+                    Nazwa pochodzi od nazwiska 
+                    <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski.">Wacława Sierpińskiego</span>.  
+                </p>
+            </div>
+            <div class="dywan-picture">
+                <img src="/obrazy/Sierpinski.png" alt="Dywan Sierpińskiego">
+                <h4>Dywan Sierpińskiego</h4>
+            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
+             <!----------------------------------------------------------------------------PRZYKŁADY FRAKTALI-KONIEC--------------------------------------------------------->   
+             <br>   
+            <h2>Inne rodzaje fraktali</h2>
+            <p>..........................</p>
+            <div class="inne1">
+                <h3></h3>
+                <p>
+
+                </p>
+                <p></p>
+            </div>
+            <div class="inne1-picture">
+                <img src="" alt="">
+            </div>
+            <div class="inne2">
+                <h3></h3>
+                <p>
+
+                </p>
+                <p></p>
+            </div>
+            <div class="inne2-picture">
+                <img src="" alt="">
+            </div>
+            <div class="inne3">
+                <h3></h3>
+                <p>
+
+                </p>
+                <p></p>
+            </div>
+            <div class="inne3-picture">
+                <img src="" alt="">
+            </div>
+            <div class="inne4">
+                <h3></h3>
+                <p>
+
+                </p>
+                <p></p>
+            </div>
+            <div class="inne5-picture">
+                <img src="" alt="">
+            </div>
+            <!----------------------------------------------FRAKTALE W NATURZE-POCZĄTEK-------------------------------------------------->
+            <h2>Fraktale wokół nas</h2><br>
+            <div class="real">
+                <img src="/obrazy/real_kalafior.jpg" alt="Zdjęcie kalafiora Brassica oleracea">
+                <p>Zdjęcie kalafiora Brassica oleracea</p>
+            </div>
+            <div class="real">
+                <img src="/obrazy/real_galaktyka.jpg" alt="Zdjęcie wykonane teleskopem Hubble’a">
+                <p>Zdjęcie wykonane teleskopem Hubble’a</p>
+            </div>
+            <div class="real">
+                <img src="/obrazy/real_chmura.jpg" alt="Chmura">
+                <p>Chmura</p>
+            </div>
+            <div class="real">
+                <img src="/obrazy/real_fjordy.jpg" alt="Fjordy">
+                <p>Fiordy Sognefjorden i Hardangerfjorden</p>
+            </div>
+            <div class="real">
+                <img src="/obrazy/real_skaly.jpg" alt="Formacje skalne">
+                <p>Formacje skalne</p>
+            </div>
+            <div class="real">
+                <img src="/obrazy/real_aloes.jpg" alt="Aloes wielkolistny">
+                <p>Aloes wielkolistny</p>
+            </div>
+            <!-------------------------------------------------------FRAKTALE W NATURZE-KONIEC------------------------------------------>
+              
+
+
+            <h2>Metody tworzenia fraktali</h2>
+
+            <h2>Zastosowania geometrii fraktalnej</h2>
+
+            <h2>Rozwój geometrii fraktalnej</h2>
+
+            <h2>Problemy nierozwiązane w geometrii fraktalnej</h2>
+            
+        
+        </div>
+        <!-------------------POCZĄTEK FOOTER---------------------->
+        <div id="footer">
+            Mateusz Zimny &copy; 2023
+        </div>
+        <!-------------------KONIEC FOOTER------------------------>
+
+    </div> 
+    
+    <!----------------SKRYPTY--------------------->
+    <script src="/skrypty/jquery.min.js"></script>
+    <script src="/skrypty/stickynav.js"></script>
+    <script src="/skrypty/rozwijane1.js"></script> <!--     <span class="definition" data-tooltip="">definicja</span> - aby przywolac definicje     -->
+     
+</body>
+</html>
