@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/patern.css">  <!--DODANIE OGÓLNEGO CSS STRONY-->
     <link rel="stylesheet" type="text/css" href="../../css/algorytmys.css"> <!--DODANIE CSS DLA TEJ PODSTRONY-->
+    <link rel="stylesheet" type="text/css" href="../../css/darkmode.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap" rel="stylesheet"><!--DODANIE CZCIONEK Lato, Nunito, Rubik Maze-->
@@ -35,12 +36,19 @@
                 <li><a href="zastosowanie.html"><span class="text-underline">Zastosowanie</span></a></li>
                 <li><a href="../../podstrony/wymiar_fraktalny/wymiar.html"><span class="text-underline">Wymiar fraktalny</span></a></li>
                 <li><a href="../../podstrony/informacje/informacje.html"><span class="text-underline">O stronie</span></a></li>
-            </ol> 
+            </ol>
+            <!--DARKMODE SWITCH-->
+            <label class="switch">
+                <img src="/obrazy/fractal.png" width="10px" >
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+              </label> 
+            <!--KONIEC DARKMODE SWITCH--> 
         <div style="clear:both"></div><!--WYCZYSZCZENIE STYLI-->
         </div>
         <!-------------------------------------------------------------------POCZĄTEK STRONY------------------------------------------------------------>
         <div id="content">
-            <input type="range" min="0" max="100" value="50" class="dark-slider">
+            
 
         </div>
         <!-------------------POCZĄTEK FOOTER---------------------->
@@ -55,5 +63,6 @@
     <script src="../../skrypty/jquery.min.js"></script>
     <script src="../../skrypty/stickynav.js"></script>
     <script src="../../skrypty/rozwijane1.js"></script>
+    <script src="../../skrypty/darkmode.js"></script>
 </body>
 </html>
