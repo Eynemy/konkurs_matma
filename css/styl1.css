@@ -56,6 +56,43 @@ img:hover{
       width: 60%;
       
 }
+/*stylizacja canvas 2(iteracyjny)*/
+#trojkat{
+    transform: rotate(180deg);
+}
+.draw_sierpinski {
+    display: grid;
+    place-items: center; /* wyśrodkowanie w obu kierunkach */
+}
+#draw_sierpinski {
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+#reset {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#iteracja{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 
 /*-------------FRAKTALE PRZEDSTAWIENIE-------------*/
 

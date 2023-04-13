@@ -10,7 +10,15 @@ body{
     width: 100% 0;
     background-color:  #1b1b1b;
 }
+/*stylizacja trojkata obok log*/
+#myCanvas {
+  float: left;
+  margin-right: -10px;
+}
+
 #logo{
+  display: flex;
+  align-items: center;
     font-family: 'Rubik Maze', cursive;
     font-size: 70px;
     margin-left: auto;

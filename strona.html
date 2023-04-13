@@ -21,8 +21,7 @@
             <div class="typewriter">
                 <div id="logo">
                     <!----------------SKRYPT TROJKAT LOGO---------------->
-                    <canvas id="canvas" width="50" height="50"></canvas>
-                    <script src="skrypty/trojkat.js"></script>
+                    <canvas id="myCanvas" width="100" height="100"></canvas>
                     <!--------------KONIEC SKRYPTU TROJKAT LOGO---------->
                     Geometria fraktalna
                     </div style="clear: both;"></div><!--WYCZYSZCZENIE STYLI-->
@@ -58,10 +57,21 @@
                 <h4>(zbiór Mandelbrota)</h4>
             </div><div style="clear:both"></div><!--wyczyszczenie styli-->
             <br><hr style="border: none; height: 1px; background-image: linear-gradient(to right, #ffffff, #aa0f0f, #1100f8);">
+            <!--poczatek-omowienie-->
+
             <h2>Omówienie wybranych cech fraktali</h2>
             <h3>Samo-podobieństwo</h3>
-            <p>Najprostsze fraktale są konstruowane przez iterację. Na przykład, zacznij od wypełnionego trójkąta i powtarzaj ten proces: Dla każdego wypełnionego trójkąta połącz punkty środkowe boków i usuń środkowy trójkąt. Powtarzanie tego procesu w nieskończoność daje w rezultacie Sierpińskiego Dywan.</p>
+            <p>Najprostsze fraktale są konstruowane przez iterację. Na przykład, zacznij od wypełnionego trójkąta i powtarzaj ten proces: Dla każdego wypełnionego trójkąta połącz punkty środkowe boków i usuń środkowy trójkąt. Powtarzanie tego procesu w nieskończoność daje w rezultacie Trójkąt Sierpińskiego.</p>
             
+            <div class="draw_sierpinski">
+                <div id="draw_sierpinski">
+                    <canvas id="trojkat" width="300" height="300"></canvas>
+                    <br>
+                    <button id="iteracja" onclick="nextIteration()">Kolejna iteracja</button>
+                    <button id="reset" onclick="reset()">Resetuj</button>
+                </div>
+            </div>
+            <p>Trójkąt jest samo-podobny. Oznacza to, że składa się z mniejszych kopii samej siebie.</p>
 
             <!-----------------------------------------------------------------PRZYKŁADY FRAKTALI - POCZĄTEK------------------------------------------------------------>
         
@@ -299,6 +309,8 @@
     <script src="skrypty/jquery.min.js"></script>
     <script src="skrypty/stickynav.js"></script>
     <script src="skrypty/rozwijane1.js"></script> <!--     <span class="definition" data-tooltip="">definicja</span> - aby przywolac definicje     -->
+    <script src="skrypty/trojkat.js"></script>
+    <script src="skrypty/draw_sierpinski.js"></script>
      
 </body>
 </html>
