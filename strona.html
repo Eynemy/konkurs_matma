@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/patern.css"><!--DODANIE OGÓLNEGO CSS STRONY-->
     <link rel="stylesheet" type="text/css" href="css/styl1.css"><!--DODANIE CSS DLA TEJ STRONY-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap" rel="stylesheet"><!--DODANIE CZCIONEK: Lato, Nunito, Rubik Maze-->
@@ -36,7 +37,11 @@
                 <li><a href="podstrony/Zastosowanie/zastosowanie.html"><span class="text-underline">Zastosowanie</span></a></li>
                 <li><a href="podstrony/wymiar_fraktalny/wymiar.html"><span class="text-underline">Wymiar fraktalny</span></a></li>
                 <li><a href="podstrony/informacje/informacje.html"><span class="text-underline">O stronie</span></a></li>
-            </ol> 
+            </ol>
+            <div class="toggle-container">
+                <input type="checkbox" id="dark-mode-toggle">
+                <label for="dark-mode-toggle"></label>
+            </div> 
         <div style="clear:both"></div><!--wyczyszczenie styli-->
         </div>
         <!-------------------------------------------------------------------POCZĄTEK STRONY------------------------------------------------------------>
@@ -319,6 +324,7 @@
     <script src="skrypty/rozwijane1.js"></script> <!--     <span class="definition" data-tooltip="">definicja</span> - aby przywolac definicje     -->
     <script src="skrypty/trojkat.js"></script>
     <script src="skrypty/draw_sierpinski.js"></script>
+    <script src="skrypty/darkmode.js"></script>
      
 </body>
 </html>

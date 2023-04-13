@@ -213,3 +213,48 @@ body{
   .definition:hover::before {
     opacity: 1; /* Przezroczystość przy najechaniu */
   }
+/* opcje dla dark mode*/
+body {
+  transition: background-color 0.5s ease;
+}
+.dark-mode {
+  background-color: #2a2a2a;
+  color: #e2e2e2;
+}
+.toggle-container {
+  display: inline-block;
+  align-items: center;
+}
+.toggle-container input[type=checkbox] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.toggle-container label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;/*
+  padding: 5px;*/
+  position: relative;
+  height: 26px;
+  width: 50px;
+}
+.toggle-container label::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 22px;
+  margin-top: 2px;
+  margin-left: 2px;
+  position: absolute;
+  top: 0;
+  transition: transform 0.2s ease-in-out;
+  width: 22px;
+}
+.toggle-container input:checked + label::after {
+  transform: translateX(24px);
+}
