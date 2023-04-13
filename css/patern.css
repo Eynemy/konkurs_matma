@@ -172,18 +172,20 @@ body{
     top: 30px;  /* ILE PONIŻEJ TEKSTU MA SIĘ POJAWIĆ DEFINICJA*/
     left: 0;
     padding: 5px;
-    width: 200px;   /* SZEROKOŚĆ BLOKU DEFINICJI */ /* było 150 px */
+    width: 250px;   /* SZEROKOŚĆ BLOKU DEFINICJI */ /* było 150 px */
     background-color: white;
     border: 1px solid black;
     text-align: center;
     z-index: 1;
     font-size: medium;
+
   }
   
 .definition:hover::after {  /* ODPOWADA TO BLOKOWI DEFINICJI*/
     display: block;
     color: black;
     font-weight: normal;
+    border-radius: 5%;
 }
   
 .definition:hover {

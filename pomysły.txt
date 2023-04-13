@@ -22,7 +22,7 @@ Po najechaniu na ikonkę w menu nawigacyjnym ładowanie paska stanu //
 
 Potencjalna wyszukiwarka w menu nawigacyjnym 
 
-Poprawić animacje trójkata i zrobić żeby się uruchomiła dopiero po tekście
+Poprawić animacje trójkata i zrobić żeby się uruchomiła dopiero po tekście//
 
 Każdy przycisk nawigacyjny ma swój osobny pastelowy kolor 
 
@@ -38,7 +38,7 @@ Można dodać ikonki w nawigacji
 
 Opcjonalnie białe lekko przezroczyste tło i animacje odgrywające się w tle pod tłem/ obok
 
-Odnośniki do tekstu tzw zakotwienia
+Odnośniki do tekstu tzw zakotwienia//
 
 Przed strona jakiś fajny animowany przycisk zaczynajmy, cytat kogoś o geometri fraktalnej spadające lub inną animacja pojawiania się napisy geometria fraktalna i jakieś spoko animowane najlepiej tło
 
