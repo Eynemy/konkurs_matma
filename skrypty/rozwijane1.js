@@ -9,3 +9,5 @@ const definitions = document.querySelectorAll('.definition');
         tooltip.style.display = 'none';
       });
     });
+
+//menu definicji
