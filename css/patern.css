@@ -33,6 +33,14 @@ body{
     margin-right: auto;
     text-align: justify;
 }
+/*stylizacja oddzielaczy*/
+hr{
+  border: none;
+  height: 1px;
+  background-image:
+  linear-gradient(to right, #ffffff, #aa0f0f, #1100f8);
+}
+
 /*-------------KOLORY NAWIGACJI-------------*/
 .nav{
     background-color: rgb(255, 255, 255); 
@@ -77,8 +85,9 @@ body{
  .nav > ol > li{ /*stylizujemy element li, którego rodzicem jest element ol( stylizujemy tylko potomków ol) */
     float: left;
     width: 150px;
-    height: 40px;
-    border-right: 1px dashed rgb(19, 19, 80);
+    height: 40px;/*
+    border-right: 1px dashed rgb(19, 19, 80);*/
+    border-right: 1px dashed rgb(24, 63, 14);
  }
 .nav > ol > li:first-child{ /* zastosowanie opcji do pierwszego elementu w kodzie od li */
     border-left: 1px dashed rgb(19, 19, 80);
@@ -220,7 +229,28 @@ body {
 .dark-mode {
   background-color: #2a2a2a;
   color: #e2e2e2;
+ 
 }
+.dark-mode h2{
+  color:rgb(30, 219, 188);
+}
+.dark-mode hr{
+  background-image:
+  linear-gradient(to right, #51ff00, #1ec4da, #2500fa);
+}
+
+.dark-mode h3{
+  color: rgb(228, 65, 65);
+}
+.dark-mode h4{
+  color:gainsboro;
+}
+.dark-mode{
+
+}
+
+
+/*guzika darkmode*/
 .toggle-container {
   display: inline-block;
   align-items: center;

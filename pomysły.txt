@@ -28,7 +28,7 @@ Każdy przycisk nawigacyjny ma swój osobny pastelowy kolor
 
 Potencjalnie rozwijane menu więcej fraktali
 
-Ładne graficzne oddzielenie tematów
+Ładne graficzne oddzielenie tematów //
 
 Ładniejsza czcionka //
 
