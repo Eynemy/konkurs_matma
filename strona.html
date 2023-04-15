@@ -21,54 +21,60 @@
         <div id="header">
             <div class="typewriter">
                 <div id="logo">
-                    <!----------------SKRYPT TROJKAT LOGO---------------->
-                    <canvas id="myCanvas" width="100" height="100"></canvas>
-                    <!--------------KONIEC SKRYPTU TROJKAT LOGO---------->
+                    <canvas id="myCanvas" width="100" height="100"></canvas><!--przywolanie skryptu logo-->
                     Geometria fraktalna
-                    </div style="clear: both;"></div><!--WYCZYSZCZENIE STYLI-->
+                    </div style="clear: both;"></div><!--wyczyszczenie styli-->
                 </div>
             </div>
         </div>
-        <!----------------------------------------------------POCZĄTEK NAWIGACJI---------------------------------------------------->
+        <!--poczatek nawigacji-->
         <div class="nav">
             <ol>
                 <li><a href="index.html"><span class="text-underline">Strona główna</span></a></li>
                 <li><a href="strona.html"><span class="text-underline">Teoria</span></a></li>
-                <li><a href="podstrony/algorytmy/algorytmy.html"><span class="text-underline">Edycja</span></a></li>
-                <li><a href="podstrony/Zastosowanie/zastosowanie.html"><span class="text-underline">Zastosowanie</span></a></li>
-                <li><a href="podstrony/wymiar_fraktalny/wymiar.html"><span class="text-underline">Wymiar fraktalny</span></a></li>
-                <li><a href="podstrony/informacje/informacje.html"><span class="text-underline">O stronie</span></a></li>
+                <li><a href="podstrony/algorytmy.html"><span class="text-underline">Edycja</span></a></li>
+                <li><a href="podstrony/zastosowanie.html"><span class="text-underline">Zastosowanie</span></a></li>
+                <li><a href="podstrony/wymiar.html"><span class="text-underline">Wymiar fraktalny</span></a></li>
+                <li><a href="podstrony/informacje.html"><span class="text-underline">O stronie</span></a></li>
             </ol>
+            <!--dark mode button poczatek-->
             <div class="toggle-container">
                 <input type="checkbox" id="dark-mode-toggle">
                 <label for="dark-mode-toggle"></label>
-            </div> 
-        <div style="clear:both"></div><!--wyczyszczenie styli-->
+            </div>
+            <!--dark mode button koniec--> 
+        <div style="clear:both"></div>
         </div>
-        <!-------------------------------------------------------------------POCZĄTEK STRONY------------------------------------------------------------>
+        <!--koniec nawigacji-->
+
+        
         <div id="content">
+            <!--pierwszy naglowek poczatek-->
             <div class="lewo-fraktal">
                 <h2>Czym są fraktale?</h2>
+                <p>Fraktal  w znaczeniu potocznym oznacza zwykle obiekt samopodobny (tzn. taki, którego części są podobne do całości) albo "nieskończenie subtelny" (ukazujący subtelne detale nawet w wielokrotnym powiększeniu).</p>
                 <p>Nie istnieje jedna precyzyjna definicja fraktali. W zamian wymienia się cechy obiektów fraktalnych, najważniejsze z nich to:</p>
                 <ul>
                     <li><b>Nietrywialna struktura</b> w każdej skali,</li>
                     <li><b>Samo-podobieństwo</b>, jeśli nie w sensie dokładnym, to przybliżonym,</li>
                     <li>Naturalny „<b>poszarpany</b>”, „<b>kłębiasty</b>”  wygląd,</li>
-                    <li><span class="definition" data-tooltip="oznacza to, że obiekt fraktalny ma wymiar mniejszy od wymiaru przestrzeni, w której się znajduje,"><b>Niecałkowity wymiar fraktalny</b></span>,</li>
+                    <li><b>Niecałkowity wymiar fraktalny</b>,</li>
                     <li>struktura ta nie daje się łatwo opisać w języku tradycyjnej geometrii euklidesowej</span>.</li>
                 </ul>
             </div>
             <div class="prawo-fraktal">
                 <img src="obrazy/fraktal-mandelbrot.png" alt="zbiór Mandelbrota " style="border-radius: 10px;"> <!-- dodane style="border-radius: 10px;" do zaokrąglenia zdjęcia -->
                 <h4>(zbiór Mandelbrota)</h4>
-            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
+            </div><div style="clear:both"></div>
             <br><hr>
-            <!--poczatek-omowienie-->
-
+            <!--pierwszy naglowek koniec-->
+            
+            <!--poczatek omowienie-->
             <h2>Omówienie wybranych cech fraktali</h2>
             <h3>Samo-podobieństwo</h3>
             <p>Najprostsze fraktale są konstruowane przez iterację. Na przykład, zacznij od wypełnionego trójkąta i powtarzaj ten proces: Dla każdego wypełnionego trójkąta połącz punkty środkowe boków i usuń środkowy trójkąt. Powtarzanie tego procesu w nieskończoność daje w rezultacie Trójkąt Sierpińskiego.</p>
             
+            <!--poczatek skrypt rysowanie iteracji-->
             <div class="draw_sierpinski">
                 <div id="draw_sierpinski">
                     <canvas id="trojkat" width="300" height="300"></canvas>
@@ -77,6 +83,7 @@
                     <button id="reset" onclick="reset()">Resetuj</button>
                 </div>
             </div>
+            <!--koniec skrypt rysowanie iteracji-->
             <p>Trójkąt jest samo-podobny. Oznacza to, że składa się z mniejszych kopii samej siebie.</p>
             <img src="" alt="przybliżenie trojkat-sierpinskiego" style="border-radius: 10px;">
             <p>Możemy opisać ten trójkąt jako złożony z trzech kopii, każda 1/2 wysokości i 1/2 szerokości oryginału. Zwróć jednak uwagę na konsekwencję samopodobieństwa: każda z tych kopii składa się z trzech jeszcze mniejszych kopii, więc możemy powiedzieć, że trójkąt składa się z dziewięciu kopii, każda 1/4 na 1/4 oryginału, lub 27 kopii każda 1 / 8 przez 1/8 lub ... . Zwykle wolimy najprostszy opis.</p>
@@ -95,12 +102,12 @@
                     płaszczyzna w.=2 itd.</p>
             <h3>Nie daje się opisać w tradycyjnej geometrii euklidesowej</h3>
                 <p>....</p>
-            <!-----------------------------------------------------------------PRZYKŁADY FRAKTALI - POCZĄTEK------------------------------------------------------------>
-        
+            <!--koniec omowienie-->
             <br><hr>
+            <!--przykłady fraktali poczatek-->
             <h2>Najpopularniejsze przykłady fraktali</h2>
 
-            <!---------------------TRÓJKĄT SIERPIŃSKIEGO - POCZĄTEK----------------------->
+            <!--trojkat sierpinskiego poczatek-->
             <div class="triangle">
                 <h3 id="trojkat-sierpinskiego">Trójkąt Sierpińskiego</h3>
                 <p>Trójkąt Sierpińskiego jest jednym z najprostszych fraktali.Konstrukcja tego zbioru została podana przez polskiego matematyka 
@@ -116,18 +123,21 @@
                 </ol>
             </div>
 
-            <!---------------------TRÓJKĄT SIERPIŃSKIEGO-ZDJĘCIA----------------------->
+            <!--trojkat sierpinskiego zdjecia poczatek-->
             <div class="triangle-picture">
                 <img src="obrazy/Sierpinski_triangle.svg" alt="Trójkąt Sierpińskiego" width="350">
                 <h4>Trójkąt Sierpińskiego</h4>
-            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
-            <!-----------------------------------KRZYWA KOCHA/ŚNIEŻYNKA - POCZĄTEK---------------------------------->
+            </div><div style="clear:both"></div>
+            <!--trojkat sierpinskiego zdjecia koniec-->
+            <!--trojkat sierpinskiego koniec-->
+
+            <!--krzywa kochas/sniezynka poczatek-->
             <div class="Krzywa">
                 <h3 id="krzywa-kocha"><br></h3>
                 <h3>Krzywa Kocha</h3>
                 <p>
                     Krzywa Kocha to krzywa fraktalna, którą można zdefiniować jako 
-                    <span class="definition" data-tooltip=""><u>atraktor IFS</u></span>
+                    <span class="definition" data-tooltip="atraktor IFS too zbiór funkcji za pomocą, których konstruuje się fraktale. IFS zostały opisane przez John'a Hutchinson'a w 1981 natomiast spopularyzował je Micheal Barnsley."><u>atraktor IFS</u></span>
                         lub jako 
                     <span class="definition" data-tooltip=""><u>granicę ciągu krzywych</u></span>.
                      Jest nieskończenie długa, ale mieści się na skończonej powierzchni, więc
@@ -135,25 +145,48 @@
                     von Kocha.
                 </p>
                 <p>Jak stworzyć Krzywą Kocha?</p>
-                <ol>
-                    <li>Podziel odcinek na 3 części</li>
-                    <li>Zastąpienie środkowej ząbkiem (o ramieniu długości równej 1/3 odcinka)</li>
-                    <li>Ustaw te fragmenty taj, żeby wraz z usuwaną częścią tworzy trójkąt równoboczny.</li>
-                    <li>Powtarzaj te kroki w nieskończoność, dla każdego fragmentu odcinka.</li>
-                </ol>
+                <p>Krzywa Kocha powstaje z odcinka, poprzez podzielenie go na 3 części i zastąpienie środkowej ząbkiem (o ramieniu długości równej 1/3 odcinka) takim, że wraz z usuwaną częścią tworzy trójkąt równoboczny. Krok ten jest powtarzany w nieskończoność, dla każdego fragmentu odcinka.</p>
+                <b>Krok 0</b>
+                <ul>
+                    <li>Krzywa Kocha w kroku zerowym (k = 0) jest odcinkiem. Zostanie on podzielony na 3 równe części, a środkową zastąpią dwa odcinki długości ⅓l nachylone względem niej pod kątem 60°.</li>
+                </ul>
+                <b>Krok 1</b>
+                <ul>
+                    <li>Krzywa Kocha w kroku pierwszym (k = 1)po transformacji zawiera 4 odcinki, każdy równy ⅓l. W kolejnym kroku każdy z tych odcinków ponownie zostanie podzielony na 3 części, a środkową znów zastąpimy dwoma odcinkami.</li>
+                </ul>
+                <b>Krok 2</b>
+                <ul>
+                    <li>Krzywa Kocha w kroku drugim (k = 2) zawiera już 16 odcinków, każdy długości ⅑l. W kolejnym kroku (k = 3) powstanie 64 odcinków, każdy długości ⅟₂₇ itd.</li>
+                </ul>
+                    
+            </div>
+            <div class="Krzywa-picture">
+                <img src="obrazy/Koch-Curve.png" alt="Krzywa Kocha">
+                <h4>Krzywa Kocha</h4>
+                <br><br>
+                <img src="obrazy/koch_zoom.gif" alt="przybliżenie Krzywej Kocha">
+                <h4>przybliżenie Krzywej Kocha</h4>
+                <br><br><br>
+                <div class="Etapy">
+                    <img src="obrazy/Koch_krok0.gif" alt="Etap 0 tworzenia krzywej Kocha">
+                    <h4>Etap 0</h4>
+                    <img src="obrazy/Koch_krok1.gif" alt="Etap 1 tworzenia krzywej Kocha">
+                    <h4>Etap 1</h4>
+                    <img src="obrazy/Koch_krok2.gif" alt="Etap 2 tworzenia krzywej Kocha">
+                    <h4>Etap 2</h4>
+                </div>
+            </div><div style="clear:both"></div>
+            <div class="snowflake">
                 <h3>Płatek Kocha</h3>
                 <p>
                     Płatek Kocha jest jednym z najwcześniejszych fraktali, które zostały opisane. Opiera się na krzywej Kocha, powstaje poprzez połączenie ze sobą 3 Krzywych Kocha.
                 </p>
-            </div>
-            <!-----------------------------------KRZYWA KOCHA/ŚNIEŻYNKA-ZDJĘCIA---------------------------------->
-            <div class="Krzywa-picture">
-                <img src="obrazy/Koch-Curve.png" alt="Krzywa Kocha">
-                <h4>Krzywa Kocha</h4>
                 <img src="obrazy/Koch-snowflake.gif" alt="płatek Kocha">   
                 <h4><br>płatek Kocha</h4>
-            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
-            <!---------------------------------------ZBIÓR MANDELBROTA-POCZĄTEK-------------------------------->
+            </div>
+           
+
+            <!--zbior mandelbrota poczatek-->
             <div class="Mandelbrot">
                 <h3 id="zbior-mandelbroda"><br></h3>
                 <h3>Zbiór Mandelbrota</h3>
@@ -273,6 +306,34 @@
             <!----------------------------------------------FRAKTALE W NATURZE-POCZĄTEK-------------------------------------------------->
             <br><hr>
             <h2>Fraktale wokół nas</h2><br>
+            
+            <h3>Fraktale w grafice komputerowej</h3>
+            <div class="computer">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="computer">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="computer">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="computer">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="computer">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="computer">
+                <img src="" alt="">
+                <p></p>
+            </div>
+
+            <h3>Fraktale w naturze</h3>
             <div class="real">
                 <img src="obrazy/real_kalafior.jpg" alt="Zdjęcie kalafiora Brassica oleracea">
                 <p style="padding-left: 20px;">Zdjęcie kalafiora Brassica oleracea</p>

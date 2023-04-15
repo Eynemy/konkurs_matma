@@ -1,5 +1,5 @@
-
-const text = 'Geografia Fraktalna';
+//spadanie napisu gegrafia fraktalna na stronie glownej
+const text = 'Geografia Fraktalna'; //napis ktory spada
 const container = document.querySelector('.tekst');
 let left = 0;
 const spaceWidth = 10;
@@ -15,9 +15,10 @@ for (let i = 0; i < text.length; i++) {
     letter.style.top = '0px';
   }, i * 500);
   
-  if (text[i] === ' ') {
+  if (text[i] === ' ') { //ustawianie zeby nie pomijalo spacji
     left += spaceWidth;
   } else {
     left += letter.offsetWidth;
   }
 }
+

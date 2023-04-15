@@ -1,3 +1,4 @@
+//skrypt na menu definicji
 const definitions = document.querySelectorAll('.definition');
     definitions.forEach((definition) => {
       definition.addEventListener('mouseenter', () => {
@@ -10,4 +11,3 @@ const definitions = document.querySelectorAll('.definition');
       });
     });
 
-//menu definicji

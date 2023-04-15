@@ -1,3 +1,4 @@
+// skrypt na sticky nawigacje
 $(document).ready(function() {
     var NavY = $('.nav').offset().top;
     

@@ -1,3 +1,4 @@
+// rysowanie trojkata sierpinskiego z nastepnymi iteracjami
 var canvas2 = document.getElementById("trojkat");
 var ctx2 = canvas2.getContext("2d");
 var width2 = canvas2.width;

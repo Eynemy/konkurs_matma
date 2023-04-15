@@ -1,4 +1,4 @@
-
+// ustawianie ciemnego trybu
 const toggle = document.querySelector('#dark-mode-toggle');
 const body = document.body;
 

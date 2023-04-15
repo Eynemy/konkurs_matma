@@ -58,7 +58,7 @@ img:hover{
 }
 /*stylizacja canvas 2(iteracyjny)*/
 #trojkat{
-    transform: rotate(180deg);
+    transform: rotate(180deg);/* obrocenie trojkaata o 180 stopni*/
 }
 .draw_sierpinski {
     display: grid;
@@ -105,6 +105,7 @@ img:hover{
     top:  90px;              
     
 }
+/*ustawianie wielkosci zdjec fraktali*/
 .triangle-picture > img{
     width: 350px;
 }
@@ -113,6 +114,9 @@ img:hover{
     width: 350px;
     position: relative;
     top: 20px;
+}
+.Etapy > img{
+    width: 200px;
 }
 .Mandelbrot-picture > img{
     width: 350px;
@@ -123,12 +127,20 @@ img:hover{
 .dywan-picture > img{
     width: 350px;
 }
+
+
+
+
 .triangle, .Krzywa, .Mandelbrot, .drzewo, .dywan{
     text-align: left;
     float: left;
     vertical-align: top;
     width: 60%;
 }
+
+
+/* fraktale w grafice komputerowej */
+
 /*-----------------Fraktale w naturze-----------------*/
 .real{
     display: inline-block;
