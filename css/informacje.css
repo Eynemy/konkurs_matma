@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@900&family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap');
+
 body{
     text-align: center;
 
+}
+li{
+    list-style: none;
 }
 body{
     color: rgb(0, 0, 0);
@@ -27,15 +32,20 @@ a{
     text-decoration: none;
     
 }
-img{
-    border-radius: 10px;
+.obrazy > a >img{
     width: 100px;
     height: 100px;
+    
 }
 img{
+    border-radius: 10px;
     transition: transform 0.5s ease;    /* dodanie przybliżenia */
 }
 
 img:hover{
     transform: scale(1.1);  /* dodanie przybliżenia o 10% */
+}
+.programy >ul>li> img{
+    width: 30px;
+    height: 30px;
 }
