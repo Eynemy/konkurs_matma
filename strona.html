@@ -52,7 +52,7 @@
             <!--pierwszy naglowek poczatek-->
             <div class="lewo-fraktal">
                 <h2>Czym są fraktale?</h2>
-                <p>Fraktal  w znaczeniu potocznym oznacza zwykle obiekt samopodobny (tzn. taki, którego części są podobne do całości) albo "nieskończenie subtelny" (ukazujący subtelne detale nawet w wielokrotnym powiększeniu).</p>
+                <p>Fraktal  w znaczeniu potocznym oznacza zwykle obiekt samopodobny albo "nieskończenie subtelny" (ukazujący subtelne detale nawet w wielokrotnym powiększeniu).</p>
                 <p>Nie istnieje jedna precyzyjna definicja fraktali. W zamian wymienia się cechy obiektów fraktalnych, najważniejsze z nich to:</p>
                 <ul>
                     <li><b>Nietrywialna struktura</b> w każdej skali,</li>
@@ -79,14 +79,16 @@
                 <div id="draw_sierpinski">
                     <canvas id="trojkat" width="300" height="300"></canvas>
                     <br>
-                    <button id="iteracja" onclick="nextIteration()">Kolejna iteracja</button>
-                    <button id="reset" onclick="reset()">Resetuj</button>
+                    <button id="iteracja" onclick="nextIteration()"> Kolejna iteracja </button>
+                    <button id="reset" onclick="reset()"> Resetuj </button>
                 </div>
             </div>
             <!--koniec skrypt rysowanie iteracji-->
             <p>Trójkąt jest samo-podobny. Oznacza to, że składa się z mniejszych kopii samej siebie.</p>
-            <img src="" alt="przybliżenie trojkat-sierpinskiego" style="border-radius: 10px;">
-            <p>Możemy opisać ten trójkąt jako złożony z trzech kopii, każda 1/2 wysokości i 1/2 szerokości oryginału. Zwróć jednak uwagę na konsekwencję samopodobieństwa: każda z tych kopii składa się z trzech jeszcze mniejszych kopii, więc możemy powiedzieć, że trójkąt składa się z dziewięciu kopii, każda 1/4 na 1/4 oryginału, lub 27 kopii każda 1 / 8 przez 1/8 lub ... . Zwykle wolimy najprostszy opis.</p>
+            <center> 
+                <img src="obrazy/samo-podobienstwo.png" alt="przybliżenie trojkat-sierpinskiego" width="500px" style="border-radius: 10px;">
+            </center>
+            <p>Możemy opisać ten trójkąt jako złożony z trzech kopii, każda ½ wysokości i ½ szerokości oryginału. Zwróć jednak uwagę na konsekwencję samopodobieństwa: każda z tych kopii składa się z trzech jeszcze mniejszych kopii, więc możemy powiedzieć, że trójkąt składa się z dziewięciu kopii, każda ¼ na ¼ oryginału, lub 27 kopii każda ⅛ przez ⅛ lub ...</p>
 
             <h3>Nietrywialna struktura</h3>
                 <p>powiększanie ujawnia kolejne równie skomplikowane formy</p>
@@ -161,18 +163,18 @@
                     
             </div>
             <div class="Krzywa-picture">
-                <img src="obrazy/Koch-Curve.png" alt="Krzywa Kocha">
+                <img src="obrazy/Koch-Curve.png" alt="Krzywa Kocha" style="border-radius: 10px;">
                 <h4>Krzywa Kocha</h4>
                 <br><br>
-                <img src="obrazy/koch_zoom.gif" alt="przybliżenie Krzywej Kocha">
+                <img src="obrazy/koch_zoom.gif" alt="przybliżenie Krzywej Kocha" style="border-radius: 10px;">
                 <h4>przybliżenie Krzywej Kocha</h4>
                 <br><br><br>
                 <div class="Etapy">
-                    <img src="obrazy/Koch_krok0.gif" alt="Etap 0 tworzenia krzywej Kocha">
+                    <img src="obrazy/Koch_krok0.gif" alt="Etap 0 tworzenia krzywej Kocha" style="border-radius: 10px;">
                     <h4>Etap 0</h4>
-                    <img src="obrazy/Koch_krok1.gif" alt="Etap 1 tworzenia krzywej Kocha">
+                    <img src="obrazy/Koch_krok1.gif" alt="Etap 1 tworzenia krzywej Kocha" style="border-radius: 10px;">
                     <h4>Etap 1</h4>
-                    <img src="obrazy/Koch_krok2.gif" alt="Etap 2 tworzenia krzywej Kocha">
+                    <img src="obrazy/Koch_krok2.gif" alt="Etap 2 tworzenia krzywej Kocha" style="border-radius: 10px;">
                     <h4>Etap 2</h4>
                 </div>
             </div><div style="clear:both"></div>
@@ -181,7 +183,10 @@
                 <p>
                     Płatek Kocha jest jednym z najwcześniejszych fraktali, które zostały opisane. Opiera się na krzywej Kocha, powstaje poprzez połączenie ze sobą 3 Krzywych Kocha.
                 </p>
-                <img src="obrazy/Koch-snowflake.gif" alt="płatek Kocha">   
+                <center>
+                    <img src="obrazy/Koch-snowflake.gif" alt="płatek Kocha" style="border-radius: 10px;">
+                    <img src="obrazy/koch snowflake making.svg" alt="płatek Kocha" style="border-radius: 10px;">
+                </center>   
                 <h4><br>płatek Kocha</h4>
             </div>
            
@@ -240,7 +245,7 @@
                 </ol>
             </div>
             <div class="drzewo-picture">
-                <img src="obrazy/Pythagoras_tree_.gif" alt="Drzewo_Pitagorejskie">
+                <img src="obrazy/Pythagoras_tree_.gif" alt="Drzewo_Pitagorejskie" style="border-radius: 10px;">
                 <h4>Drzewo Pitagorejskie</h4>
             </div><div style="clear:both"></div><!--WYCZYSZCZENIE STYLI-->
             <!-------------------------------------DYWAN SIERPIŃSKIEGO------------------------------------->
@@ -255,7 +260,7 @@
                 </p>
             </div>
             <div class="dywan-picture">
-                <img src="obrazy/Sierpinski.png" alt="Dywan Sierpińskiego">
+                <img src="obrazy/sierpinski_carpet.gif" alt="Dywan Sierpińskiego">
                 <h4>Dywan Sierpińskiego</h4>
             </div><div style="clear:both"></div><!--wyczyszczenie styli-->
              <!----------------------------------------------------------------------------PRZYKŁADY FRAKTALI-KONIEC--------------------------------------------------------->   
@@ -309,28 +314,24 @@
             
             <h3>Fraktale w grafice komputerowej</h3>
             <div class="computer">
-                <img src="" alt="">
-                <p></p>
+                <img src="obrazy/grafika1.jpg" alt="Electricsheep-21194">
+                <p>Electricsheep-21194</p>
             </div>
             <div class="computer">
-                <img src="" alt="">
-                <p></p>
+                <img src="obrazy/Grafika 2.jpg" alt="Electricsheep-21158">
+                <p>Electricsheep-21158</p>
             </div>
             <div class="computer">
-                <img src="" alt="">
-                <p></p>
+                <img src="obrazy/Grafika3.jpg" alt="Apophysis fractal flame">
+                <p>Apophysis fractal flame</p>
             </div>
             <div class="computer">
-                <img src="" alt="">
-                <p></p>
+                <img src="obrazy/Grafika4.jpg" alt="Electricsheep-21158">
+                <p>Electricsheep-21158</p>
             </div>
             <div class="computer">
-                <img src="" alt="">
-                <p></p>
-            </div>
-            <div class="computer">
-                <img src="" alt="">
-                <p></p>
+                <img src="obrazy/Grafika5.jpg" alt="Fraktal zrobiony programem Sterling2">
+                <p>Fraktal zrobiony programem Sterling2</p>
             </div>
 
             <h3>Fraktale w naturze</h3>
@@ -360,7 +361,7 @@
             </div>
             <div class="real">
                 <img src="obrazy/Real_Frost_patterns.jpg" alt="kryształy lodu tworzące fraktalne wzory na szkle">
-                <p>kryształy lodu tworzące fraktalne wzory na szkle</p>
+                <p>Mroźne kryształy występujące naturalnie na zimnym szkle tworzą fraktalne wzory</p>
                 
             </div>
             <!-------------------------------------------------------FRAKTALE W NATURZE-KONIEC------------------------------------------>

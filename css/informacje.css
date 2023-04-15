@@ -27,3 +27,15 @@ a{
     text-decoration: none;
     
 }
+img{
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+img{
+    transition: transform 0.5s ease;    /* dodanie przybliżenia */
+}
+
+img:hover{
+    transform: scale(1.1);  /* dodanie przybliżenia o 10% */
+}

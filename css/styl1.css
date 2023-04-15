@@ -72,24 +72,34 @@ img:hover{
 
 #reset {
     position: absolute;
-    bottom: 0;
+    bottom: -20;
     right: 0;
     background-color: darkgreen;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 3px; 
+     
 }
 
 #iteracja{
     position: absolute;
-    bottom: 0;
+    bottom: -20;
     left: 0;
     background-color: darkgreen;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 3px;  
+}
+
+#reset:hover{
+    transform: scale(1.1); 
+}
+#iteracja:hover{
+    transform: scale(1.1); 
 }
 
 
@@ -141,6 +151,14 @@ img:hover{
 
 /* fraktale w grafice komputerowej */
 
+.computer{
+    display: inline-block;
+}
+.computer > img{
+    width: 400px;
+    border-radius: 10px;
+    height: 300px;
+}
 /*-----------------Fraktale w naturze-----------------*/
 .real{
     display: inline-block;
