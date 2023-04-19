@@ -80,7 +80,7 @@ hr{
 .nav > ol a{ /* stytlizowanie hiperłącz elementu ol */
     color: rgb(39, 37, 37);
     text-decoration: none; /* usunięcie dekorowania tekstu (usuwa podkreślenia itp */
-    display: black; /*ustawienie żeby ten element zachowywał się jak element blokowy */
+    display: block; /*ustawienie żeby ten element zachowywał się jak element blokowy */
  }
  .nav > ol > li{ /*stylizujemy element li, którego rodzicem jest element ol( stylizujemy tylko potomków ol) */
     float: left;

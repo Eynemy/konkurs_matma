@@ -58,7 +58,7 @@
                     <li><b>Nietrywialna struktura</b> w każdej skali,</li>
                     <li><b>Samo-podobieństwo</b>, jeśli nie w sensie dokładnym, to przybliżonym,</li>
                     <li>Naturalny „<b>poszarpany</b>”, „<b>kłębiasty</b>”  wygląd,</li>
-                    <li><b>Niecałkowity wymiar fraktalny</b>,</li>
+                    <li>jego <b>wymiar Hausdorffa jest większy niż jego wymiar topologiczny</b>,</li>
                     <li>struktura ta nie daje się łatwo opisać w języku tradycyjnej geometrii euklidesowej</span>.</li>
                 </ul>
             </div>
@@ -90,24 +90,27 @@
             </center>
             <p>Możemy opisać ten trójkąt jako złożony z trzech kopii, każda ½ wysokości i ½ szerokości oryginału. Zwróć jednak uwagę na konsekwencję samopodobieństwa: każda z tych kopii składa się z trzech jeszcze mniejszych kopii, więc możemy powiedzieć, że trójkąt składa się z dziewięciu kopii, każda ¼ na ¼ oryginału, lub 27 kopii każda ⅛ przez ⅛ lub ...</p>
 
-            <h3>Nietrywialna struktura</h3>
-                <p>Powiększanie ujawnia kolejne równie skomplikowane formy.</p>
             <h3>Niecałkowity wymiar fraktalny</h3>
-                <p>Wymiar – minimalna liczba
-                    niezależnych parametrów
-                    potrzebnych do opisania
-                    jakiegoś zbioru. Zatem jest to
-                    liczba przypisana zbiorowi lub
-                    przestrzeni w taki sposób, by
-                    punkt miał w.=0, prosta w.=1,
-                    płaszczyzna w.=2 itd.</p>
-            <h3>Nie daje się opisać w tradycyjnej geometrii euklidesowej</h3>
-                <p> W przeciwieństwie do tradycyjnej geometrii euklidesowej, geometria fraktalna nie daje się opisać w sposób jednoznaczny i precyzyjny</p>
+                <p>Niecalkowity wymiar fraktalny to pojęcie odnoszące się do wymiaru Hausdorffa fraktala, który nie jest liczbą całkowitą. Wymiar Hausdorffa opisuje sposób, w jaki zbiór wypełnia przestrzeń. Dla regularnych obiektów geometrycznych, takich jak linia, kwadrat czy sześcian, wymiar Hausdorffa jest liczbą całkowitą równą 1, 2 i 3 odpowiednio. Jednak dla fraktali wymiar Hausdorffa może być liczbą niecałkowitą. Na przykład dla dywanu Sierpińskiego wymiar Hausdorffa wynosi około 1.8928.
+                    Niecalkowity wymiar fraktalny odzwierciedla fakt, że fraktale są bardziej skomplikowane niż regularne obiekty geometryczne i mają nietrywialną strukturę na różnych skalach.
+                </p>
             <!--koniec omowienie-->
             <br><hr>
             <!--przykłady fraktali poczatek-->
+            
             <h2>Najpopularniejsze przykłady fraktali</h2>
 
+            <!--Zbiór Cantora-->
+            <div class="Cantor">
+                <h3 id="Zbiór-Cantora">Zbiór Cantora</h3>
+                <p>Zbiór Cantora to podzbiór prostej rzeczywistej opisany w 1883 roku przez niemieckiego matematyka 
+                    <span class="definition" data-tooltip="Georg Cantor był niemieckim matematykiem, który żył w latach 1845-1918. Był pionierem w dziedzinie matematyki zwaną teorią mnogości. Wprowadził wiele nowych pojęć i udowodnił wiele ważnych twierdzeń. Jego praca miała ogromny wpływ na rozwój matematyki."><u>Georga Cantora</u></span>.
+                     Jest to najprostszy przykład fraktala 1. Zbiór ten powstaje poprzez podział odcinka na 3 równe części i wycięcie środkowej 1/3 części.
+                     Następnie wykonuje się to samo dla dwóch pozostałych odcinków i tak dalej
+                </p>
+                
+                <canvas id="Cantor-Canvas3" width="1000" height="200"></canvas>
+            </div>
             <!--trojkat sierpinskiego poczatek-->
             <div class="triangle">
                 <h3 id="trojkat-sierpinskiego">Trójkąt Sierpińskiego</h3>
@@ -208,11 +211,14 @@
                 </ul>
                 <p>Jak stworzyć Zbiór Mandelbrota?</p>
                 <p>Aby stworzyć zbiór Mandelbrota należy wyznaczyć wartości ciągu rekurencyjnego dla każdego punktu płaszczyzny zespolonej i sprawdzić, czy ten ciąg jest ograniczony. Jeśli ciąg jest ograniczony, to punkt należy do zbioru Mandelbrota</p>
-                <!--
-                <ol>
-                   <li></li>
-                </ol>
-                -->
+                
+                <ul>
+                   <li>Wybierz zakres wartości dla osi rzeczywistej (x) i urojonej (y) na płaszczyźnie zespolonej. Na przykład x od -2 do 1 i y od -1.5 do 1.5.</li>
+                   <li>Wybierz rozdzielczość obrazu, czyli liczbę pikseli na jednostkę długości dla osi x i y.</li>
+                   <li>Dla każdego piksela (x,y) na płaszczyźnie zespolonej wykonaj następujące kroki: a. Zainicjalizuj z = 0 oraz c = x + yi. b. Wykonaj iterację z = z^2 + c. c. Sprawdź, czy wartość bezwzględna z przekracza 2. Jeśli tak, to oznacza, że punkt (x,y) nie należy do zbioru Mandelbrota i przejdź do następnego piksela. d. Powtarzaj kroki b i c przez określoną liczbę iteracji lub aż zostanie spełniony warunek z kroku c.</li>
+                   <li>Jeśli dla danego piksela (x,y) po określonej liczbie iteracji wartość bezwzględna z nie przekroczyła 2, oznacza to, że punkt (x,y) należy do zbioru Mandelbrota.</li>
+                </ul>
+                
             </div>
             
             <!---------------------------------------ZBIÓR MANDELBROTA-ZDJĘCIA-------------------------------->
@@ -265,11 +271,11 @@
                 <h4>Dywan Sierpińskiego</h4>
             </div><div style="clear:both"></div><!--wyczyszczenie styli-->
              <!----------------------------------------------------------------------------PRZYKŁADY FRAKTALI-KONIEC--------------------------------------------------------->   
-             <br><br><hr><!-- 
+             <br><br><hr>
             <h2>Inne rodzaje fraktali</h2>
             <p>..........................</p>
             <div class="inne1">
-                <h3></h3>
+                <h3>Gąbka Mengera</h3>
                 <p>
 
                 </p>
@@ -307,9 +313,11 @@
             </div>
             <div class="inne5-picture">
                 <img src="" alt="">
-            </div>-->  
-            <!----------------------------------------------FRAKTALE W NATURZE-POCZĄTEK-------------------------------------------------->
+            </div>
             <br><hr>
+            -->  
+            <!----------------------------------------------FRAKTALE W NATURZE-POCZĄTEK-------------------------------------------------->
+            
             <h2>Fraktale wokół nas</h2><br>
             
             <h3>Fraktale w grafice komputerowej</h3>
@@ -384,6 +392,12 @@
                     filmach i grach
                     Obecnie prawie każdy telefon komórkowy korzysta z
                     wbudowanej anteny fraktalnej. </p>
+            <h3>Kompresja danych</h3>
+
+            <h3>Anteny fraktalne</h3>
+
+            <h3>Grafika komputerowa</h3>
+
             <br><hr>
             <h2>Rozwój geometrii fraktalnej</h2>
                     <p>Rozwój geometrii fraktalnej i jej przemianę w nową dziedzinę matematyki zawdzięczamy przede wszystkim urodzonemu w Polsce matematykowi Benoît Mandelbrotowi i jego głośnemu esejowi "The Fraktal Geometry of Nature" (Fraktalna geometria natury) z 1977 r.
@@ -407,6 +421,7 @@
     <script src="skrypty/trojkat.js"></script>
     <script src="skrypty/draw_sierpinski.js"></script>
     <script src="skrypty/darkmode.js"></script>
+    <script src="skrypty/cantor.js"></script>
      
 </body>
 </html>
