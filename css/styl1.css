@@ -1,7 +1,7 @@
 body{
     color: rgb(0, 0, 0);
     font-size: 22px;
-    font-family: 'Nunito', sans-serif
+    font-family: 'Nunito', sans-serif;
 
 }
 /*-----------------STYLIZACJĄ NAGŁÓWKÓW-----------------*/
@@ -95,6 +95,10 @@ img:hover{
 #iteracja:hover{
     transform: scale(1.1); 
 }
+.center{
+    text-align: center; 
+}
+
 /*-------------FRAKTALE PRZEDSTAWIENIE-------------*/
 .triangle, .Krzywa, .Mandelbrot, .drzewo, .dywan, .Smok-Heighwaya, .Krzywa-Levy, .Kostka-Mengera{
     text-align: left;
