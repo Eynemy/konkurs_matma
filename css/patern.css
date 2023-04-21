@@ -19,12 +19,12 @@ body{
 #logo{
   display: flex;
   align-items: center;
-    font-family: 'Rubik Maze', cursive;
-    font-size: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 885px;
-    color: rgb(255, 255, 255);
+  font-family: 'Rubik Maze', cursive;
+  font-size: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 885px;
+  color: rgb(255, 255, 255);
 }
 #content{
     padding: 20px 0;
@@ -85,8 +85,7 @@ hr{
  .nav > ol > li{ /*stylizujemy element li, którego rodzicem jest element ol( stylizujemy tylko potomków ol) */
     float: left;
     width: 150px;
-    height: 40px;/*
-    border-right: 1px dashed rgb(19, 19, 80);*/
+    height: 40px;
     border-right: 1px dashed rgb(24, 63, 14);
  }
 .nav > ol > li:first-child{ /* zastosowanie opcji do pierwszego elementu w kodzie od li */
@@ -105,43 +104,42 @@ hr{
 
 /* Domyślny styl dla elementu tekstu */
 .text-underline {
-    position: relative;
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-  }
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
   
   /* Styl dla animacji podkreślenia */
-  .text-underline::before, .text-underline::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: 0;
-    background-color: black;
-  }
+.text-underline::before, .text-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  background-color: black;
+}
   
   /*Animacja podkreślenia*/
-  .text-underline::before {
-    right: 50%;
-    transition: width 0.3s ease-out, right 0.3s ease-out;
-  }
+.text-underline::before {
+  right: 50%;
+  transition: width 0.3s ease-out, right 0.3s ease-out;
+}
   
-  .text-underline::after {
-    left: 50%;
-    transition: width 0.3s ease-out, left 0.3s ease-out;
-  }
+.text-underline::after {
+  left: 50%;
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+}
   
   /* Efekt animacji */
-  .text-underline:hover::before {
-    width: 50%;
-    right: 0;
-  }
-  
-  .text-underline:hover::after {
-    width: 50%;
-    left: 0;
-  }
+.text-underline:hover::before {
+  width: 50%;
+  right: 0;
+}
+.text-underline:hover::after {
+  width: 50%;
+  left: 0;
+}
 
 
 
@@ -150,30 +148,27 @@ hr{
     from { width: 0 }
     to { width: 100% }
 }
-  
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #1b1b1b }
 }
-  
 .typewriter  {
-    overflow: hidden;
-    border-right: .73em solid black;  /*<!--+3 trzeba-->*/
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .10em;
-    animation:
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end 1;
-    max-width: 72ch;                  /*<!-- +2 trzeba dodac-->*/
-    animation-fill-mode: forwards;
+  overflow: hidden;
+  border-right: .73em solid black;  /*<!--+3 trzeba-->*/
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .10em;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end 1;
+  max-width: 72ch;                  /*<!-- +2 trzeba dodac-->*/
+  animation-fill-mode: forwards;
 }
 
 /*-----------------ROZWIJANE MENU Z DEFINICJĄ-----------------*/
 .definition {
     position: relative;
 }
-
 .definition::after {
     content: attr(data-tooltip);
     display: none;
@@ -188,15 +183,13 @@ hr{
     z-index: 1;
     font-size: medium;
 
-  }
-  
+  } 
 .definition:hover::after {  /* ODPOWADA TO BLOKOWI DEFINICJI*/
     display: block;
     color: black;
     font-weight: normal;
     border-radius: 5px;
-}
-  
+} 
 .definition:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -205,23 +198,19 @@ hr{
     text-decoration: none;
     color: #3366cc;
 }
-
-
-  
-  .definition::before {
-    content: "?"; /* Symbol, który pojawi się przed tekstem */
-    position: absolute;
-    top: -6px; /* Odległość od góry */
-    right: -6px; /* Odległość od prawej strony */
-    font-size: 12px; /* Rozmiar czcionki */
-    color: #333; /* Kolor symbolu */
-    opacity: 0; /* Początkowa wartość przezroczystości */
-    transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
-  }
-  
-  .definition:hover::before {
-    opacity: 1; /* Przezroczystość przy najechaniu */
-  }
+.definition::before {
+  content: "?"; /* Symbol, który pojawi się przed tekstem */
+  position: absolute;
+  top: -6px; /* Odległość od góry */
+  right: -6px; /* Odległość od prawej strony */
+  font-size: 12px; /* Rozmiar czcionki */
+  color: #333; /* Kolor symbolu */
+  opacity: 0; /* Początkowa wartość przezroczystości */
+  transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
+}
+.definition:hover::before {
+  opacity: 1; /* Przezroczystość przy najechaniu */
+}
 /* opcje dla dark mode*/
 body {
   transition: background-color 0.5s ease;
@@ -238,19 +227,20 @@ body {
   background-image:
   linear-gradient(to right, #51ff00, #1ec4da, #2500fa);
 }
-
 .dark-mode h3{
   color: rgb(228, 65, 65);
 }
 .dark-mode h4{
   color:gainsboro;
 }
-.dark-mode{
-
+.dark-mode .png {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 
-/*guzika darkmode*/
+/*guzik darkmode*/
 .toggle-container {
   display: inline-block;
   align-items: center;

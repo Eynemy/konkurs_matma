@@ -2,16 +2,13 @@
 
 body{
     text-align: center;
-
-}
-li{
-    list-style: none;
-}
-body{
     color: rgb(0, 0, 0);
     font-size: 22px;
     font-family: 'Nunito', sans-serif
+}
 
+li{
+    list-style: none;
 }
 
 h1, h2{
@@ -20,23 +17,28 @@ h1, h2{
     text-align: center;
     
 }
+
 p{
     text-align: center;
    
 }
+
 h3{
     color: rgb(116, 7, 7);
     text-align: center;
 }
+
 a{
     text-decoration: none;
     
 }
+
 .obrazy > a >img{
     width: 100px;
     height: 100px;
     
 }
+
 img{
     border-radius: 10px;
     transition: transform 0.5s ease;    /* dodanie przybliżenia */
@@ -45,6 +47,7 @@ img{
 img:hover{
     transform: scale(1.1);  /* dodanie przybliżenia o 10% */
 }
+
 .programy >ul>li> img{
     width: 30px;
     height: 30px;

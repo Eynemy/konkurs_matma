@@ -5,6 +5,9 @@ Wyjaśnienia matematycznych pojęć i zasad związanych z geometrią fraktalną,
 
 Quizy lub gry edukacyjne sprawdzające wiedzę i umiejętności użytkowników z zakresu geometrii fraktalnej.
 
+opisac sposoby tworzenia fraktali
+
+dac zastosowanie fraktali teoria chaosu i antena fraktalna
 --------------------------------------------------------------------------------------------------
 
 Po zjechaniu w dół animacja wczytywania tekstu

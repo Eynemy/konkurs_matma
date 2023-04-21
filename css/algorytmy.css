@@ -1,15 +1,12 @@
 .edycja{
     text-align: center;
 }
+
 body{
     text-align: center;
-
-}
-body{
     color: rgb(0, 0, 0);
     font-size: 22px;
     font-family: 'Nunito', sans-serif
-
 }
 
 h1, h2{
@@ -18,14 +15,17 @@ h1, h2{
     text-align: center;
     
 }
+
 p{
     text-align: center;
    
 }
+
 h3{
     color: rgb(116, 7, 7);
     text-align: center;
 }
+
 a{
     text-decoration: none;
     

@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/patern.css"><!--DODANIE OGÓLNEGO CSS STRONY-->
     <link rel="stylesheet" type="text/css" href="css/styl1.css"><!--DODANIE CSS DLA TEJ STRONY-->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap" rel="stylesheet"><!--DODANIE CZCIONEK: Lato, Nunito, Rubik Maze-->
-
-    
-
     <link rel="shortcut icon" type="image/ico" href="obrazy/ikonkas.ico"> <!--obrazek strony-->
     <title>Geometria fraktalna</title>
 </head>
@@ -27,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <!--poczatek nawigacji-->
+     
         <div class="nav">
             <ol>
                 <li><a href="index.html"><span class="text-underline">Strona główna</span></a></li>
@@ -43,385 +39,352 @@
                 <label for="dark-mode-toggle"></label>
             </div>
             <!--dark mode button koniec--> 
-        <div style="clear:both"></div>
+        </div><div style="clear:both"></div>
         </div>
-        <!--koniec nawigacji-->
-
-        
+      
         <div id="content">
-            <!--pierwszy naglowek poczatek-->
-            <div class="lewo-fraktal">
-                <h2>Czym są fraktale?</h2>
-                <p>Fraktal  w znaczeniu potocznym oznacza zwykle obiekt samopodobny albo "nieskończenie subtelny" (ukazujący subtelne detale nawet w wielokrotnym powiększeniu).</p>
-                <p>Nie istnieje jedna precyzyjna definicja fraktali. W zamian wymienia się cechy obiektów fraktalnych, najważniejsze z nich to:</p>
-                <ul>
-                    <li><b>Nietrywialna struktura</b> w każdej skali,</li>
-                    <li><b>Samo-podobieństwo</b>, jeśli nie w sensie dokładnym, to przybliżonym,</li>
-                    <li>Naturalny „<b>poszarpany</b>”, „<b>kłębiasty</b>”  wygląd,</li>
-                    <li>jego <b>wymiar Hausdorffa jest większy niż jego wymiar topologiczny</b>,</li>
-                    <li>struktura ta nie daje się łatwo opisać w języku tradycyjnej geometrii euklidesowej</span>.</li>
-                </ul>
-            </div>
-            <div class="prawo-fraktal">
-                <img src="obrazy/fraktal-mandelbrot.png" alt="zbiór Mandelbrota " style="border-radius: 10px;"> <!-- dodane style="border-radius: 10px;" do zaokrąglenia zdjęcia -->
-                <h4>(zbiór Mandelbrota)</h4>
-            </div><div style="clear:both"></div>
-            <br><hr>
-            <!--pierwszy naglowek koniec-->
-            
-            <!--poczatek omowienie-->
-            <h2>Omówienie wybranych cech fraktali</h2>
-            <h3>Samo-podobieństwo</h3>
-            <p>Najprostsze fraktale są konstruowane przez iterację. Na przykład, zacznij od wypełnionego trójkąta i powtarzaj ten proces: Dla każdego wypełnionego trójkąta połącz punkty środkowe boków i usuń środkowy trójkąt. Powtarzanie tego procesu w nieskończoność daje w rezultacie Trójkąt Sierpińskiego.</p>
-            
-            <!--poczatek skrypt rysowanie iteracji-->
-            <div class="draw_sierpinski">
-                <div id="draw_sierpinski">
-                    <canvas id="trojkat" width="300" height="300"></canvas>
-                    <br>
-                    <button id="iteracja" onclick="nextIteration()"> Kolejna iteracja </button>
-                    <button id="reset" onclick="reset()"> Resetuj </button>
+            <div class="pierwszy naglowek">
+                <div class="lewo-fraktal">
+                    <h2>Czym są fraktale?</h2>
+                    <p>Fraktal  w znaczeniu potocznym oznacza zwykle obiekt samopodobny albo "nieskończenie subtelny" (ukazujący subtelne detale nawet w wielokrotnym powiększeniu).</p>
+                    <p>Nie istnieje jedna precyzyjna definicja fraktali. W zamian wymienia się cechy obiektów fraktalnych, najważniejsze z nich to:</p>
+                    <ul>
+                        <li><b>Nietrywialna struktura</b> w każdej skali,</li>
+                        <li><b>Samo-podobieństwo</b>, jeśli nie w sensie dokładnym, to przybliżonym,</li>
+                        <li>Naturalny „<b>poszarpany</b>”, „<b>kłębiasty</b>”  wygląd,</li>
+                        <li>jego <b>wymiar Hausdorffa jest większy niż jego wymiar topologiczny</b>,</li>
+                        <li>struktura ta nie daje się łatwo opisać w języku tradycyjnej geometrii euklidesowej</span>.</li>
+                    </ul>
                 </div>
+                <div class="prawo-fraktal">
+                    <img src="obrazy/fraktal-mandelbrot.png" alt="zbiór Mandelbrota " style="border-radius: 10px;"> <!-- dodane style="border-radius: 10px;" do zaokrąglenia zdjęcia -->
+                    <h4>(zbiór Mandelbrota)</h4>
+                </div><div style="clear:both"></div><br><hr>
             </div>
-            <!--koniec skrypt rysowanie iteracji-->
-            <p>Trójkąt jest samo-podobny. Oznacza to, że składa się z mniejszych kopii samej siebie.</p>
-            <center> 
-                <img src="obrazy/samo-podobienstwo.png" alt="przybliżenie trojkat-sierpinskiego" width="500px" style="border-radius: 10px;">
-            </center>
-            <p>Możemy opisać ten trójkąt jako złożony z trzech kopii, każda ½ wysokości i ½ szerokości oryginału. Zwróć jednak uwagę na konsekwencję samopodobieństwa: każda z tych kopii składa się z trzech jeszcze mniejszych kopii, więc możemy powiedzieć, że trójkąt składa się z dziewięciu kopii, każda ¼ na ¼ oryginału, lub 27 kopii każda ⅛ przez ⅛ lub ...</p>
-
-            <h3>Niecałkowity wymiar fraktalny</h3>
-                <p>Niecalkowity wymiar fraktalny to pojęcie odnoszące się do wymiaru Hausdorffa fraktala, który nie jest liczbą całkowitą. Wymiar Hausdorffa opisuje sposób, w jaki zbiór wypełnia przestrzeń. Dla regularnych obiektów geometrycznych, takich jak linia, kwadrat czy sześcian, wymiar Hausdorffa jest liczbą całkowitą równą 1, 2 i 3 odpowiednio. Jednak dla fraktali wymiar Hausdorffa może być liczbą niecałkowitą. Na przykład dla dywanu Sierpińskiego wymiar Hausdorffa wynosi około 1.8928.
-                    Niecalkowity wymiar fraktalny odzwierciedla fakt, że fraktale są bardziej skomplikowane niż regularne obiekty geometryczne i mają nietrywialną strukturę na różnych skalach.
-                </p>
-            <!--koniec omowienie-->
-            <br><hr>
-            <!--przykłady fraktali poczatek-->
-            
-            <h2>Najpopularniejsze przykłady fraktali</h2>
-
-            <!--Zbiór Cantora-->
-            <div class="Cantor">
-                <h3 id="Zbiór-Cantora">Zbiór Cantora</h3>
-                <p>Zbiór Cantora to podzbiór prostej rzeczywistej opisany w 1883 roku przez niemieckiego matematyka 
-                    <span class="definition" data-tooltip="Georg Cantor był niemieckim matematykiem, który żył w latach 1845-1918. Był pionierem w dziedzinie matematyki zwaną teorią mnogości. Wprowadził wiele nowych pojęć i udowodnił wiele ważnych twierdzeń. Jego praca miała ogromny wpływ na rozwój matematyki."><u>Georga Cantora</u></span>.
-                     Jest to najprostszy przykład fraktala 1. Zbiór ten powstaje poprzez podział odcinka na 3 równe części i wycięcie środkowej 1/3 części.
-                     Następnie wykonuje się to samo dla dwóch pozostałych odcinków i tak dalej
-                </p>
+            <div class="omowienie">
+                <h2>Omówienie wybranych cech fraktali</h2>
+                <h3>Samo-podobieństwo</h3>
+                <p>Najprostsze fraktale są konstruowane przez iterację. Na przykład, zacznij od wypełnionego trójkąta i powtarzaj ten proces: Dla każdego wypełnionego trójkąta połącz punkty środkowe boków i usuń środkowy trójkąt. Powtarzanie tego procesu w nieskończoność daje w rezultacie Trójkąt Sierpińskiego.</p>
                 
-                <canvas id="Cantor-Canvas3" width="1000" height="200"></canvas>
-            </div>
-            <!--trojkat sierpinskiego poczatek-->
-            <div class="triangle">
-                <h3 id="trojkat-sierpinskiego">Trójkąt Sierpińskiego</h3>
-                <p>Trójkąt Sierpińskiego jest jednym z najprostszych fraktali.Konstrukcja tego zbioru została podana przez polskiego matematyka 
-                    <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski."><u>Wacława Sierpińskiego</u></span>
-                     w 1915 roku.</p>
-                <p>Tworzy się go  w następujący sposób:</p>
-                <ol>
-                    <li>Narysuj trójkąt równoboczny.</li>
-                    <li>Podziel każdy bok trójkąta na trzy równe części.</li>
-                    <li>Usuń środkowy odcinek każdego boku trójkąta.</li>
-                    <li>Narysuj trójkąty, łącząc końce pozostałych odcinków.</li>
-                    <li>Proces ten należy powtarzać dla każdego z powstałych mniejszych trójkątów, aż do uzyskania pożądanej ilości iteracji.</li>
-                </ol>
-            </div>
+                <!--poczatek skrypt rysowanie iteracji-->
+                <div class="draw_sierpinski">
+                    <div id="draw_sierpinski">
+                        <canvas id="trojkat" width="300" height="300"></canvas>
+                        <br>
+                        <button id="iteracja" onclick="nextIteration()"> Kolejna iteracja </button>
+                        <button id="reset" onclick="reset()"> Resetuj </button>
+                    </div>
+                </div>
+                <!--koniec skrypt rysowanie iteracji-->
+                <p>Trójkąt jest samo-podobny. Oznacza to, że składa się z mniejszych kopii samej siebie.</p>
+                <center> 
+                    <img src="obrazy/samo-podobienstwo.png" alt="przybliżenie trojkat-sierpinskiego" width="500px" style="border-radius: 10px;">
+                </center>
+                <p>Możemy opisać ten trójkąt jako złożony z trzech kopii, każda ½ wysokości i ½ szerokości oryginału. Zwróć jednak uwagę na konsekwencję samopodobieństwa: każda z tych kopii składa się z trzech jeszcze mniejszych kopii, więc możemy powiedzieć, że trójkąt składa się z dziewięciu kopii, każda ¼ na ¼ oryginału, lub 27 kopii każda ⅛ przez ⅛ lub ...</p>
 
-            <!--trojkat sierpinskiego zdjecia poczatek-->
-            <div class="triangle-picture">
-                <img src="obrazy/Sierpinski_triangle.svg" alt="Trójkąt Sierpińskiego" width="350">
-                <h4>Trójkąt Sierpińskiego</h4>
-            </div><div style="clear:both"></div>
-            <!--trojkat sierpinskiego zdjecia koniec-->
-            <!--trojkat sierpinskiego koniec-->
-
-            <!--krzywa kochas/sniezynka poczatek-->
-            <div class="Krzywa">
-                <h3 id="krzywa-kocha"><br></h3>
-                <h3>Krzywa Kocha</h3>
-                <p>
-                    Krzywa Kocha to krzywa fraktalna, którą można zdefiniować jako 
-                    <span class="definition" data-tooltip="atraktor IFS too zbiór funkcji za pomocą, których konstruuje się fraktale. IFS zostały opisane przez John'a Hutchinson'a w 1981 natomiast spopularyzował je Micheal Barnsley."><u>atraktor IFS</u></span>
-                        lub jako granicę ciągu krzywych.
-                     Jest nieskończenie długa, ale mieści się na skończonej powierzchni, więc
-                    można narysować jej przybliżenie. Została po raz pierwszy opisana w 1904 roku przez Helgego
-                    von Kocha.
-                </p>
-                <p>Jak stworzyć Krzywą Kocha?</p>
-                <p>Krzywa Kocha powstaje z odcinka, poprzez podzielenie go na 3 części i zastąpienie środkowej ząbkiem (o ramieniu długości równej 1/3 odcinka) takim, że wraz z usuwaną częścią tworzy trójkąt równoboczny. Krok ten jest powtarzany w nieskończoność, dla każdego fragmentu odcinka.</p>
-                <b>Krok 0</b>
-                <ul>
-                    <li>Krzywa Kocha w kroku zerowym (k = 0) jest odcinkiem. Zostanie on podzielony na 3 równe części, a środkową zastąpią dwa odcinki długości ⅓l nachylone względem niej pod kątem 60°.</li>
-                </ul>
-                <b>Krok 1</b>
-                <ul>
-                    <li>Krzywa Kocha w kroku pierwszym (k = 1)po transformacji zawiera 4 odcinki, każdy równy ⅓l. W kolejnym kroku każdy z tych odcinków ponownie zostanie podzielony na 3 części, a środkową znów zastąpimy dwoma odcinkami.</li>
-                </ul>
-                <b>Krok 2</b>
-                <ul>
-                    <li>Krzywa Kocha w kroku drugim (k = 2) zawiera już 16 odcinków, każdy długości ⅑l. W kolejnym kroku (k = 3) powstanie 64 odcinków, każdy długości ⅟₂₇ itd.</li>
-                </ul>
+                <h3>Niecałkowity wymiar fraktalny</h3>
+                    <p>Niecalkowity wymiar fraktalny to pojęcie odnoszące się do wymiaru Hausdorffa fraktala, który nie jest liczbą całkowitą. Wymiar Hausdorffa opisuje sposób, w jaki zbiór wypełnia przestrzeń. Dla regularnych obiektów geometrycznych, takich jak linia, kwadrat czy sześcian, wymiar Hausdorffa jest liczbą całkowitą równą 1, 2 i 3 odpowiednio. Jednak dla fraktali wymiar Hausdorffa może być liczbą niecałkowitą. Na przykład dla dywanu Sierpińskiego wymiar Hausdorffa wynosi około 1.8928.
+                        Niecalkowity wymiar fraktalny odzwierciedla fakt, że fraktale są bardziej skomplikowane niż regularne obiekty geometryczne i mają nietrywialną strukturę na różnych skalach.
+                    </p>
+            </div><br><hr>
+            <div>
+            <div class="przyklady fraktali">
+                <h2>Najpopularniejsze przykłady fraktali</h2>
+                <div class="fraktal 1 - Zbiór__Cantora">
+                    <div class="Cantor">
+                        <h3 id="Zbiór-Cantora">Zbiór Cantora</h3>
+                        <p>Zbiór Cantora to podzbiór prostej rzeczywistej opisany w 1883 roku przez niemieckiego matematyka 
+                            <span class="definition" data-tooltip="Georg Cantor był niemieckim matematykiem, który żył w latach 1845-1918. Był pionierem w dziedzinie matematyki zwaną teorią mnogości. Wprowadził wiele nowych pojęć i udowodnił wiele ważnych twierdzeń. Jego praca miała ogromny wpływ na rozwój matematyki."><u>Georga Cantora</u></span>.
+                            Jest to najprostszy przykład fraktala. Zbiór ten powstaje poprzez podział odcinka na 3 równe części i wycięcie środkowej 1/3 części.
+                            Następnie wykonuje się to samo dla dwóch pozostałych odcinków i tak dalej
+                        </p>
+                        <div class="png">
+                            <canvas id="Cantor-Canvas3"  width="1000" height="200"></canvas>
+                        </div>
+                        
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 2 - trójkąt Sierpińskiego">
+                    <div class="triangle">
+                        <h3 id="trojkat-sierpinskiego">Trójkąt Sierpińskiego</h3>
+                        <p>Trójkąt Sierpińskiego jest jednym z najprostszych fraktali. Konstrukcja tego zbioru została podana przez polskiego matematyka 
+                            <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski."><u>Wacława Sierpińskiego</u></span>
+                            w 1915 roku.</p>
+                        <p>Tworzy się go  w następujący sposób:</p>
+                        <ol>
+                            <li>Narysuj trójkąt równoboczny.</li>
+                            <li>Podziel każdy bok trójkąta na trzy równe części.</li>
+                            <li>Usuń środkowy odcinek każdego boku trójkąta.</li>
+                            <li>Narysuj trójkąty, łącząc końce pozostałych odcinków.</li>
+                            <li>Proces ten należy powtarzać dla każdego z powstałych mniejszych trójkątów, aż do uzyskania pożądanej ilości iteracji.</li>
+                        </ol>
+                    </div>
+                    <div class="triangle-picture">
+                        <div class="png">
+                            <img src="obrazy/Sierpinski_triangle.svg" alt="Trójkąt Sierpińskiego" width="350">
+                        </div>
+                        <h4>Trójkąt Sierpińskiego</h4>
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 3 - Krzywa__Kocha">
+                    <div class="Krzywa">
+                        <h3 id="krzywa-kocha"><br></h3>
+                        <h3>Krzywa Kocha</h3>
+                        <p>
+                            Krzywa Kocha to krzywa fraktalna, którą można zdefiniować jako 
+                            <span class="definition" data-tooltip="atraktor IFS - zbiór funkcji za pomocą, których konstruje się fraktale. IFS zostały opisane przez John'a Hutchinson'a w 1981 natomiast spopularyzował je Micheal Barnsley."><u>atraktor IFS</u></span>
+                                lub jako granicę ciągu krzywych.
+                            Jest nieskończenie długa, ale mieści się na skończonej powierzchni, więc
+                            można narysować jej przybliżenie. Została po raz pierwszy opisana w 1904 roku przez Helgego
+                            von Kocha.
+                        </p>
+                        <p>Jak stworzyć Krzywą Kocha?</p>
+                        <b>Krok 0</b>
+                        <ul>
+                            <li>Krzywa Kocha w kroku zerowym (k = 0) jest odcinkiem. Zostanie on podzielony na 3 równe części, a środkową zastąpią dwa odcinki długości ⅓l nachylone względem niej pod kątem 60°.</li>
+                        </ul>
+                        <b>Krok 1</b>
+                        <ul>
+                            <li>Krzywa Kocha w kroku pierwszym (k = 1)po transformacji zawiera 4 odcinki, każdy równy ⅓l. W kolejnym kroku każdy z tych odcinków ponownie zostanie podzielony na 3 części, a środkową znów zastąpimy dwoma odcinkami.</li>
+                        </ul>
+                        <b>Krok 2</b>
+                        <ul>
+                            <li>Krzywa Kocha w kroku drugim (k = 2) zawiera już 16 odcinków, każdy długości ⅑l. W kolejnym kroku (k = 3) powstanie 64 odcinków, każdy długości ⅟₂₇ itd.</li>
+                        </ul>
+                            
+                    </div>
+                    <div class="Krzywa-picture">
+                        <br>
+                        <img src="obrazy/Koch-Curve.png" alt="Krzywa Kocha" style="border-radius: 10px;">
+                        <h4>Krzywa Kocha</h4>
+                        <br><br>
+                        <br><br><br>
+                        <div class="Etapy">
+                            <img src="obrazy/Koch_krok0.gif" alt="Etap 0 tworzenia krzywej Kocha" style="border-radius: 10px;">
+                            <h4>Krok 0</h4>
+                            <img src="obrazy/Koch_krok1.gif" alt="Etap 1 tworzenia krzywej Kocha" style="border-radius: 10px;">
+                            <h4>Krok 1</h4>
+                            <img src="obrazy/Koch_krok2.gif" alt="Etap 2 tworzenia krzywej Kocha" style="border-radius: 10px;">
+                            <h4>Krok 2</h4>
+                        </div>
+                    </div><div style="clear:both"></div>
+                    <div class="snowflake">
+                        <h3>Płatek Kocha</h3>
+                        <p>
+                            Płatek Kocha jest jednym z najwcześniejszych fraktali, które zostały opisane. Opiera się na krzywej Kocha, powstaje poprzez połączenie ze sobą 3 Krzywych Kocha.
+                        </p>
+                        <center>
+                            <div class="png">
+                                <img src="obrazy/Koch-snowflake.gif" alt="płatek Kocha" style="border-radius: 10px;">
+                            
+                                <img src="obrazy/koch snowflake making.svg" alt="płatek Kocha" style="border-radius: 10px;">
+                            </div>
+                        </center>   
+                        <h4><br>płatek Kocha</h4>
+                    </div>
+                </div><div class="fraktal 4 - Zbiór Mandelbroda">
+                    <div class="Mandelbrot">
+                        <h3 id="zbior-mandelbroda"><br></h3>
+                        <h3>Zbiór Mandelbrota</h3>
+                        <p>
+                        Zbiór Mandelbrota to podzbiór 
+                        <span class="definition" data-tooltip="Płaszczyzna zespolona to płaszczyzna, na której każdy punkt odpowiada liczbie zespolonej."><u>płaszczyzny zespolonej</u></span>, którego 
+                        <span class="definition" data-tooltip="brzeg - zbiór punktów „granicznych” danego zbioru."><u>brzeg</u></span>
+                        jest jednym z najbardziej znanych fraktali, „najsłynniejszym obiektem współczesnej matematyki”.Nazwa tego obiektu
+                        pochodzi od jego odkrywcy, matematyka 
+                        <span class="definition" data-tooltip="Benoit Mandelbrot był francusko-amerykańskim matematykiem, który jest znany przede wszystkim jako twórca fraktalnej geometrii. Jego najbardziej znane dzieło to książka: 'Fraktale: kształty, haos i nieustanny świat wzorów', w której przedstawił swoją teorię fraktali oraz zastosowanie fraktalnej geometrii w różnych dziedzinach nauki."><u>Benoit Mandelbrota</u></span>.
+                        </p>
+                        <p>Przydatne pojęcia:</p>
+                        <ul>
+                        <li>Liczba zespolona to pojęcie z matematyki, które obejmuje liczby złożone z części rzeczywistej i urojonej, np. a + bi, gdzie a i b są liczbami rzeczywistymi, a i b to części rzeczywista i urojona, a i b mają różne znaki i i to tzw. jednostka urojona, którą definiujemy jako pierwiastek kwadratowy z -1.</li>
+                        <li></li>
+                        </ul>
+                        <p>Jak stworzyć Zbiór Mandelbrota?</p>
+                        <p>Aby stworzyć zbiór Mandelbrota należy wyznaczyć wartości ciągu rekurencyjnego dla każdego punktu płaszczyzny zespolonej i sprawdzić, czy ten ciąg jest ograniczony. Jeśli ciąg jest ograniczony, to punkt należy do zbioru Mandelbrota</p>
+                        
+                        <ul>
+                        <li>Wybierz zakres wartości dla osi rzeczywistej (x) i urojonej (y) na płaszczyźnie zespolonej. Na przykład x od -2 do 1 i y od -1.5 do 1.5.</li>
+                        <li>Wybierz rozdzielczość obrazu, czyli liczbę pikseli na jednostkę długości dla osi x i y.</li>
+                        <li>Dla każdego piksela (x,y) na płaszczyźnie zespolonej wykonaj następujące kroki: a. Zainicjalizuj z = 0 oraz c = x + yi. b. Wykonaj iterację z = z^2 + c. c. Sprawdź, czy wartość bezwzględna z przekracza 2. Jeśli tak, to oznacza, że punkt (x,y) nie należy do zbioru Mandelbrota i przejdź do następnego piksela. d. Powtarzaj kroki b i c przez określoną liczbę iteracji lub aż zostanie spełniony warunek z kroku c.</li>
+                        <li>Jeśli dla danego piksela (x,y) po określonej liczbie iteracji wartość bezwzględna z nie przekroczyła 2, oznacza to, że punkt (x,y) należy do zbioru Mandelbrota.</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="Mandelbrot-picture">
                     
-            </div>
-            <div class="Krzywa-picture">
-                <img src="obrazy/Koch-Curve.png" alt="Krzywa Kocha" style="border-radius: 10px;">
-                <h4>Krzywa Kocha</h4>
-                <br><br>
-                <img src="obrazy/koch_zoom.gif" alt="przybliżenie Krzywej Kocha" style="border-radius: 10px;">
-                <h4>przybliżenie Krzywej Kocha</h4>
-                <br><br><br>
-                <div class="Etapy">
-                    <img src="obrazy/Koch_krok0.gif" alt="Etap 0 tworzenia krzywej Kocha" style="border-radius: 10px;">
-                    <h4>Etap 0</h4>
-                    <img src="obrazy/Koch_krok1.gif" alt="Etap 1 tworzenia krzywej Kocha" style="border-radius: 10px;">
-                    <h4>Etap 1</h4>
-                    <img src="obrazy/Koch_krok2.gif" alt="Etap 2 tworzenia krzywej Kocha" style="border-radius: 10px;">
-                    <h4>Etap 2</h4>
+                        <img src="obrazy/Mandelset.png" alt="Zbiór Mandelbrota na płaszczyźnie zespolonej" style="border-radius: 10px;">
+                        <h4>Zbiór Mandelbrota na płaszczyźnie zespolonej</h4>
+                        <img src="obrazy/fraktal-mandelbrot.png" alt="Zbiór Mandelbrota" style="border-radius: 10px;">
+                        <h4>Zbiór Mandelbrota</h4>
+                        <img src="obrazy/tapeta.gif" alt="Zbiór Mandelbrota w przybliżeniu" style="border-radius: 10px;">
+                        <h4>Zbiór Mandelbrota w przybliżeniu</h4>
+                
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 5 - Drzewo Pitagorejskie">
+                    <div class="drzewo">
+                        <h3 id="drzewo-pitagorejskie"><br></h3>
+                        <h3>Drzewo Pitagorejskie</h3>
+                        <p>
+                            Drzewo pitagorejskie (także drzewo Pitagorasa) – fraktal zbudowany z kwadratów na
+                            płaszczyźnie, swym kształtem przypominający drzewo. 
+                            Nazwany został od imienia greckiego matematyka i myśliciela Pitagorasa,
+                            gdyż na każdym etapie konstrukcji wymaga rysowania dwóch kwadratów opartych na
+                            odpowiednich bokach trójkąta prostokątnego, których własności stanowią ilustrację
+                                twierdzenia Pitagorasa
+                        </p>
+                        <p>Jak stworzyć Drzewo Pitagorejskie?</p>
+                        <ol>
+                            <li>Zdefiniuj korzeń drzewa jako trójkąt o bokach równej długości, na przykład 3-4-5.</li>
+                            <li>Dla każdego trójkąta w drzewie, wyznacz dwa mniejsze trójkąty pitagorejskie, które można utworzyć poprzez dodanie jednego boku do drugiego.</li>
+                            <li>Dodaj nowe trójkąty do drzewa, aż do osiągnięcia pożądanej liczby poziomów lub dopóki nie zostanie osiągnięta pewna granica.</li>
+                        </ol>
+                    </div>
+                    <div class="drzewo-picture">
+                        <img src="obrazy/Pythagoras_tree_.gif" alt="Drzewo_Pitagorejskie" style="border-radius: 10px;">
+                        <h4>Drzewo Pitagorejskie</h4>
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 6 - Dywan Sierpińskiego">
+                    <div class="dywan">
+                        <h3 id="dywan-sierpinskiego"><br></h3>
+                        <h3>Dywan Sierpińskiego</h3>
+                        <p>
+                            Dywan Sierpińskiego – fraktal otrzymany z kwadratu za pomocą podzielenia go na dziewięć (3x3) mniejszych kwadratów,
+                            usunięcia środkowego kwadratu i ponownego rekurencyjnego zastosowania tej samej procedury do każdego z pozostałych ośmiu kwadratów.
+                            Nazwa pochodzi od nazwiska 
+                            <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski."><u>Wacława Sierpińskiego</u></span>.  
+                        </p>
+                    </div>
+                    <div class="dywan-picture">
+                        <img src="obrazy/sierpinski_carpet.gif" alt="Dywan Sierpińskiego">
+                        <h4>Dywan Sierpińskiego</h4>
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 7 - Smok Heighwaya">
+                    <div class="Smok-Heighwaya">
+                        <h3 id="Smok_Heighwaya_kt"><br></h3>
+                        <h3>Smok Heighwaya</h3>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="Smok-Heighwaya-picture">
+                        <img src="obrazy/Dragon_Curve_making.gif" alt="Smok Heighwaya konstrukcja">
+                        <h4>Smok Heighwaya</h4>
+                    </div><div style="clear:both"></div>
                 </div>
-            </div><div style="clear:both"></div>
-            <div class="snowflake">
-                <h3>Płatek Kocha</h3>
-                <p>
-                    Płatek Kocha jest jednym z najwcześniejszych fraktali, które zostały opisane. Opiera się na krzywej Kocha, powstaje poprzez połączenie ze sobą 3 Krzywych Kocha.
-                </p>
-                <center>
-                    <img src="obrazy/Koch-snowflake.gif" alt="płatek Kocha" style="border-radius: 10px;">
-                    <img src="obrazy/koch snowflake making.svg" alt="płatek Kocha" style="border-radius: 10px;">
-                </center>   
-                <h4><br>płatek Kocha</h4>
-            </div>
-           
+                </div><div class="fraktal 9 - Kostka Mengera">
+                    <div class="Kostka-Mengera">
+                        <h3 id="Kostka_Mengera_kt"><br></h3>
+                        <h3>Kostka Mengera</h3>
+                        <p>
 
-            <!--zbior mandelbrota poczatek-->
-            <div class="Mandelbrot">
-                <h3 id="zbior-mandelbroda"><br></h3>
-                <h3>Zbiór Mandelbrota</h3>
-                <p>
-                   Zbiór Mandelbrota to podzbiór 
-                   <span class="definition" data-tooltip="Płaszczyzna zespolona to płaszczyzna, na której każdy punkt odpowiada liczbie zespolonej."><u>płaszczyzny zespolonej</u></span>, którego 
-                   <span class="definition" data-tooltip="brzeg - zbiór punktów „granicznych” danego zbioru."><u>brzeg</u></span>
-                   jest jednym z najbardziej znanych fraktali, „najsłynniejszym obiektem współczesnej matematyki”.Nazwa tego obiektu
-                   pochodzi od jego odkrywcy, matematyka 
-                   <span class="definition" data-tooltip="Benoit Mandelbrot był francusko-amerykańskim matematykiem, który jest znany przede wszystkim jako twórca fraktalnej geometrii. Jego najbardziej znane dzieło to książka: 'Fraktale: kształty, haos i nieustanny świat wzorów', w której przedstawił swoją teorię fraktali oraz zastosowanie fraktalnej geometrii w różnych dziedzinach nauki."><u>Benoit Mandelbrota</u></span>.
-                </p>
-                <p>Przydatne pojęcia:</p>
-                <ul>
-                   <li>Liczba zespolona to pojęcie z matematyki, które obejmuje liczby złożone z części rzeczywistej i urojonej, np. a + bi, gdzie a i b są liczbami rzeczywistymi, a i b to części rzeczywista i urojona, a i b mają różne znaki i i to tzw. jednostka urojona, którą definiujemy jako pierwiastek kwadratowy z -1.</li>
-                   <li></li>
-                </ul>
-                <p>Jak stworzyć Zbiór Mandelbrota?</p>
-                <p>Aby stworzyć zbiór Mandelbrota należy wyznaczyć wartości ciągu rekurencyjnego dla każdego punktu płaszczyzny zespolonej i sprawdzić, czy ten ciąg jest ograniczony. Jeśli ciąg jest ograniczony, to punkt należy do zbioru Mandelbrota</p>
+                        </p>
+                    </div>
+                    <div class="Kostka-Mengera-picture">
+                        <img src="obrazy/kostka_mengera_iteracje.gif" alt="Kostka Mengera">
+                        <h4>Kostka Mengera</h4>
+                        
+                    </div><div style="clear:both"></div>
+                </div>
+            </div><br><br><hr>
+            <div class="fraktale-wokół-nas">
+                <h2>Fraktale wokół nas</h2><br>
                 
-                <ul>
-                   <li>Wybierz zakres wartości dla osi rzeczywistej (x) i urojonej (y) na płaszczyźnie zespolonej. Na przykład x od -2 do 1 i y od -1.5 do 1.5.</li>
-                   <li>Wybierz rozdzielczość obrazu, czyli liczbę pikseli na jednostkę długości dla osi x i y.</li>
-                   <li>Dla każdego piksela (x,y) na płaszczyźnie zespolonej wykonaj następujące kroki: a. Zainicjalizuj z = 0 oraz c = x + yi. b. Wykonaj iterację z = z^2 + c. c. Sprawdź, czy wartość bezwzględna z przekracza 2. Jeśli tak, to oznacza, że punkt (x,y) nie należy do zbioru Mandelbrota i przejdź do następnego piksela. d. Powtarzaj kroki b i c przez określoną liczbę iteracji lub aż zostanie spełniony warunek z kroku c.</li>
-                   <li>Jeśli dla danego piksela (x,y) po określonej liczbie iteracji wartość bezwzględna z nie przekroczyła 2, oznacza to, że punkt (x,y) należy do zbioru Mandelbrota.</li>
-                </ul>
-                
-            </div>
-            
-            <!---------------------------------------ZBIÓR MANDELBROTA-ZDJĘCIA-------------------------------->
-            <div class="Mandelbrot-picture">
-            
-                <img src="obrazy/Mandelset.png" alt="Zbiór Mandelbrota na płaszczyźnie zespolonej" style="border-radius: 10px;">
-                <h4>Zbiór Mandelbrota na płaszczyźnie zespolonej</h4>
-                <img src="obrazy/fraktal-mandelbrot.png" alt="Zbiór Mandelbrota" style="border-radius: 10px;">
-                <h4>Zbiór Mandelbrota</h4>
-                <img src="obrazy/tapeta.gif" alt="Zbiór Mandelbrota w przybliżeniu" style="border-radius: 10px;">
-                <h4>Zbiór Mandelbrota w przybliżeniu</h4>
-           
-            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
-            <!------------------------------DRZEWO PITAGOREJSKIE-POCZĄTEK----------------------------->
-            <div class="drzewo">
-                <h3 id="drzewo-pitagorejskie"><br></h3>
-                <h3>Drzewo Pitagorejskie</h3>
-                <p>
-                    Drzewo pitagorejskie (także drzewo Pitagorasa) – fraktal zbudowany z kwadratów na
-                     płaszczyźnie, swym kształtem przypominający drzewo. 
-                     Nazwany został od imienia greckiego matematyka i myśliciela Pitagorasa,
-                      gdyż na każdym etapie konstrukcji wymaga rysowania dwóch kwadratów opartych na
-                       odpowiednich bokach trójkąta prostokątnego, których własności stanowią ilustrację
-                        twierdzenia Pitagorasa
-                </p>
-                <p>Jak stworzyć Drzewo Pitagorejskie?</p>
-                <ol>
-                    <li>Zdefiniuj korzeń drzewa jako trójkąt o bokach równej długości, na przykład 3-4-5.</li>
-                    <li>Dla każdego trójkąta w drzewie, wyznacz dwa mniejsze trójkąty pitagorejskie, które można utworzyć poprzez dodanie jednego boku do drugiego.</li>
-                    <li>Dodaj nowe trójkąty do drzewa, aż do osiągnięcia pożądanej liczby poziomów lub dopóki nie zostanie osiągnięta pewna granica.</li>
-                </ol>
-            </div>
-            <div class="drzewo-picture">
-                <img src="obrazy/Pythagoras_tree_.gif" alt="Drzewo_Pitagorejskie" style="border-radius: 10px;">
-                <h4>Drzewo Pitagorejskie</h4>
-            </div><div style="clear:both"></div><!--WYCZYSZCZENIE STYLI-->
-            <!-------------------------------------DYWAN SIERPIŃSKIEGO------------------------------------->
-            <div class="dywan">
-                <h3 id="dywan-sierpinskiego"><br></h3>
-                <h3>Dywan Sierpińskiego</h3>
-                <p>
-                    Dywan Sierpińskiego – fraktal otrzymany z kwadratu za pomocą podzielenia go na dziewięć (3x3) mniejszych kwadratów,
-                    usunięcia środkowego kwadratu i ponownego rekurencyjnego zastosowania tej samej procedury do każdego z pozostałych ośmiu kwadratów.
-                    Nazwa pochodzi od nazwiska 
-                    <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski."><u>Wacława Sierpińskiego</u></span>.  
-                </p>
-            </div>
-            <div class="dywan-picture">
-                <img src="obrazy/sierpinski_carpet.gif" alt="Dywan Sierpińskiego">
-                <h4>Dywan Sierpińskiego</h4>
-            </div><div style="clear:both"></div><!--wyczyszczenie styli-->
-             <!----------------------------------------------------------------------------PRZYKŁADY FRAKTALI-KONIEC--------------------------------------------------------->   
-             <br><br><hr>
-            <h2>Inne rodzaje fraktali</h2>
-            <p>..........................</p>
-            <div class="inne1">
-                <h3>Gąbka Mengera</h3>
-                <p>
+                <h3>Fraktale w grafice komputerowej</h3>
+                <div class="computer">
+                    <img src="obrazy/grafika1.jpg" alt="Electricsheep-21194">
+                    <p>Electricsheep-21194</p>
+                </div>
+                <div class="computer">
+                    <img src="obrazy/Grafika 2.jpg" alt="Electricsheep-21158">
+                    <p>Electricsheep-21158</p>
+                </div>
+                <div class="computer">
+                    <img src="obrazy/Grafika3.jpg" alt="Apophysis fractal flame">
+                    <p>Apophysis fractal flame</p>
+                </div>
+                <div class="computer">
+                    <img src="obrazy/Grafika4.jpg" alt="Electricsheep-21158">
+                    <p>Electricsheep-21158</p>
+                </div>
+                <div class="computer">
+                    <img src="obrazy/Grafika5.jpg" alt="Fraktal zrobiony programem Sterling2">
+                    <p>Fraktal zrobiony programem Sterling2</p>
+                </div>
 
-                </p>
-                <p></p>
-            </div>
-            <div class="inne1-picture">
-                <img src="" alt="">
-            </div>
-            <div class="inne2">
-                <h3></h3>
-                <p>
+                <h3>Fraktale w naturze</h3>
+                <div class="real">
+                    <img src="obrazy/real_kalafior.jpg" alt="Zdjęcie kalafiora Brassica oleracea">
+                    <p style="padding-left: 20px;">Zdjęcie kalafiora Brassica oleracea</p>
+                </div>
+                <div class="real">
+                    <img src="obrazy/real_galaktyka.jpg" alt="Zdjęcie wykonane teleskopem Hubble’a">
+                    <p>Zdjęcie wykonane teleskopem Hubble’a</p>
+                </div>
+                <div class="real">
+                    <img src="obrazy/real_chmura.jpg" alt="Chmura">
+                    <p style="padding-left: 160px;">Chmura</p>
+                </div>
+                <div class="real">
+                    <img src="obrazy/real_fjordy.jpg" alt="Fjordy">
+                    <p>Fiordy Sognefjorden i Hardangerfjorden</p>
+                </div>
+                <div class="real">
+                    <img src="obrazy/real_skaly.jpg" alt="Formacje skalne">
+                    <p>Formacje skalne</p>
+                </div>
+                <div class="real">
+                    <img src="obrazy/real_aloes.jpg" alt="Aloes wielkolistny" >
+                    <p>Aloes wielkolistny</p>
+                </div>
+                <div class="real">
+                    <img src="obrazy/Real_Frost_patterns.jpg" alt="kryształy lodu tworzące fraktalne wzory na szkle">
+                    <p>Mroźne kryształy występujące naturalnie na zimnym szkle tworzą fraktalne wzory</p>
+                    
+                </div>
+            </div><br><hr>
+            <div class="metody tworzenia fraktali">
+                <h2>Metody tworzenia fraktali</h2>
+                    <p>
+                        Najprostszą metodą tworzenia fraktali jest wykorzystanie zbioru przekształceń afinicznych będących przekształceniami zwężającymi (kontrakcjami). Inną metodą jest wykorzystanie systemu funkcji iterowanych (IFS), który składa się z zbioru n funkcji przekształcających zbiór S. Istnieją także inne metody konstrukcji fraktali, takie jak np. tworzenie fraktali za pomocą algorytmów genetycznych.
+                    </p>
+            </div><br><hr>
+            <div class="zastosowanie div">
+                <h3 id="zastosowanie"></h3><br>
+                <h2>Zastosowania geometrii fraktalnej</h2>
+                    <p>Zastosowania w analizie tekstur, dekompozycja
+                        obrazu na podstawie lokalnego wymiaru
+                        fraktalnego, Kompresja fraktalna obrazu
+                        (znajdowanie IFS dla zadanego prototypu)
+                        Grafika komputerowa - geometrię fraktalną
+                        wykorzystano do generowania krajobrazów i roślin w
+                        filmach i grach
+                        Obecnie prawie każdy telefon komórkowy korzysta z
+                        wbudowanej anteny fraktalnej. </p>
+                <h3>Kompresja danych</h3>
 
-                </p>
-                <p></p>
-            </div>
-            <div class="inne2-picture">
-                <img src="" alt="">
-            </div>
-            <div class="inne3">
-                <h3></h3>
-                <p>
+                <h3>Anteny fraktalne</h3>
 
-                </p>
-                <p></p>
-            </div>
-            <div class="inne3-picture">
-                <img src="" alt="">
-            </div>
-            <div class="inne4">
-                <h3></h3>
-                <p>
-
-                </p>
-                <p></p>
-            </div>
-            <div class="inne5-picture">
-                <img src="" alt="">
-            </div>
-            <br><hr>
-            -->  
-            <!----------------------------------------------FRAKTALE W NATURZE-POCZĄTEK-------------------------------------------------->
-            
-            <h2>Fraktale wokół nas</h2><br>
-            
-            <h3>Fraktale w grafice komputerowej</h3>
-            <div class="computer">
-                <img src="obrazy/grafika1.jpg" alt="Electricsheep-21194">
-                <p>Electricsheep-21194</p>
-            </div>
-            <div class="computer">
-                <img src="obrazy/Grafika 2.jpg" alt="Electricsheep-21158">
-                <p>Electricsheep-21158</p>
-            </div>
-            <div class="computer">
-                <img src="obrazy/Grafika3.jpg" alt="Apophysis fractal flame">
-                <p>Apophysis fractal flame</p>
-            </div>
-            <div class="computer">
-                <img src="obrazy/Grafika4.jpg" alt="Electricsheep-21158">
-                <p>Electricsheep-21158</p>
-            </div>
-            <div class="computer">
-                <img src="obrazy/Grafika5.jpg" alt="Fraktal zrobiony programem Sterling2">
-                <p>Fraktal zrobiony programem Sterling2</p>
-            </div>
-
-            <h3>Fraktale w naturze</h3>
-            <div class="real">
-                <img src="obrazy/real_kalafior.jpg" alt="Zdjęcie kalafiora Brassica oleracea">
-                <p style="padding-left: 20px;">Zdjęcie kalafiora Brassica oleracea</p>
-            </div>
-            <div class="real">
-                <img src="obrazy/real_galaktyka.jpg" alt="Zdjęcie wykonane teleskopem Hubble’a">
-                <p>Zdjęcie wykonane teleskopem Hubble’a</p>
-            </div>
-            <div class="real">
-                <img src="obrazy/real_chmura.jpg" alt="Chmura">
-                <p style="padding-left: 160px;">Chmura</p>
-            </div>
-            <div class="real">
-                <img src="obrazy/real_fjordy.jpg" alt="Fjordy">
-                <p>Fiordy Sognefjorden i Hardangerfjorden</p>
-            </div>
-            <div class="real">
-                <img src="obrazy/real_skaly.jpg" alt="Formacje skalne">
-                <p>Formacje skalne</p>
-            </div>
-            <div class="real">
-                <img src="obrazy/real_aloes.jpg" alt="Aloes wielkolistny" >
-                <p>Aloes wielkolistny</p>
-            </div>
-            <div class="real">
-                <img src="obrazy/Real_Frost_patterns.jpg" alt="kryształy lodu tworzące fraktalne wzory na szkle">
-                <p>Mroźne kryształy występujące naturalnie na zimnym szkle tworzą fraktalne wzory</p>
-                
-            </div>
-            <!-------------------------------------------------------FRAKTALE W NATURZE-KONIEC------------------------------------------>
-              
-            
-            <br><hr>
-            <h2>Metody tworzenia fraktali</h2>
-                <p>
-                    Najprostszą metodą tworzenia fraktali jest wykorzystanie zbioru przekształceń afinicznych będących przekształceniami zwężającymi (kontrakcjami). Inną metodą jest wykorzystanie systemu funkcji iterowanych (IFS), który składa się z zbioru n funkcji przekształcających zbiór S. Istnieją także inne metody konstrukcji fraktali, takie jak np. tworzenie fraktali za pomocą algorytmów genetycznych.
-                </p>
-            <br><hr>
-            <h3 id="zastosowanie"></h3><br>
-            <h2>Zastosowania geometrii fraktalnej</h2>
-                <p>Zastosowania w analizie tekstur, dekompozycja
-                    obrazu na podstawie lokalnego wymiaru
-                    fraktalnego, Kompresja fraktalna obrazu
-                    (znajdowanie IFS dla zadanego prototypu)
-                    Grafika komputerowa - geometrię fraktalną
-                    wykorzystano do generowania krajobrazów i roślin w
-                    filmach i grach
-                    Obecnie prawie każdy telefon komórkowy korzysta z
-                    wbudowanej anteny fraktalnej. </p>
-            <h3>Kompresja danych</h3>
-
-            <h3>Anteny fraktalne</h3>
-
-            <h3>Grafika komputerowa</h3>
-
-            <br><hr>
-            <h2>Rozwój geometrii fraktalnej</h2>
+                <h3>Grafika komputerowa</h3>
+            </div><br><hr>
+            <div class="rozwój geometri fraktalnej">
+                <h2>Rozwój geometrii fraktalnej</h2>
                     <p>Rozwój geometrii fraktalnej i jej przemianę w nową dziedzinę matematyki zawdzięczamy przede wszystkim urodzonemu w Polsce matematykowi Benoît Mandelbrotowi i jego głośnemu esejowi "The Fraktal Geometry of Nature" (Fraktalna geometria natury) z 1977 r.
                         W rozwoju geometrii fraktalnej istotną rolę odegrał także Georg Cantor, który jako pierwszy wprowadził pojęcie zbioru nieskończonego. Współcześnie fraktale znajdują zastosowanie w wielu dziedzinach nauki i techniki, takich jak np. w grafice komputerowej, teorii chaosu czy teorii strun.
                     </p>
-            <br><hr>
-            
+            </div><br><hr>   
         </div>
-        <!-------------------POCZĄTEK FOOTER---------------------->
+
         <div id="footer">
             Mateusz Zimny &copy; 2023
         </div>
-        <!-------------------KONIEC FOOTER------------------------>
-
     </div> 
-    
-    <!----------------SKRYPTY--------------------->
-    <script src="skrypty/jquery.min.js"></script>
-    <script src="skrypty/stickynav.js"></script>
-    <script src="skrypty/rozwijane1.js"></script> <!--     <span class="definition" data-tooltip="">definicja</span> - aby przywolac definicje     -->
-    <script src="skrypty/trojkat.js"></script>
-    <script src="skrypty/draw_sierpinski.js"></script>
-    <script src="skrypty/darkmode.js"></script>
-    <script src="skrypty/cantor.js"></script>
+    <div class="skrypty">
+        <script src="skrypty/jquery.min.js"></script>
+        <script src="skrypty/stickynav.js"></script>
+        <script src="skrypty/rozwijane1.js"></script> <!--     <span class="definition" data-tooltip="">definicja</span> - aby przywolac definicje     -->
+        <script src="skrypty/trojkat.js"></script>
+        <script src="skrypty/draw_sierpinski.js"></script>
+        <script src="skrypty/darkmode.js"></script>
+        <script src="skrypty/cantor.js"></script>
+    </div>
      
 </body>
 </html>
