@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/patern.css"><!--DODANIE OGÓLNEGO CSS STRONY-->
     <link rel="stylesheet" type="text/css" href="css/styl1.css"><!--DODANIE CSS DLA TEJ STRONY-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap" rel="stylesheet"><!--DODANIE CZCIONEK: Lato, Nunito, Rubik Maze-->
     <link rel="shortcut icon" type="image/ico" href="obrazy/ikonkas.ico"> <!--obrazek strony-->
     <title>Geometria fraktalna</title>
 </head>
@@ -18,7 +15,7 @@
             <div class="typewriter">
                 <div id="logo">
                     <canvas id="myCanvas" width="100" height="100"></canvas><!--przywolanie skryptu logo-->
-                    Geometria fraktalna
+                    Fraktale
                     </div style="clear: both;"></div>
                 </div>
             </div>
@@ -33,12 +30,10 @@
                 <li><a href="podstrony/wymiar.html"><span class="text-underline">Wymiar fraktalny</span></a></li>
                 <li><a href="podstrony/informacje.html"><span class="text-underline">O stronie</span></a></li>
             </ol>
-            <!--dark mode button poczatek-->
             <div class="toggle-container">
                 <input type="checkbox" id="dark-mode-toggle">
                 <label for="dark-mode-toggle"></label>
             </div>
-            <!--dark mode button koniec--> 
         </div><div style="clear:both"></div>
         </div>
       
@@ -65,8 +60,7 @@
                 <h2>Omówienie wybranych cech fraktali</h2>
                 <h3>Samo-podobieństwo</h3>
                 <p>Najprostsze fraktale są konstruowane przez iterację. Na przykład, zacznij od wypełnionego trójkąta i powtarzaj ten proces: Dla każdego wypełnionego trójkąta połącz punkty środkowe boków i usuń środkowy trójkąt. Powtarzanie tego procesu w nieskończoność daje w rezultacie Trójkąt Sierpińskiego.</p>
-                
-                <!--poczatek skrypt rysowanie iteracji-->
+
                 <div class="draw_sierpinski">
                     <div id="draw_sierpinski">
                         <canvas id="trojkat" width="300" height="300"></canvas>
@@ -75,7 +69,6 @@
                         <button id="reset" onclick="reset()"> Resetuj </button>
                     </div>
                 </div>
-                <!--koniec skrypt rysowanie iteracji-->
                 <p>Trójkąt jest samo-podobny. Oznacza to, że składa się z mniejszych kopii samej siebie.</p>
                 <div class="center"> 
                     <img src="obrazy/samo-podobienstwo.png" alt="przybliżenie trojkat-sierpinskiego" width="500px" style="border-radius: 10px;">
@@ -88,12 +81,24 @@
                     </p>
             </div><br><hr>
             <div>
+            <div class="Historia">
+                <h2>Rys historyczny</h2>
+                Pojęcie fraktala zostało wprowadzone do matematyki przez
+                    <div class="definitionimg" data-definition="Mandelbrot"><span class="definition-text"><u>Benoît Mandelbrota</u></span><div class="definition-tooltip"><p><b>Benoît_Mandelbrot</b>_(1924-2010)_był_francusko-amerykańskim_matematykiem<br>pochodzenia_polsko-żydowskiego.<br>Zajmował_się_szerokim_zakresem_problemów_matematycznych,_ale_jest<br>najbardziej_znany_jako_twórca_geometrii<br>fraktalnej._Opisał_zbiór_Mandelbrota_i_wymyślił samo słowo “fraktal”.</p></div></div>
+                    w latach 70. XX wieku. Odkryty przez niego zbiór Mandelbrota nie był jednak pierwszym przykładem fraktala. Wcześniej istniała już cała gama zbiorów o niecałkowitym wymiarze Hausdorffa, postrzeganych jednak głównie jako kontrprzykłady pewnych twierdzeń.</p>
+                Wśród wybitnych matematyków, którzy istotnie przyczynili się do rozwoju geometrii fraktalnej, można wymienić 
+                    <div class="definitionimg" data-definition="Weierstrass"><span class="definition-text"><u>Karla Weierstrassa</u></span><div class="definition-tooltip"><b>Karl_Weierstrass</b>_(1815-1897)_był_niemieckim_matematykiem,_profesorem_Uniwersytetu_Berlińskiego_i_członkiem_Akademii_Nauk_Pruskiej_i_Francuskiej._Był_zwolennikiem_arytmetyzacji_analizy_matematycznej_i_twórcą_precyzyjnego_pojęcia_granicy_funkcji_.</div></div>i 
+                    <div class="definitionimg" data-definition="Cantor"><span class="definition-text"><u>Georga Cantora</u></span><div class="definition-tooltip"><p><b>Georg_Cantor</b>_(1845-1918)_był_niemieckim_matematykiem,_pionierem_teorii_mnogości_._Wprowadził_ogólne_pojęcie_mocy_zbioru,_udowodnił_nieprzeliczalność_zbioru_liczb_rzeczywistych_przez_rozumowanie_przekątniowe_i_wykazał_ogólniejsze_twierdzenie_Cantora.</p></div></div>.
+                
+
+
+            </div><br><hr>
             <div class="przyklady fraktali">
                 <h2>Najpopularniejsze przykłady fraktali</h2>
                 <div class="fraktal 1 - Zbiór__Cantora">
                     <div class="Cantor">
                         <h3 id="Zbiór-Cantora">Zbiór Cantora</h3>
-                        <p>Zbiór Cantora to podzbiór prostej rzeczywistej opisany w 1883 roku przez niemieckiego matematyka<br><span class="definition" data-tooltip="Georg Cantor był niemieckim matematykiem, który żył w latach 1845-1918. Był pionierem w dziedzinie matematyki zwaną teorią mnogości. Wprowadził wiele nowych pojęć i udowodnił wiele ważnych twierdzeń. Jego praca miała ogromny wpływ na rozwój matematyki."><u>Georga Cantora</u></span>.
+                        <p>Zbiór Cantora to podzbiór prostej rzeczywistej opisany w 1883 roku przez niemieckiego matematyka<br><div class="definitionimg" data-definition="Cantor"><span class="definition-text">Georga Cantora</span><div class="definition-tooltip"><p><b>Georg_Cantor</b>_(1845-1918)_był_niemieckim_matematykiem,_pionierem_teorii_mnogości_._Wprowadził_ogólne_pojęcie_mocy_zbioru,_udowodnił_nieprzeliczalność_zbioru_liczb_rzeczywistych_przez_rozumowanie_przekątniowe_i_wykazał_ogólniejsze_twierdzenie_Cantora.</p></div></div>.
                             Jest to najprostszy przykład fraktala. Zbiór ten powstaje poprzez podział odcinka na 3 równe części i wycięcie środkowej 1/3 części.
                             Następnie wykonuje się to samo dla dwóch pozostałych odcinków i tak dalej.
                         </p>
@@ -105,9 +110,9 @@
                 </div><div class="fraktal 2 - trójkąt Sierpińskiego">
                     <div class="triangle">
                         <h3 id="trojkat-sierpinskiego">Trójkąt Sierpińskiego</h3>
-                        <p>Trójkąt Sierpińskiego jest jednym z najprostszych fraktali. Konstrukcja tego zbioru została podana przez polskiego matematyka 
-                            <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski."><u>Wacława Sierpińskiego</u></span>
-                            w 1915 roku.</p>
+                        Trójkąt Sierpińskiego jest jednym z najprostszych fraktali. Konstrukcja tego zbioru została podana przez polskiego matematyka 
+                            <div class="definitionimg" data-definition="Sierpinski"><span class="definition-text"><u>Wacława Sierpińskiego</u></span><div class="definition-tooltip"><p><b>Wacław_Sierpiński</b>_(1882-1969)_był_polskim_matematykiem,_jednym_z_czołowych_przedstawicieli_warszawskiej_szkoły_matematycznej_i_twórców_polskiej_szkoły_matematycznej._Był_wieloletnim_profesorem_Uniwersytetu_Warszawskiego_i_przewodniczącym_rady_naukowej_Instytutu_Matematycznego_Polskiej_Akademii_Nauk._Zajmował_się_teorią_liczb,_analizą_matematyczną_i_podstawami_matematyki_–_teorią_mnogości,_topologią_mnogościową_oraz_teorią_kategorii.</p></div></div>
+                            w 1915 roku.
                         <p>Tworzy się go  w następujący sposób:</p>
                         <ol>
                             <li>Narysuj trójkąt równoboczny.</li>
@@ -127,14 +132,14 @@
                     <div class="Krzywa">
                         <h3 id="krzywa-kocha"><br></h3>
                         <h3>Krzywa Kocha</h3>
-                        <p>
-                            Krzywa Kocha to krzywa fraktalna, którą można zdefiniować jako 
+                        
+                        Krzywa Kocha to krzywa fraktalna, którą można zdefiniować jako 
                             <span class="definition" data-tooltip="atraktor IFS - zbiór funkcji za pomocą, których konstruje się fraktale. IFS zostały opisane przez John'a Hutchinson'a w 1981 natomiast spopularyzował je Micheal Barnsley."><u>atraktor IFS</u></span>
                                 lub jako granicę ciągu krzywych.
                             Jest nieskończenie długa, ale mieści się na skończonej powierzchni, więc
-                            można narysować jej przybliżenie. Została po raz pierwszy opisana w 1904 roku przez Helgego
-                            von Kocha.
-                        </p>
+                            można narysować jej przybliżenie. Została po raz pierwszy opisana w 1904 roku przez 
+                            <div class="definitionimg" data-definition="Koch"><span class="definition-text"><u>Helgego von Kocha</u></span><div class="definition-tooltip"><p><b>Helge_von_Koch</b>_(1870-1924)_był_szwedzkim_matematykiem,_znanym_z_odkrycia_krzywej_Kocha._Była_to_jedna_z_pierwszych_i_najbardziej_znanych_krzywych_fraktalnych._Napisał_wiele_prac_na_temat_teorii_liczb_i_zajmował_się_hipotezą_Riemanna.</p></div></div>.
+                        
                         <p>Jak stworzyć Krzywą Kocha?</p>
                         <b>Krok 0</b>
                         <ul>
@@ -178,19 +183,31 @@
                             </div>
                         </div>   
                         <h4><br>płatek Kocha</h4>
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 4 - Funkcja Weierstrassa">
+                    <div class="Weierstrass">
+                        <h3>Funkcja Weierstrassa</h3>
+                        <p>Funkcja Weierstrassa to pierwszy opublikowany przykład rzeczywistej funkcji ciągłej, która jest nieróżniczkowalna w żadnym punkcie. Została odkryta przez Karla Weierstraßa i stanowi przykład krzywej fraktalnej. Jest to interesujący obiekt matematyczny, który pokazuje, że nie wszystkie funkcje ciągłe są różniczkowalne.</p>
+                        <p> work in progress</p>
                     </div>
-                </div><div class="fraktal 4 - Zbiór Mandelbroda">
+                    <div class="Weierstrass-picture">
+                    
+                        <img src="obrazy/WeierstrassFunction.svg" alt="Funkcja Weierstrassa">
+                        <h4>Funkcja Weierstrassa</h4>
+
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 5 - Zbiór Mandelbroda">
                     <div class="Mandelbrot">
                         <h3 id="zbior-mandelbroda"><br></h3>
                         <h3>Zbiór Mandelbrota</h3>
-                        <p>
+                        
                         Zbiór Mandelbrota to podzbiór 
                         <span class="definition" data-tooltip="Płaszczyzna zespolona to płaszczyzna, na której każdy punkt odpowiada liczbie zespolonej."><u>płaszczyzny zespolonej</u></span>, którego 
                         <span class="definition" data-tooltip="brzeg - zbiór punktów „granicznych” danego zbioru."><u>brzeg</u></span>
                         jest jednym z najbardziej znanych fraktali, „najsłynniejszym obiektem współczesnej matematyki”.Nazwa tego obiektu
                         pochodzi od jego odkrywcy, matematyka 
-                        <span class="definition" data-tooltip="Benoit Mandelbrot był francusko-amerykańskim matematykiem, który jest znany przede wszystkim jako twórca fraktalnej geometrii. Jego najbardziej znane dzieło to książka: 'Fraktale: kształty, haos i nieustanny świat wzorów', w której przedstawił swoją teorię fraktali oraz zastosowanie fraktalnej geometrii w różnych dziedzinach nauki."><u>Benoit Mandelbrota</u></span>.
-                        </p>
+                        <div class="definitionimg" data-definition="Mandelbrot"><span class="definition-text"><u>Benoît Mandelbrota</u></span><div class="definition-tooltip"><p><b>Benoît_Mandelbrot</b>_(1924-2010)_był_francusko-amerykańskim_matematykiem<br>pochodzenia_polsko-żydowskiego.<br>Zajmował_się_szerokim_zakresem_problemów_matematycznych,_ale_jest<br>najbardziej_znany_jako_twórca_geometrii<br>fraktalnej._Opisał_zbiór_Mandelbrota_i_wymyślił samo słowo “fraktal”.</p></div></div>.
+                        
                         <p>work in progress</p>
                         <!--
                         <p>Przydatne pojęcia:</p>
@@ -219,7 +236,18 @@
                         <h4>Zbiór Mandelbrota w przybliżeniu</h4>
                 
                     </div><div style="clear:both"></div>
-                </div><div class="fraktal 5 - Drzewo Pitagorejskie">
+                </div><div class="fraktal 6 - Zbiór__Julii">
+                    <div class="Julii">
+                        <h3>Zbiór Julii</h3>
+                        <p>Zbiór Julii to fraktal będący podzbiorem płaszczyzny zespolonej. Został odkryty przez francuskiego matematyka Gastona Julii i jest zdefiniowany jako zbiór liczb zespolonych p takich, że pewien ciąg zdefiniowany dla tych liczb nie dąży do nieskończoności. Brzeg tego zbioru jest fraktalem i jego kształt zależy od wybranej stałej c.</p>
+                        <p> work in progress</p>
+                    </div>
+                    <div class="Julii-picture">
+                    
+                        <img src="obrazy/Julia-set.png" alt="Zbiór Julii">
+                        <h4>Zbiór Julii</h4>
+                    </div><div style="clear:both"></div>
+                </div><div class="fraktal 7 - Drzewo Pitagorejskie">
                     <div class="drzewo">
                         <h3 id="drzewo-pitagorejskie"><br></h3>
                         <h3>Drzewo Pitagorasa</h3>
@@ -260,41 +288,45 @@
                             <h4>Krok 4</h4>
                         </div>
                     </div><div style="clear:both"></div>
-                </div><div class="fraktal 6 - Dywan Sierpińskiego">
+                </div><div class="fraktal 8 - Dywan Sierpińskiego">
                     <div class="dywan">
                         <h3 id="dywan-sierpinskiego"><br></h3>
                         <h3>Dywan Sierpińskiego</h3>
-                        <p>
+                        
                             Dywan Sierpińskiego – fraktal otrzymany z kwadratu za pomocą podzielenia go na dziewięć (3x3) mniejszych kwadratów,
                             usunięcia środkowego kwadratu i ponownego rekurencyjnego zastosowania tej samej procedury do każdego z pozostałych ośmiu kwadratów.
                             Nazwa pochodzi od nazwiska 
-                            <span class="definition" data-tooltip="Wacław Sierpiński był polskim matematykiem żyjącym w latach 1882-1969, znany głównie ze swoich prac w teorii liczb, teorii mnogości oraz geometrii fraktalnej. Jest uważany za jednego z najwybitniejszych matematyków w historii Polski."><u>Wacława Sierpińskiego</u></span>.  
-                        </p>
+                            <div class="definitionimg" data-definition="Sierpinski"><span class="definition-text"><u>Wacława Sierpińskiego</u></span><div class="definition-tooltip"><p><b>Wacław_Sierpiński</b>_(1882-1969)_był_polskim_matematykiem,_jednym_z_czołowych_przedstawicieli_warszawskiej_szkoły_matematycznej_i_twórców_polskiej_szkoły_matematycznej._Był_wieloletnim_profesorem_Uniwersytetu_Warszawskiego_i_przewodniczącym_rady_naukowej_Instytutu_Matematycznego_Polskiej_Akademii_Nauk._Zajmował_się_teorią_liczb,_analizą_matematyczną_i_podstawami_matematyki_–_teorią_mnogości,_topologią_mnogościową_oraz_teorią_kategorii.</p></div></div>.  
+                        
                     </div>
                     <div class="dywan-picture">
                         <img src="obrazy/sierpinski_carpet.gif" alt="Dywan Sierpińskiego">
                         <h4>Dywan Sierpińskiego</h4>
                     </div><div style="clear:both"></div>
-                </div><div class="fraktal 7 - Smok Heighwaya">
+                </div><div class="fraktal 9 - Smok Heighwaya">
                     <div class="Smok-Heighwaya">
                         <h3 id="Smok_Heighwaya_kt"><br></h3>
                         <h3>Smok Heighwaya</h3>
                         <p>
-                            Smok Heighwaya to jeden z najbardziej znanych fraktali, który powstaje poprzez ciągłe składanie i obracanie prostokąta o 90 stopni. Ten proces jest powtarzany wiele razy, a każde kolejne powtórzenie prowadzi do uzyskania bardziej skomplikowanego kształtu przypominającego smoka. Smok Heighwaya został odkryty przez Johna Heighwaya, Bruce’a Banksa i Williama Hartera z NASA w latach 60. XX wieku, a jego nazwa pochodzi od nazwiska jednego z jego odkrywców.
+                            Smok Heighwaya to jeden z najbardziej znanych fraktali, który powstaje poprzez ciągłe składanie i obracanie prostokąta o 90 stopni. Ten proces jest powtarzany wiele razy, a każde kolejne powtórzenie prowadzi do uzyskania bardziej skomplikowanego kształtu przypominającego smoka. Smok Heighwaya został odkryty przez 
+                            <span class="definition" data-tooltip="John_Heighway był fizykiem NASA, który badał krzywą smoka Heighwaya."><u>Johna Heighwaya</u></span>,
+                            <span class="definition" data-tooltip="Bruce’a Banksa był fizykiem NASA, który badał krzywą smoka Heighwaya."><u>Bruce’a Banksa</u></span> i 
+                            <span class="definition" data-tooltip="Williama Hartera był fizykiem NASA, który badał krzywą smoka Heighwaya."><u>Williama Hartera</u></span> z NASA w latach 60. XX wieku, a jego nazwa pochodzi od nazwiska jednego z jego odkrywców.
                         </p>
                     </div>
                     <div class="Smok-Heighwaya-picture">
                         <img src="obrazy/Dragon_Curve_making.gif" alt="Smok Heighwaya konstrukcja">
                         <h4>Smok Heighwaya</h4>
                     </div><div style="clear:both"></div>
-                </div>
-                </div><div class="fraktal 9 - Kostka Mengera">
+                </div><div class="fraktal 10 - Kostka Mengera">
                     <div class="Kostka-Mengera">
                         <h3 id="Kostka_Mengera_kt"><br></h3>
                         <h3>Kostka Mengera</h3>
-                        <p>
-                            Kostka Mengera to jeden z najbardziej znanych fraktali, który powstaje poprzez ciągłe dzielenie sześcianu na mniejsze sześciany i usuwanie ich środkowych części. Ten proces jest powtarzany wiele razy, a każde kolejne powtórzenie prowadzi do uzyskania bardziej skomplikowanego kształtu przypominającego gąbkę. Kostka Mengera została odkryta przez austriackiego matematyka Karla Mengera w 1927 roku, a jej nazwa pochodzi od nazwiska jej odkrywcy.
-                        </p>
+                        
+                            Kostka Mengera to jeden z najbardziej znanych fraktali, który powstaje poprzez ciągłe dzielenie sześcianu na mniejsze sześciany i usuwanie ich środkowych części. Ten proces jest powtarzany wiele razy, a każde kolejne powtórzenie prowadzi do uzyskania bardziej skomplikowanego kształtu przypominającego gąbkę. Kostka Mengera została odkryta przez austriackiego matematyka 
+                            <div class="definitionimg" data-definition="Menger"><span class="definition-text"><u>Karla Mengera</u></span><div class="definition-tooltip"><p><b>Karl_Menger</b>_(1902-1985)_był_austriacko-amerykańskim_matematykiem,_synem_ekonomisty_Carla_Mengera.W_matematyce_Menger_badał_teorię_algebry_i_teorię_wymiaru_krzywych_i_obszarów_o_niskiej_regularności(„szorstkich”);_w_teorii_grafów_przypisuje_mu_się_twierdzenie_Mengera.Jego_najbardziej_znanym_wkładem_dla_szerokiej_publiczności_była_kostka_Mengera.</p></div></div>
+                             w 1927 roku, a jej nazwa pochodzi od nazwiska jej odkrywcy.
+                        
                     </div>
                     <div class="Kostka-Mengera-picture">
                         <img src="obrazy/kostka_mengera_iteracje.gif" alt="Kostka Mengera">
@@ -306,56 +338,58 @@
             <div class="fraktale-wokół-nas">
                 <h2>Fraktale wokół nas</h2><br>
                 
-                <h3>Fraktale w grafice komputerowej</h3>
+                <h3>Fraktale generowane komputerowo</h3>
                 <div class="computer">
                     <img src="obrazy/grafika1.jpg" alt="Electricsheep-21194">
-                    <p>Electricsheep-21194</p>
+                    <p style="padding-left: 23%;">Electricsheep-21194</p>
                 </div>
                 <div class="computer">
                     <img src="obrazy/Grafika 2.jpg" alt="Electricsheep-21158">
-                    <p>Electricsheep-21158</p>
+                    <p style="padding-left: 23%;">Electricsheep-21158</p>
                 </div>
                 <div class="computer">
                     <img src="obrazy/Grafika3.jpg" alt="Apophysis fractal flame">
-                    <p>Apophysis fractal flame</p>
+                    <p style="padding-left: 30%;">Apophysis</p>
                 </div>
                 <div class="computer">
                     <img src="obrazy/Grafika4.jpg" alt="Electricsheep-21158">
-                    <p>Electricsheep-21158</p>
+                    <p style="padding-left: 23%;">Electricsheep-21158</p>
                 </div>
                 <div class="computer">
                     <img src="obrazy/Grafika5.jpg" alt="Fraktal zrobiony programem Sterling2">
-                    <p>Fraktal zrobiony programem Sterling2</p>
+                    <p style="padding-left: 30%;">Sterling2</p>
                 </div>
 
                 <h3>Fraktale w naturze</h3>
+                <p>Fraktale to struktury o niekończącej się złożoności, które można znaleźć w wielu miejscach w przyrodzie. Przykłady fraktali w przyrodzie to drzewa, chmury, płatki śniegu, brokuły, kalafior, fiordy, linia brzegowa czy naczynia krwionośne.</p>
                 <div class="real">
                     <img src="obrazy/real_kalafior.jpg" alt="Zdjęcie kalafiora Brassica oleracea">
-                    <p style="padding-left: 20px;">Zdjęcie kalafiora Brassica oleracea</p>
+                    <p class="hover" style="padding-left: 70px;">Kalafior Brassica oleracea</p><span class="hover-text" style="padding-left: 40px;">Roślina występująca we Włoszech.</span>
+                    
                 </div>
                 <div class="real">
                     <img src="obrazy/real_galaktyka.jpg" alt="Zdjęcie wykonane teleskopem Hubble’a">
-                    <p>Zdjęcie wykonane teleskopem Hubble’a</p>
+                    <p style="padding-left: 35%;">Galaktyki</p>
                 </div>
                 <div class="real">
                     <img src="obrazy/real_chmura.jpg" alt="Chmura">
-                    <p style="padding-left: 160px;">Chmura</p>
+                    <p style="padding-left: 160px;">Chmury</p>
                 </div>
                 <div class="real">
                     <img src="obrazy/real_fjordy.jpg" alt="Fjordy">
-                    <p>Fiordy Sognefjorden i Hardangerfjorden</p>
+                    <p class="hover" style="padding-left: 40%;">Fiordy</p><span class="hover-text">Fiordy Sognefjorden i Hardangerfjorden</span>
                 </div>
                 <div class="real">
                     <img src="obrazy/real_skaly.jpg" alt="Formacje skalne">
-                    <p>Formacje skalne</p>
+                    <p style="padding-left: 25%;">Formacje skalne</p>
                 </div>
                 <div class="real">
                     <img src="obrazy/real_aloes.jpg" alt="Aloes wielkolistny" >
-                    <p>Aloes wielkolistny</p>
+                    <p style="padding-left: 25%;">Aloes wielkolistny</p>
                 </div>
                 <div class="real">
                     <img src="obrazy/Real_Frost_patterns.jpg" alt="kryształy lodu tworzące fraktalne wzory na szkle">
-                    <p>Mroźne kryształy występujące naturalnie na zimnym szkle tworzą fraktalne wzory</p>
+                    <p style="padding-left: 30%;">Kryształy lodu</p>
                     
                 </div>
             </div><br><hr>
@@ -378,17 +412,33 @@
                         Obecnie prawie każdy telefon komórkowy korzysta z
                         wbudowanej anteny fraktalnej. </p>
                 <h3>Kompresja danych</h3>
-
-                <h3>Anteny fraktalne</h3>
-
-                <h3>Grafika komputerowa</h3>
+                        <p>Kompresja fraktalna to system kompresji stratnej opierający się na 
+                            wykorzystaniu fraktali do reprezentacji danych. Używany jest prawie 
+                            wyłącznie do kompresji obrazów. Najpopularniejszym zestawem fraktali 
+                            są systemy funkcji iterowanych (IFS). 
+                            Kompresja fraktalna daje dobre wyniki zarówno przy bardzo wysokim 
+                            stopniu kompresji (czyli niskiej jakości) jak i wtedy gdy chcemy zachować 
+                            wysoką jakość, jednak w tym drugim przypadku skompresowanie obrazu 
+                            jest operacją bardzo czasochłonną.
+                        </p>
+                        <div style="text-align: center;">
+                            <img src="obrazy/Zasada_dzialania_ifs_1.png" style="text-align: center;">
+                        </div>
+                        
+                        <p>Chcąc skompresować obraz najpierw należy podzielić go na mniejsze części, następnie poszukać podobieństw między małymi częściami a większymi od nich fragmentami obrazu. Na przykładowym obrazku łatwo można zauważyć, że części nr 2 i 3 wyglądają dokładnie tak jak pomniejszona całość. Jak się za chwilę okaże informacja ta plus informacja, że część nr 1 jest biała a część nr 4 czarna pozwoli odtworzyć cały obraz.
+                            Aby rozpakować nasz obrazek, bierzemy dowolny losowy obraz (na przykładzie szare tło) i malujemy część nr 1 na biało a część nr 4 na czarno, następnie zmniejszamy obraz czterokrotnie i wklejamy w miejsca 2,3 – powstało coś co przypomina schody, jeśli ponownie zmniejszymy całość i wkleimy w obszary 2 i 3 schody staną się drobniejsze. Powtarzając tę operację odpowiednio wiele razy "schodki" staną się mniejsze od wymiarów jednego pixela uzyskamy wówczas obraz bardzo podobny do oryginalnego
+                        </p>
+                <h3>Telekomunikacja</h3>
+                        <p>
+                            Fraktalne anteny są jednym z zastosowań fraktali w telekomunikacji. Są używane w telefonach komórkowych i innych urządzeniach bezprzewodowych. Dzięki fraktalnemu kształtowi antena działa we wszystkich pasmach GSM, niezależnie od tego, w której części świata jest właściciel telefonu. Fraktalne anteny mają wiele zalet. Są mniejsze i lżejsze niż tradycyjne anteny, a jednocześnie zapewniają lepszą jakość sygnału i większy zasięg. Są również bardziej uniwersalne i mogą pracować na wielu różnych częstotliwościach.
+                        </p>
+                        <div style="text-align: center;">
+                            <img src="obrazy/Antena_fraktalna.png" alt="antena fraktalna schemat" style="border-radius: 10px;">
+                        </div>
+                        <p>
+                            Fraktalne anteny działają na podobnej zasadzie jak tradycyjne anteny, ale ich kształt jest bardziej złożony. Są zbudowane z powtarzających się wzorów o samopodobnej strukturze, co pozwala im pracować na wielu różnych częstotliwościach. Dzięki fraktalnemu kształtowi można zmniejszyć rozmiar anteny bez utraty jej właściwości. Fraktalne anteny są również bardziej elastyczne i mogą być dostosowane do różnych zastosowań.
+                        </p>
             </div><br><hr>
-            <div class="rozwój geometri fraktalnej">
-                <h2>Rozwój geometrii fraktalnej</h2>
-                    <p>Rozwój geometrii fraktalnej i jej przemianę w nową dziedzinę matematyki zawdzięczamy przede wszystkim urodzonemu w Polsce matematykowi Benoît Mandelbrotowi i jego głośnemu esejowi "The Fraktal Geometry of Nature" (Fraktalna geometria natury) z 1977 r.
-                        W rozwoju geometrii fraktalnej istotną rolę odegrał także Georg Cantor, który jako pierwszy wprowadził pojęcie zbioru nieskończonego. Współcześnie fraktale znajdują zastosowanie w wielu dziedzinach nauki i techniki, takich jak np. w grafice komputerowej, teorii chaosu czy teorii strun.
-                    </p>
-            </div><br><hr>   
         </div>
 
         <div id="footer">
@@ -397,12 +447,12 @@
     </div> 
     <div class="skrypty">
         <script src="skrypty/jquery.min.js"></script>
-        <script src="skrypty/stickynav.js"></script>
-        <script src="skrypty/rozwijane1.js"></script> <!--     <span class="definition" data-tooltip="">definicja</span> - aby przywolac definicje     -->
-        <script src="skrypty/trojkat.js"></script>
+        <script src="skrypty/stickynav.js"></script> <!--     <span class="definition" data-tooltip="">definicja</span> - aby przywolac definicje     -->
+        <script src="skrypty/trojkat.js"></script> <!--<div class="definitionimg" data-definition="Cantor"><span class="definition-text">Georga Cantora</span><div class="definition-tooltip"><p><b>Georg_Cantor</b></p></div></div>-->
         <script src="skrypty/draw_sierpinski.js"></script>
         <script src="skrypty/darkmode.js"></script>
         <script src="skrypty/cantor.js"></script>
+        <script src="skrypty/ukryta_.js"></script>
     </div>
      
 </body>

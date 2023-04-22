@@ -1,7 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@900&family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap');
 body{
-    background-color: white;
-    margin: 0 !important;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-family: 'Nunito', sans-serif;
+  background-color: white;
+  margin: 0 !important;
+
 }
+/*-----------------STYLIZACJĄ NAGŁÓWKÓW-----------------*/
+h1, h2{
+  font-family: 'Lato', sans-serif;
+  color: rgb(8, 61, 11);
+}
+/*-----------------SYLIZACJA NAGŁÓWKÓW V2(FIGURY)-----------------*/
+h3{/*
+  color: rgb(116, 7, 7);*/
+  color: rgb(19, 18, 18);
+}
+/*-----------------SYLIZACJA OPISÓW ZDJĘĆ-----------------*/
+h4{
+  text-align: center;
+  vertical-align: middle;
+  font-size: medium;
+  color: dimgrey;
+}
+/*-----------------DODANIE ANIMACJI PRZYBLIŻENIA-----------------*/
+img{
+  transition: transform 0.5s ease;    /* dodanie przybliżenia */
+}
+
+img:hover{
+  transform: scale(1.1);  /* dodanie przybliżenia o 10% */
+}
+
 #wrapper{
     width: 100%;
 }
@@ -38,7 +69,7 @@ hr{
   border: none;
   height: 1px;
   background-image:
-  linear-gradient(to right, #ffffff, #aa0f0f, #1100f8);
+  linear-gradient(to right, #ffffff,grey, #000000);
 }
 
 /*-------------KOLORY NAWIGACJI-------------*/
@@ -161,57 +192,12 @@ hr{
   animation:
     typing 3.5s steps(30, end),
     blink-caret .5s step-end 1;
-  max-width: 72ch;                  /*<!-- +2 trzeba dodac-->*/
+  max-width: 32ch;                  /*<!-- +2 trzeba dodac-->*/
   animation-fill-mode: forwards;
 }
 
-/*-----------------ROZWIJANE MENU Z DEFINICJĄ-----------------*/
-.definition {
-    position: relative;
-}
-.definition::after {
-    content: attr(data-tooltip);
-    display: none;
-    position: absolute;
-    top: 30px;  /* ILE PONIŻEJ TEKSTU MA SIĘ POJAWIĆ DEFINICJA*/
-    left: 0;
-    padding: 5px;
-    width: 250px;   /* SZEROKOŚĆ BLOKU DEFINICJI */ /* było 150 px */
-    background-color: white;
-    border: 1px solid black;
-    text-align: center;
-    z-index: 1;
-    font-size: medium;
-
-  } 
-.definition:hover::after {  /* ODPOWADA TO BLOKOWI DEFINICJI*/
-    display: block;
-    color: black;
-    font-weight: normal;
-    border-radius: 5px;
-} 
-.definition:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-.definition > u{
-    text-decoration: none;
-    color: #3366cc;
-}
-.definition::before {
-  content: "?"; /* Symbol, który pojawi się przed tekstem */
-  position: absolute;
-  top: -6px; /* Odległość od góry */
-  right: -6px; /* Odległość od prawej strony */
-  font-size: 12px; /* Rozmiar czcionki */
-  color: #333; /* Kolor symbolu */
-  opacity: 0; /* Początkowa wartość przezroczystości */
-  transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
-}
-.definition:hover::before {
-  opacity: 1; /* Przezroczystość przy najechaniu */
-}
 /* opcje dla dark mode*/
+/*color: rgb(228, 65, 65);  linear-gradient(to right, #51ff00, #1ec4da, #2500fa);*/
 body {
   transition: background-color 0.5s ease;
 }
@@ -220,26 +206,43 @@ body {
   color: #e2e2e2;
  
 }
+.dark-mode h1{
+  color:white;
+}
 .dark-mode h2{
-  color:rgb(30, 219, 188);
+  color:white;
 }
 .dark-mode hr{
   background-image:
-  linear-gradient(to right, #51ff00, #1ec4da, #2500fa);
+  linear-gradient(to right, #ffffff, #2a2a2a);
 }
 .dark-mode h3{
-  color: rgb(228, 65, 65);
+  color: #ffffff;
 }
 .dark-mode h4{
   color:gainsboro;
 }
+
 .dark-mode .png {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
 }
-
-
+.dark-mode .definition-text > u {
+    text-decoration-color: rgb(143, 140, 139);
+}
+.dark-mode .definitionimg .definition-tooltip {
+  background-color: #2a2a2a;
+}
+.dark-mode .definition::after{
+  background-color: #2a2a2a;
+}
+.dark-mode .definition:hover::after {
+  color: #e2e2e2;
+}
+.dark-mode .definition > u {
+  text-decoration-color: rgb(143, 140, 139);
+}
 /*guzik darkmode*/
 .toggle-container {
   display: inline-block;

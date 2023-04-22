@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/patern.css">  <!--DODANIE OGÓLNEGO CSS STRONY-->
-    <link rel="stylesheet" type="text/css" href="../css/"> <!--DODANIE CSS DLA TEJ PODSTRONY-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@300&family=Rubik+Maze&display=swap" rel="stylesheet"><!--DODANIE CZCIONEK Lato, Nunito, Rubik Maze-->
-    <link rel="shortcut icon" type="image/ico" href="../obrazy/ikonkas.ico"> <!--obrazek strony-->
+    <link rel="stylesheet" type="text/css" href="../css/wymiar.css"> <!--DODANIE CSS DLA TEJ PODSTRONY-->
     <title>Wymiar fraktalny</title>
 </head>
 <body>
@@ -18,7 +14,7 @@
             <div class="typewriter">
                 <div id="logo">
                     <canvas id="myCanvas" width="100" height="100"></canvas><!--skrypt logo-->
-                    Geometria fraktalna
+                    Fraktale
                     </div style="clear: both;"></div>
                 </div>
             </div>
@@ -40,27 +36,9 @@
         </div>
         <div id="content">
            <h2>Wymiar fraktalny</h2>
-            <P>Wymiar fraktalny to inaczej wymiar podobieństwa lub samopodobieństwa. Samo
-                słowo "fraktal" pochodzi od słowa frangere co w języku łacińskim oznacza "łamać".
-                Wymiar fraktalny Hausdorfa-Besicovitcha jest miarą chropowatości i nie musi być liczbą
-                całkowitą. Wymiar fraktalny skupia się na współczynniku skalowania, który jest stosunkiem
-                między pomiarami obiektu i reprezentacją obiektu.
-                Trudno wyobrazić sobie obiekt o nie całkowitym wymiarze, ponieważ jesteśmy
-                przyzwyczajeni do dwu- lub trójwymiarowych figur.
-                Fraktale są nazywane pudełkami, ponieważ są oparte o koncepcję, w której daną figurę
-                pokrywamy mniejszymi, podobnymi do wyjściowej.</P>
-                <h2></h2>
-                <ul>
-                    <li>
-                        Wymiar Hausdorffa - metoda polegająca na pokryciu fraktala kulami o coraz mniejszych promieniach i obliczeniu granicy ilorazu logarytmu liczby kul do logarytmu promienia kuli.
-                    </li>
-                    <li>
-                        Wymiar Minkowskiego - metoda polegająca na obliczeniu granicy ilorazu logarytmu objętości otoczki fraktala do logarytmu długości boku sześcianu użytego do konstrukcji otoczki.
-                    </li>
-                    <li>
-                        Wymiar pudełkowy - metoda polegająca na podzieleniu przestrzeni na coraz mniejsze sześciany (pudełka) i obliczeniu granicy ilorazu logarytmu liczby pudełek pokrywających fraktal do logarytmu długości boku pudełka.
-                    </li>
-                </ul>
+           <p>Wymiar fraktalny jest miarą złożoności fraktala i może być obliczony na kilka sposobów. Jednym z najczęściej stosowanych sposobów jest obliczenie wymiaru Hausdorffa-Besicovitcha. Wymiar ten opisuje sposób, w jaki zmienia się skala fraktala wraz ze zmianą skali pomiaru.</p>
+                <p>Wymiar Hausdorffa-Besicovitcha dla fraktala D jest obliczany według wzoru: D = -log(N) / log(S), gdzie N to liczba samopodobnych kopii fraktala, a S to skala pomniejszenia każdej z kopii.</p>
+                <p>Na przykład, dla dywanu Sierpińskiego, który składa się z 8 samopodobnych kopii pomniejszonych ośmiokrotnie, wymiar Hausdorffa-Besicovitcha wynosi D = -log(8) / log(3) ≈ 1.8928.</p>
                     
             <!--
             <h2>Współczynnik skalowania</h2>

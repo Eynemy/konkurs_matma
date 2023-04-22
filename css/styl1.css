@@ -1,33 +1,4 @@
-body{
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-    font-family: 'Nunito', sans-serif;
 
-}
-/*-----------------STYLIZACJĄ NAGŁÓWKÓW-----------------*/
-h1, h2{
-    font-family: 'Lato', sans-serif;
-    color: rgb(8, 61, 11);
-}
-/*-----------------SYLIZACJA NAGŁÓWKÓW V2(FIGURY)-----------------*/
-h3{
-    color: rgb(116, 7, 7);
-}
-/*-----------------SYLIZACJA OPISÓW ZDJĘĆ-----------------*/
-h4{
-    text-align: center;
-    vertical-align: middle;
-    font-size: medium;
-    color: dimgrey;
-}
-/*-----------------DODANIE ANIMACJI PRZYBLIŻENIA-----------------*/
-img{
-    transition: transform 0.5s ease;    /* dodanie przybliżenia */
-}
-
-img:hover{
-    transform: scale(1.1);  /* dodanie przybliżenia o 10% */
-}
 
 /*-----------------STYLIZACJA 1 ELEMENTU(CO TO FRAKTALE?)-----------------*/
 .prawo-fraktal{
@@ -100,22 +71,19 @@ img:hover{
 }
 
 /*-------------FRAKTALE PRZEDSTAWIENIE-------------*/
-.triangle, .Krzywa, .Mandelbrot, .drzewo, .dywan, .Smok-Heighwaya, .Krzywa-Levy, .Kostka-Mengera{
+.triangle, .Krzywa, .Mandelbrot, .drzewo, .dywan, .Smok-Heighwaya, .Krzywa-Levy, .Kostka-Mengera, .Julii, .Weierstrass{
     text-align: left;
     float: left;
     vertical-align: top;
     width: 60%;
 }
-.triangle-picture, .Krzywa-picture, .Mandelbrot-picture, .drzewo-picture, .dywan-picture, .Smok-Heighwaya-picture, .Krzywa-Levy-picture, .Kostka-Mengera-picture{
+.triangle-picture, .Krzywa-picture, .Mandelbrot-picture, .drzewo-picture, .dywan-picture, .Smok-Heighwaya-picture, .Krzywa-Levy-picture, .Kostka-Mengera-picture, .Julii-picture, .Weierstrass-picture{
     float: right;
     text-align: center;
     vertical-align: top;
     width: 40%;               
     position: relative;
     top:  90px;              
-    
-}
-#Cantor-Canvas3{
     
 }
 .dark-mode #Cantor-Canvas3{
@@ -125,6 +93,7 @@ img:hover{
 }
 
 /*ustawianie wielkosci zdjec fraktali*/
+
 .triangle-picture > img{
     width: 350px;
 }
@@ -135,6 +104,15 @@ img:hover{
 }
 .Etapy > img{
     width: 200px;
+}
+.Julii-picture > img{
+    width: 350px;
+    border-radius: 10px; 
+}
+.Weierstrass-picture > img{
+    width: 350px;
+    border-radius: 10px;  
+    
 }
 .Mandelbrot-picture > img{
     width: 350px;
@@ -176,4 +154,151 @@ img:hover{
     border-radius: 10px;
     height: 300px;
 }
+/* definicja z obrazem */
+.definitionimg {
+    position: relative; /* ustawienie pozycji względem rodzica */
+    display: inline-block; /* ustawienie elementu jako blok inline */
+    margin-right: 10px; /* margines z prawej strony */
+    margin-bottom: 10px; /* margines na dole */
+    text-align: right;
+}
 
+.definitionimg .definition-text {
+    display: inline-block; /* ustawienie tekstu definicji jako blok inline */
+}
+.definitionimg:hover .definition-text { 
+    text-decoration: underline; /* dodanie podkreslenia po najechaniu na tekst z definicja*/
+}
+
+.definitionimg .definition-tooltip {
+    position: absolute; /* ustawienie pozycji absolutnej względem rodzica */
+    top: 0; /* odległość od góry */
+    left: 100%; /* odległość od lewej strony */
+    width: 310px; /* szerokość */
+    padding: 10px; /* wewnętrzny padding */
+    background-color: white; /* tło tooltipa */
+    border: 1px solid black; /* obramowanie tooltipa */
+    font-size: medium; /* rozmiar czcionki */
+    text-align: justify; /* justowanie tekstu */
+    display: none; /* ukrycie tooltipa */
+    background-repeat: no-repeat; /* nie powtarzaj tła */
+    z-index: 1; /* ustawienie poziomu elementu */
+    margin-right: 110px; /* margines z prawej strony */
+}
+
+.definitionimg:hover .definition-tooltip {
+    display: block; /* pojawienie się tooltipa po najechaniu myszą */
+}
+
+.definitionimg:hover {
+    cursor: pointer; /* zmiana kursora na "wskaźnik" */
+    text-decoration: underline; /* podkreślenie tekstu */
+}
+
+.definition-text > u {
+    text-decoration: underline;
+    text-decoration-color: rgb(23, 75, 25);
+}
+
+.definitionimg::before {
+    content: "?"; /* Symbol, który pojawi się przed tekstem */
+    position: absolute;
+    top: -8px; /* Odległość od góry */
+    right: -7px; /* Odległość od prawej strony */
+    font-size: 20px; /* Rozmiar czcionki */
+    color: #174626; /* Kolor symbolu */
+    opacity: 0; /* Początkowa wartość przezroczystości */
+    transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
+}
+.definitionimg:hover::before {
+    opacity: 1; /* Przezroczystość przy najechaniu */
+}
+
+.definitionimg .definition-tooltip {
+    background-position: top right; /* położenie obrazka w tle tooltipa */
+    padding-right: 230px; /* odstęp od prawej strony dla tekstu tooltipa */
+    border-radius: 10px; /* zaokrąglenie narożników obramowania tooltipa */
+    left: 0; /* odległość od lewej strony */
+    top: 100%; /* odległość od góry */
+}
+.definitionimg[data-definition="Mandelbrot"] .definition-tooltip {
+    background-image: url('../obrazy/Mandelbrot.jpg');
+    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+}
+.definitionimg[data-definition="Weierstrass"] .definition-tooltip {
+    background-image: url('../obrazy/Weierstrass.jpg');
+    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+}
+.definitionimg[data-definition="Cantor"] .definition-tooltip {
+    background-image: url('../obrazy/Cantor.jpg');
+    background-size: 220px; /* rozmiar obrazka w tle tooltipa */
+}
+.definitionimg[data-definition="Sierpinski"] .definition-tooltip {
+    background-image: url('../obrazy/Sierpinski.jpg');
+    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+}
+.definitionimg[data-definition="Koch"] .definition-tooltip {
+    background-image: url('../obrazy/Koch.jpg');
+    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+}
+.definitionimg[data-definition="Menger"] .definition-tooltip {
+    background-image: url('../obrazy/Menger.jpg');
+    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+}
+
+
+/* zwykła definicja */
+.definition {
+    position: relative;
+}
+.definition::after {
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    top: 30px;  /* ILE PONIŻEJ TEKSTU MA SIĘ POJAWIĆ DEFINICJA*/
+    left: 0;
+    padding: 5px;
+    width: 250px;   /* SZEROKOŚĆ BLOKU DEFINICJI */ /* było 150 px */
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    z-index: 1;
+    font-size: medium;
+
+  } 
+.definition:hover::after {  /* ODPOWADA TO BLOKOWI DEFINICJI*/
+    display: block;
+    color: black;
+    font-weight: normal;
+    border-radius: 5px;
+}
+.definition:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.definition > u {
+    text-decoration: underline;
+    text-decoration-color: rgb(23, 75, 25);
+}
+.definition::before {
+  content: "?"; /* Symbol, który pojawi się przed tekstem */
+  position: absolute;
+  top: -8px; /* Odległość od góry */
+  right: -7px; /* Odległość od prawej strony */
+  font-size: 20px; /* Rozmiar czcionki */
+  color: #174626; /* Kolor symbolu */
+  opacity: 0; /* Początkowa wartość przezroczystości */
+  transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
+}
+.definition:hover::before {
+  opacity: 1; /* Przezroczystość przy najechaniu */
+}
+
+
+.hover-text {
+    display: none;
+}
+  
+.hover:hover + .hover-text {
+    display: inline;
+}

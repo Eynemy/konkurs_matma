@@ -1,7 +1,7 @@
 //spadanie napisu gegrafia fraktalna na stronie glownej
 
 // Przypisanie wartości "Geometria Fraktalna" do zmiennej "text".
-const text = 'Geometria Fraktalna';
+const text = 'Fraktale: od matematyki do sztuki';
 
 // Wybór elementu HTML, do którego będziemy dodawać litery z tekstu.
 const container = document.querySelector('.tekst');
