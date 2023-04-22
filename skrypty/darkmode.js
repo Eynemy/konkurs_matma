@@ -12,4 +12,8 @@ if (localStorage.getItem('dark-mode') === 'true') {
 toggle.addEventListener('change', () => {
   body.classList.toggle('dark-mode');
   localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
+
+  clearCanvas2();
+  drawTriangle2(0, 0, width2, height2, level2);
 });
+

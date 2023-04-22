@@ -192,7 +192,7 @@ hr{
   animation:
     typing 3.5s steps(30, end),
     blink-caret .5s step-end 1;
-  max-width: 32ch;                  /*<!-- +2 trzeba dodac-->*/
+  max-width: 35ch;                  /*<!-- +2 trzeba dodac-->*/
   animation-fill-mode: forwards;
 }
 

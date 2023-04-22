@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="729" height="729">
+	<style type="text/css">
+		path{fill:#fff}
+	</style>
+	<pattern id="a" patternUnits="userSpaceOnUse" width="3" height="3">
+		<path d="M1,1h1v1H1"/>
+	</pattern>
+	<pattern id="b" patternUnits="userSpaceOnUse" width="9" height="9">
+		<circle r="99" fill="url(#a)"/>
+		<path d="M3,3h3v3H3"/>
+	</pattern>
+	<pattern id="c" patternUnits="userSpaceOnUse" width="27" height="27">
+		<circle r="99" fill="url(#b)"/>
+		<path d="M9,9h9v9H9"/>
+	</pattern>
+	<pattern id="d" patternUnits="userSpaceOnUse" width="81" height="81">
+		<circle r="999" fill="url(#c)"/>
+		<path d="M27,27h27v27H27"/>
+	</pattern>
+	<pattern id="e" patternUnits="userSpaceOnUse" width="243" height="243">
+		<circle r="999" fill="url(#d)"/>
+		<path d="M81,81h81v81H81"/>
+	</pattern>
+	<circle r="9999"/>
+	<circle r="9999" fill="url(#e)"/>
+	<path d="M243,243h243v243H243"/>
+</svg>

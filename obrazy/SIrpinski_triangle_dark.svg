@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" viewBox="0 0 40960 40960" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <defs>
+    <g id="set">
+      <path fill="#fff" d="m 20480,0 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20440,80 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20520,80 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20400,160 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20560,160 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20360,240 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20440,240 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20520,240 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20600,240 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20320,320 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20640,320 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20280,400 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20360,400 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20600,400 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20680,400 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20240,480 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20400,480 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20560,480 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20720,480 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20200,560 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20280,560 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20360,560 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20440,560 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20520,560 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20600,560 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20680,560 40,80 h-80 z"/>
+      <path fill="#fff" d="m 20760,560 40,80 h-80 z"/>
+    </g>
+  </defs>
+  <g id="setx243">
+    <g id="setx81">
+      <g id="setx27">
+        <g id="setx9">
+          <g id="setx3">
+            <use xlink:href="#set"/>
+            <use xlink:href="#set" transform="translate(-320,640)"/>
+            <use xlink:href="#set" transform="translate(320,640)"/>
+          </g>
+          <use xlink:href="#setx3" transform="translate(-640,1280)"/>
+          <use xlink:href="#setx3" transform="translate(640,1280)"/>
+        </g>
+        <use xlink:href="#setx9" transform="translate(-1280,2560)"/>
+        <use xlink:href="#setx9" transform="translate(1280,2560)"/>
+      </g>
+      <use xlink:href="#setx27" transform="translate(-2560,5120)"/>
+      <use xlink:href="#setx27" transform="translate(2560,5120)"/>
+    </g>
+    <use xlink:href="#setx81" transform="translate(-5120,10240)"/>
+    <use xlink:href="#setx81" transform="translate(5120,10240)"/>
+  </g>
+  <use xlink:href="#setx243" transform="translate(-10240,20480)"/>
+  <use xlink:href="#setx243" transform="translate(10240,20480)"/>
+</svg>
