@@ -1,37 +1,21 @@
-Wizualizacje fraktali, np. zbioru Mandelbrota, zbioru Julii czy dywanu Sierpińskiego. Można też umożliwić użytkownikom tworzenie własnych
- fraktali za pomocą systemów IFS lub generatorów L-systemów3.
+tworzenie fraktali z apomoc IFS
 
-Wyjaśnienia matematycznych pojęć i zasad związanych z geometrią fraktalną, np. wymiar Hausdorffa, samopodobieństwo czy atraktor.
-
-Quizy lub gry edukacyjne sprawdzające wiedzę i umiejętności użytkowników z zakresu geometrii fraktalnej.
+Quizy (sprawdz swoja wiedze)
 
 opisac sposoby tworzenia fraktali
 
-dac zastosowanie fraktali teoria chaosu i antena fraktalna
 --------------------------------------------------------------------------------------------------
 
 Po zjechaniu w dół animacja wczytywania tekstu
 
 Każdy przycisk nawigacyjny ma swój osobny pastelowy kolor 
 
-Potencjalnie rozwijane menu więcej fraktali
-
-Zadania quizy(sprawdź swoją wiedzę)
-
 Można dodać ikonki w nawigacji
-
-Opcjonalnie białe lekko przezroczyste tło i animacje odgrywające się w tle pod tłem/ obok
-
-Źródła i wykorzystane technologie fodstronki z ikonkami
 
 Można przycisk do sticky który prowadzi na górę strony
 
 Wzory itp  ,kazdą zmienna innym kolorem
 
-Okienko które automatycznie przewija obrazy jest spoko
-
 Jak obliczyć jakieś tam gówna w tym
-
-Pojawianie się tekstu z góry na dół fajne jest
 
 Po najechaniu na nav coś to przybliża się lekko
