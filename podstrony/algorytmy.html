@@ -37,13 +37,15 @@
         </div>
         <div id="content">
             <h2>Wypróbuj sam stworzyć fraktal!</h2>
-            <div class="sierpinski_triangle2">
+            <h3>Trójkąt Sierpińskiego</h3>
+            <div class="sierpinski_triangle2" style="position: relative; left: 15%;">
                 <canvas id="mySierpinskiCanvas" width="700" height="700"></canvas><br>
                 <button onclick="myNextIteration()">Następna iteracja</button>
                 <button onclick="myReset()">Resetuj</button><br>
                 Kolor wypełnienia: <input type="color" id="myColorPicker" onchange="myChangeColor()">
             </div>
-            <div class="cantor" style="position: relative;">
+            <h3>Zbiór Cantora</h3>
+            <div class="cantor" style="position: relative; left: 15%;">
                 <div id="cantorSet11" style="width: 700px; height: 150px;"></div>
                 <br>
                 <button onclick="nextIteration11()">Następna iteracja</button>
@@ -51,41 +53,56 @@
                 <input type="color" id="colorPicker11" onchange="changeColor11(this.value)">
                 <p>Liczba iteracji: <span id="iterationCount11">0</span></p>
             </div>
-            <canvas id="dyw12carpetCanvas" width="700" height="700"></canvas><br>
-            <button id="dyw12nextButton">Następna iteracja</button>
-            <button id="dyw12resetButton">Resetuj</button><br>
-            Wybierz kolor: <input type="color" id="dyw12colorPicker"><br>
-            Licznik iteracji: <span id="dyw12iterationCounter">0</span>
 
+            <h3>Dywan Sierpińskiego</h3>
+            
+            <div class="dywcarpet" style="position: relative; left: 15%;">
+                <canvas id="dyw12carpetCanvas" width="700" height="700"></canvas><br>
+                <button id="dyw12nextButton">Następna iteracja</button>
+                <button id="dyw12resetButton">Resetuj</button><br>
+                Wybierz kolor: <input type="color" id="dyw12colorPicker"><br>
+                Licznik iteracji: <span id="dyw12iterationCounter">0</span>
+            </div>
+            <h3>Płatek Kocha</h3>
+
+            <h3>Krzywa Kocha</h3>
+            
+
+
+
+            <!--
             <a href="../../strona.html#krzywa-kocha"><h3>Śnieżynka Kocha</h3></a>
             <div class="edycja">
                 <iframe scrolling="no" title="Śnieżynka Kocha -ziel" src="https://www.geogebra.org/material/iframe/id/agksry3u/width/710/height/810/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="710px" height="810px" style="border:0px;"> </iframe>
             </div>
             <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>     
-            <!--edycja2--><hr style="border-top: 2px dashed black;">
+            <hr style="border-top: 2px dashed black;">
             <a href="../../strona.html#dywan-sierpinskiego"><h3>Dywan Sierpińskiego</h3></a>
+
+
+           
             <div class="edycja">
                 <iframe scrolling="no" title="Dywan Sierpińskiego" src="https://www.geogebra.org/material/iframe/id/vpustgtk/width/710/height/710/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="710px" height="710px" style="border:0px;"> </iframe>
             </div>
             <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
-            <!--edycja3--><hr style="border-top: 2px dashed black;">
+            <hr style="border-top: 2px dashed black;">
             <h3>Smok Heighwaya</h3>
             <div class="edycja">
                 <iframe scrolling="no" title="Smok Heighwaya" src="https://www.geogebra.org/material/iframe/id/zx3f2hyk/width/800/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="800px" height="600px" style="border:0px;"> </iframe> 
             </div>
             <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
-            <!--edycja4--><hr style="border-top: 2px dashed black;">
+            <hr style="border-top: 2px dashed black;">
             <h3>Krzywa Levy'ego</h3>
             <div class="edycja">
                 <iframe scrolling="no" title="Krzywa Levy'ego" src="https://www.geogebra.org/material/iframe/id/d5pgqy3u/width/800/height/550/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="800px" height="550px" style="border:0px;"> </iframe>
             </div>
             <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
-            <!--edycja5--><hr style="border-top: 2px dashed black;">
+            <hr style="border-top: 2px dashed black;">
             <a href="../../strona.html#drzewo-pitagorejskie"><h3>Drzewo Pitagorasa</h3></a>
             <div class="edycja">
                 <iframe scrolling="no" title="Drzewo Pitagorasa" src="https://www.geogebra.org/material/iframe/id/tjkkenfh/width/800/height/550/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="800px" height="550px" style="border:0px;"> </iframe>
             </div>
-            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
+            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>-->
         </div>
         
         <div id="footer">Mateusz Zimny &copy; 2023</div><!--footer-->
