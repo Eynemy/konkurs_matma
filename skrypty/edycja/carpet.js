@@ -43,3 +43,32 @@ document.getElementById("dyw12colorPicker").onchange = function() {
 };
 
 dyw12resetCarpet();
+
+// Kod do obsługi trybu ciemnego
+function updateCarpetColor() {
+    if (body.classList.contains('dark-mode')) {
+        if (dyw12carpetColor === "#000000") {
+            document.getElementById("dyw12colorPicker").value = "#ffffff";
+            dyw12carpetColor = "#ffffff";
+            dyw12resetCarpet();
+            for (let i = 1; i <= dyw12iteration; i++) {
+                dyw12drawCarpet(i);
+            }
+        }
+    } else {
+        if (dyw12carpetColor === "#ffffff") {
+            document.getElementById("dyw12colorPicker").value = "#000000";
+            dyw12carpetColor = "#000000";
+            dyw12resetCarpet();
+            for (let i = 1; i <= dyw12iteration; i++) {
+                dyw12drawCarpet(i);
+            }
+        }
+    }
+    }
+    
+    updateCarpetColor();
+    
+    toggle.addEventListener('change', () => {
+        updateCarpetColor();
+    });

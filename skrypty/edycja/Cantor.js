@@ -56,3 +56,25 @@ function createLine11(width) {
 }
 
 reset11();
+
+// Kod do obsługi trybu ciemnego
+function updateCantorSetColor() {
+  if (body.classList.contains('dark-mode')) {
+      if (lineColor11 === "#000000") {
+          changeColor11("#ffffff");
+          document.getElementById("colorPicker11").value = "#ffffff";
+      }
+  } else {
+      if (lineColor11 === "#ffffff") {
+          changeColor11("#000000");
+          document.getElementById("colorPicker11").value = "#000000";
+      }
+  }
+}
+
+updateCantorSetColor();
+
+toggle.addEventListener('change', () => {
+    updateCantorSetColor();
+});
+

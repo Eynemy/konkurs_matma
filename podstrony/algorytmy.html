@@ -38,71 +38,59 @@
         <div id="content">
             <h2>Wypróbuj sam stworzyć fraktal!</h2>
             <h3>Trójkąt Sierpińskiego</h3>
-            <div class="sierpinski_triangle2" style="position: relative; left: 15%;">
-                <canvas id="mySierpinskiCanvas" width="700" height="700"></canvas><br>
+            <div class="sierpinski_triangle2" style="position: relative;">
+                <canvas id="mySierpinskiCanvas" width="650" height="600"></canvas><br>
                 <button onclick="myNextIteration()">Następna iteracja</button>
-                <button onclick="myReset()">Resetuj</button><br>
-                Kolor wypełnienia: <input type="color" id="myColorPicker" onchange="myChangeColor()">
+                <button onclick="myReset()">Resetuj</button>
+                <input type="color" id="myColorPicker" onchange="myChangeColor()"><br>
+                <p>Licznik iteracji:</p>
+                <p>Kliknij "Następna iteracja" by zobaczyć następny krok budowy Trójkąta Sierpińskiego, lub "Resetuj" by zresetować obraz do stanu początkowego. Możesz także zmienić kolor konstrukcji.</p>
             </div>
             <h3>Zbiór Cantora</h3>
-            <div class="cantor" style="position: relative; left: 15%;">
-                <div id="cantorSet11" style="width: 700px; height: 150px;"></div>
+            <div class="cantor" style="position: relative;">
+                <div id="cantorSet11" style="width: 700px; height: 150px; position: relative; "></div>
                 <br>
                 <button onclick="nextIteration11()">Następna iteracja</button>
                 <button onclick="reset11()">Resetuj</button>
                 <input type="color" id="colorPicker11" onchange="changeColor11(this.value)">
-                <p>Liczba iteracji: <span id="iterationCount11">0</span></p>
+                <p>Licznik iteracji: <span id="iterationCount11">0</span> / 6</p>
+                <p>Kliknij "Następna iteracja" by zobaczyć następny krok budowy Zbiór Cantora, lub "Resetuj" by zresetować obraz do stanu początkowego. Możesz także zmienić kolor konstrukcji.</p>
             </div>
 
             <h3>Dywan Sierpińskiego</h3>
             
-            <div class="dywcarpet" style="position: relative; left: 15%;">
-                <canvas id="dyw12carpetCanvas" width="700" height="700"></canvas><br>
+            <div class="dywcarpet" style="position: relative;">
+                <canvas id="dyw12carpetCanvas" width="650" height="650"></canvas><br>
                 <button id="dyw12nextButton">Następna iteracja</button>
-                <button id="dyw12resetButton">Resetuj</button><br>
-                Wybierz kolor: <input type="color" id="dyw12colorPicker"><br>
-                Licznik iteracji: <span id="dyw12iterationCounter">0</span>
+                <button id="dyw12resetButton">Resetuj</button>
+                <input type="color" id="dyw12colorPicker"><br>
+                <p>Licznik iteracji: <span id="dyw12iterationCounter">0</span> / 5</p>
+                <p>Kliknij "Następna iteracja" by zobaczyć następny krok budowy Dywanu Sierpińskiego, lub "Resetuj" by zresetować obraz do stanu początkowego. Możesz także zmienić kolor konstrukcji.</p>
             </div>
-            <h3>Płatek Kocha</h3>
-
-            <h3>Krzywa Kocha</h3>
             
-
-
-
-            <!--
-            <a href="../../strona.html#krzywa-kocha"><h3>Śnieżynka Kocha</h3></a>
-            <div class="edycja">
-                <iframe scrolling="no" title="Śnieżynka Kocha -ziel" src="https://www.geogebra.org/material/iframe/id/agksry3u/width/710/height/810/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="710px" height="810px" style="border:0px;"> </iframe>
+            <h3>Płatek Kocha</h3>
+            <div class="Sniezynka_Kocha">
+                <canvas id="swCanvas"></canvas><br>
+                <button id="swNext">Następna iteracja</button>
+                <button id="swReset">Resetuj</button>
+                <input type="color" id="swColor" value="#000000"><br>
+                <p>Licznik iteracji: <span id="swIterations">0</span> / 6</p>
+                <p>Kliknij "Następna iteracja" by zobaczyć następny krok budowy Płatka Kocha, lub "Resetuj" by zresetować obraz do stanu początkowego. Możesz także zmienić kolor konstrukcji.</p>
             </div>
-            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>     
-            <hr style="border-top: 2px dashed black;">
-            <a href="../../strona.html#dywan-sierpinskiego"><h3>Dywan Sierpińskiego</h3></a>
+            <h3>Krzywa Kocha</h3>
+            <div class="krzywa_Kocha" style="position: relative;">
+                <canvas id="kcvCanvas"></canvas><br>
+                <button id="kcvNext">Następna iteracja</button>
+                <button id="kcvReset">Resetuj</button>
+                <input type="color" id="kcvColor" value="#000000">
+                <p>Licznik iteracji: <span id="kcvIterations">0</span></p>
+                
+                <p>Kliknij "Następna iteracja" by zobaczyć następny krok budowy Krzywej Kocha, lub "Resetuj" by zresetować obraz do stanu początkowego. Możesz także zmienić kolor konstrukcji.</p>
+            </div>
 
 
            
-            <div class="edycja">
-                <iframe scrolling="no" title="Dywan Sierpińskiego" src="https://www.geogebra.org/material/iframe/id/vpustgtk/width/710/height/710/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="710px" height="710px" style="border:0px;"> </iframe>
-            </div>
-            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
-            <hr style="border-top: 2px dashed black;">
-            <h3>Smok Heighwaya</h3>
-            <div class="edycja">
-                <iframe scrolling="no" title="Smok Heighwaya" src="https://www.geogebra.org/material/iframe/id/zx3f2hyk/width/800/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="800px" height="600px" style="border:0px;"> </iframe> 
-            </div>
-            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
-            <hr style="border-top: 2px dashed black;">
-            <h3>Krzywa Levy'ego</h3>
-            <div class="edycja">
-                <iframe scrolling="no" title="Krzywa Levy'ego" src="https://www.geogebra.org/material/iframe/id/d5pgqy3u/width/800/height/550/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="800px" height="550px" style="border:0px;"> </iframe>
-            </div>
-            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>
-            <hr style="border-top: 2px dashed black;">
-            <a href="../../strona.html#drzewo-pitagorejskie"><h3>Drzewo Pitagorasa</h3></a>
-            <div class="edycja">
-                <iframe scrolling="no" title="Drzewo Pitagorasa" src="https://www.geogebra.org/material/iframe/id/tjkkenfh/width/800/height/550/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/true" width="800px" height="550px" style="border:0px;"> </iframe>
-            </div>
-            <p>Zmieniając wartość suwaka, można obserwować kolejne kroki powstawania fraktali</p>-->
+           
         </div>
         
         <div id="footer">Mateusz Zimny &copy; 2023</div><!--footer-->
@@ -110,13 +98,14 @@
     <div class="skrypty">
         <script src="../skrypty/jquery.min.js"></script>
         <script src="../skrypty/stickynav.js"></script>
-        <script src="../skrypty/rozwijane1.js"></script>
         <script src="../skrypty/darkmode.js"></script>
         <script src="../skrypty/trojkat.js"></script>
 
         <script src="../skrypty/edycja/trojkat_sierpinskiego.js"></script>
         <script src="../skrypty/edycja/Cantor.js"></script>
         <script src="../skrypty/edycja/carpet.js"></script>
+        <script src="../skrypty/edycja/krzywa_kocha.js"></script>
+        <script src="../skrypty/edycja/Sniezka_Kocha.js"></script>
     </div>
 </body>
 </html> 

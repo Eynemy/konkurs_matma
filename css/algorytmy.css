@@ -30,3 +30,97 @@ a{
     text-decoration: none;
     
 }
+.cantor {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#cantorSet11 {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #5a635d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    background-color: #3c4649;
+    transform: scale(1.05);
+}
+
+
+input[type=color] {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px #ccc;
+    width: 50px;
+    height: 30px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.cantor {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#cantorSet11 {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+.sierpinski_triangle2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#mySierpinskiCanvas {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+.dywcarpet {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#dyw12carpetCanvas {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+.Sniezynka_Kocha {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#swCanvas {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+.krzywa_Kocha {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#kcvCanvas {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+.dark-mode p{
+    background-color: rgb(248, 244, 244);
+    color: #3c4649;
+}
+.dark-mode button{
+    background-color: aliceblue;
+    color: #2a2a2a;
+}

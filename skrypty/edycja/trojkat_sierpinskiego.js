@@ -53,3 +53,25 @@ function myChangeColor() {
 }
 
 myDrawSierpinski();
+
+// Kod do obsługi trybu ciemnego
+function updateSierpinskiColor() {
+    if (body.classList.contains('dark-mode')) {
+        if (myFillColor === "#000000") {
+            document.getElementById("myColorPicker").value = "#ffffff";
+            myChangeColor();
+        }
+    } else {
+        if (myFillColor === "#ffffff") {
+            document.getElementById("myColorPicker").value = "#000000";
+            myChangeColor();
+        }
+    }
+}
+
+updateSierpinskiColor();
+
+toggle.addEventListener('change', () => {
+    updateSierpinskiColor();
+});
+
