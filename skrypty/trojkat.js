@@ -1,39 +1,38 @@
-// skrypt na  logo (animacja powstawania trojkata sierpinskiego)
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-var size = 50;
-var maxDepth = 0;
+var zm_lgCanvas = document.getElementById("ZM_logo");
+var zm_lgCtx = zm_lgCanvas.getContext("2d");
+var zm_lgSize = 50;
+var zm_lgMaxDepth = 0;
 
-ctx.fillStyle = "white"; //wybranie koloru obiektu
+zm_lgCtx.fillStyle = "white";
 
-function drawTriangle(x, y, size, depth) {
-  if (depth === maxDepth) {
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x + size / 2, y + size);
-    ctx.lineTo(x - size / 2, y + size);
-    ctx.closePath();
-    ctx.fill();
+function zm_lgDrawTriangle(x, y, size, depth) {
+  if (depth === zm_lgMaxDepth) {
+    zm_lgCtx.beginPath();
+    zm_lgCtx.moveTo(x, y);
+    zm_lgCtx.lineTo(x + size / 2, y + size);
+    zm_lgCtx.lineTo(x - size / 2, y + size);
+    zm_lgCtx.closePath();
+    zm_lgCtx.fill();
   } else {
     var newSize = size / 2;
-    drawTriangle(x, y, newSize, depth + 1);
-    drawTriangle(x - newSize / 2, y + newSize, newSize, depth + 1);
-    drawTriangle(x + newSize / 2, y + newSize, newSize, depth + 1);
+    zm_lgDrawTriangle(x, y, newSize, depth + 1);
+    zm_lgDrawTriangle(x - newSize / 2, y + newSize, newSize, depth + 1);
+    zm_lgDrawTriangle(x + newSize / 2, y + newSize, newSize, depth + 1);
   }
 }
 
-function drawSierpinski() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawTriangle(canvas.width / 2, size / 2, size, 0);
-  if (maxDepth < 4) {
-    maxDepth++;
-    setTimeout(drawSierpinski, 1000);
+function zm_lgDrawSierpinski() {
+  zm_lgCtx.clearRect(0, 0, zm_lgCanvas.width, zm_lgCanvas.height);
+  zm_lgDrawTriangle(zm_lgCanvas.width / 2, zm_lgSize / 2, zm_lgSize, 0);
+  if (zm_lgMaxDepth < 4) {
+    zm_lgMaxDepth++;
+    setTimeout(zm_lgDrawSierpinski, 500);
   }
 }
 
-canvas.addEventListener("click", function() {
-  maxDepth = 0;
-  drawSierpinski();
+zm_lgCanvas.addEventListener("click", function() {
+  zm_lgMaxDepth = 0;
+  zm_lgDrawSierpinski();
 });
 
-drawSierpinski();
+zm_lgDrawSierpinski();
