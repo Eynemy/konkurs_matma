@@ -4,27 +4,29 @@
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/patern.css">  <!--DODANIE OGÓLNEGO CSS STRONY-->
-    <link rel="stylesheet" type="text/css" href="../css/wymiar.css"> <!--DODANIE CSS DLA TEJ PODSTRONY-->
+    <link rel="stylesheet" type="text/css" href="../css/patern.css">
+    <link rel="stylesheet" type="text/css" href="../css/wymiar.css">
+    <link rel="shortcut icon" type="image/ico" href="../obrazy/ikonkas.ico"> 
     <title>Wymiar fraktalny</title>
 </head>
 <body>
     <div id="wrapper">
         <div id="header">
-            <div class="typewriter">
-                <div id="logo">
-                    <canvas id="ZM_logo" width="100" height="100"></canvas><!--skrypt logo-->
-                    Fraktale
-                    </div style="clear: both;"></div>
+            <div id="header">
+                <div class="fade-in">
+                    <div id="logo">
+                        <canvas id="ZM_logo" width="100" height="100"></canvas>
+                        Fraktale
+                        </div style="clear: both;"></div>
+                    </div>
                 </div>
             </div>
-        </div>
         <div class="nav">
              <ol>
                 <li><a href="../index.html"><span class="text-underline">Strona główna</span></a></li>
-                <li><a href="../strona.html"><span class="text-underline">Teoria</span></a></li> 
+                <li><a href="O_fraktalach.html"><span class="text-underline">O fraktalach</span></a></li> 
                 <li><a href="algorytmy.html"><span class="text-underline">Edycja</span></a></li>
-                <li><a href="../strona.html#zastosowanie"><span class="text-underline">Zastosowanie</span></a></li>
+                <li><a href="O_fraktalach.html#zastosowanie"><span class="text-underline">Zastosowanie</span></a></li>
                 <li><a href="wymiar.html"><span class="text-underline">Wymiar fraktalny</span></a></li>
                 <li><a href="informacje.html"><span class="text-underline">O stronie</span></a></li>
             </ol>
@@ -36,39 +38,47 @@
         </div>
         <div id="content">
            <h2>Wymiar fraktalny</h2>
-           <p>Wymiar fraktalny jest miarą złożoności fraktala i może być obliczony na kilka sposobów. Jednym z najczęściej stosowanych sposobów jest obliczenie wymiaru Hausdorffa-Besicovitcha. Wymiar ten opisuje sposób, w jaki zmienia się skala fraktala wraz ze zmianą skali pomiaru.</p>
-                <p>Wymiar Hausdorffa-Besicovitcha dla fraktala D jest obliczany według wzoru: D = -log(N) / log(S), gdzie N to liczba samopodobnych kopii fraktala, a S to skala pomniejszenia każdej z kopii.</p>
-                <p>Na przykład, dla dywanu Sierpińskiego, który składa się z 8 samopodobnych kopii pomniejszonych ośmiokrotnie, wymiar Hausdorffa-Besicovitcha wynosi D = -log(8) / log(3) ≈ 1.8928.</p>
+           <p>Wymiar fraktalny (nazywany czasami wymiarem samopodobieństwa) to miara fraktali. Główną jego cechą jest to, że dla obiektów fraktalnych będzie on różny od ich wymiaru topologicznego. Wymiar fraktalny pokazuje w jakim stopniu fraktal wypełnia przestrzeń, w której jest osadzony.</p>
+
+            <p>Jednym ze sposobów obliczania wymiaru fraktalnego jest wykorzystanie własności samopodobieństwa. Dla przykładu, jeśli przedmiot w całej wielkości zawiera samopodobnych kopii siebie wielkości k, to jego wymiar samopodobieństwa wyrażony jest przez równanie:</p>
+             <p class="wzor">d = log(<B style="color: crimson;">N</B>)/log(<b style="color: #18a737">k</b>)</p>
+             <div class="lewo">
+                <ul>
+                    <p><B style="color: crimson;">N</B> - liczba samobodobnych części,</p>
+                    <b style="color: #18a737;">k</b> - współczynnik skalowania
+                
+            </div>
+            <div class="pokazanie">
+                <div class="ukazanie-prawo">
+                    <img class="zmiana" alt="trojakt_sierpinskiego">
                     
-            <!--
-            <h2>Współczynnik skalowania</h2>
-                <p>Wymiar fraktalny - jest to potęga do której trzeba
-                    podnieść odwrotność skali, w jakiej podobne są mniejsze
-                    figury, aby otrzymać ilość nowo powstałych figur.
-                    𝑠
-                    𝑑 = 𝑛
-                    Wzór na wymiar samopodobieństwa gdzie: s - odwrotność
-                    skali podobieństwa, n - liczba kawałków, które są podobne
-                    do wyjściowej figury, d - wymiar samopodobieństwa.
-                    Za każdym razem gdy skalujemy pudełko, wykonujemy to
-                    tak, aby cztery mniejsze pudełka zmieściły się w jednym
-                    większym.</p>
-            <h2>Wymiary i współczynnik skalowania</h2>
-                    <p>
-                        Na rysunku obok przedstawiono skalę i
-                        wymiary jako przykład. D to wymiar, N to
-                        liczba takich samych kształtów, na które
-                        podzielony jest pierwotny kształt, l to
-                        iteracja.
-                        Obrazek przedstawia, jak działa
-                        współczynnik skalowania i co oznacza
-                        kształt 1-wymiarowy, dwuwymiarowy i
-                        trójwymiarowy. 
-                    </p>
-            <h2>Wzór na wymiar fraktalny</h2>
-            -->
+                </div>
+                <div class="ukazanie-lewo">
+                    <p><B style="color: crimson;">N</B> wynosi <B style="color: crimson;">3</B>, ponieważ trójkąt Sierpiński składa się z <b>trzech mniejszych kopii</b> samego siebie.
+                    <p> Współczynnik skalowania <b style="color: #18a737;">k</b> wynosi <b style="color: #18a737;">2</b>, ponieważ każda z mniejszych kopii jest <b>dwa razy mniejsza</b> niż oryginał.</p>
+                    <p> Wstawiając te wartości do wzoru otrzymujemy:</p>
+                    <h5><b>d = log(<B style="color: crimson;">N</B>)/log(<b style="color: #18a737;">k</b>) = log(<B style="color: crimson;">3</B>)/log(<b style="color: #18a737;">2</b>) ≈ 1.585</b></h5>
+                </div>
+            </div><div style="clear:both"></div>
+           
+            
+
+            <p>Wymiar Hausdorffa-Besicovitcha, zwany też wymiarem Hausdorffa, jest jednym ze sposobów obliczania wymiaru fraktalnego. Jest to ilość, która ma tłumaczyć jak fraktalny zbiór wypełnia przestrzeń we wszystkich skalach. W przypadku fraktali jest to liczba niecałkowita i większa niż wymiar topologiczny.</p>
+
+            
+
+            <p>Jednym z przykładów obliczania wymiaru Hausdorffa-Besicovitcha dla konkretnych fraktali jest zbiór Cantora. Zatem: <strong>d = log(2)/log(3) = 0,631</strong> będzie wymiarem fraktalnym zbioru Cantora <br>(zbiór Cantora posiada zerowy wymiar topologiczny). 
+                <canvas id="Cantor-Canvas3"  width="1000" height="200"></canvas>
+            <p style="text-align: left;">Inne przykłady fraktali i ich wymiarów Hausdorffa-Besicovitcha to:</p>
+            <uL>
+                <li>Trójkąt Sierpińskiego (1,585),</li>
+                <li>płatek śniegu von Koch (1,262),</li>
+                <li>kostka Mengera (2,727).</li>
+            </uL>  
+
+        
         </div>
-        <div id="footer">Mateusz Zimny &copy; 2023</div><!--footer-->
+        <div id="footer">Mateusz Zimny &copy; 2023</div>
     </div> 
     <div class="skrypty">
         <script src="../skrypty/jquery.min.js"></script>
@@ -76,6 +86,7 @@
         <script src="../skrypty/rozwijane1.js"></script>
         <script src="../skrypty/darkmode.js"></script>
         <script src="../skrypty/trojkat.js"></script>
+        <script src="../skrypty/cantor.js"></script>
     </div>
 </body>
 </html>

@@ -117,10 +117,10 @@ hr{
     float: left;
     width: 150px;
     height: 40px;
-    border-right: 1px dashed rgb(24, 63, 14);
+    border-right: 1px dashed #183f0e;
  }
 .nav > ol > li:first-child{ /* zastosowanie opcji do pierwszego elementu w kodzie od li */
-    border-left: 1px dashed rgb(19, 19, 80);
+    border-left: 1px dashed #183f0e;
 }
 .nav > ol > li:hover{ /* co ma się stać po najechaniu li */
     /*background-color: #111; */
@@ -175,6 +175,15 @@ hr{
 
 
 /*-----------------ANIMACJA PISANIA - LOGO-----------------*/
+.fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+  padding-left: 20%;
+
+}
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
