@@ -37,9 +37,14 @@ function myDrawSierpinski() {
                    0);
 }
 
+let myIterationCount = 0;
 function myNextIteration() {
-    myMaxDepth++;
-    myDrawSierpinski();
+    if (myMaxDepth < 8) {
+        myMaxDepth++;
+        myDrawSierpinski();
+        myIterationCount++;
+        document.getElementById("myIterationCount").textContent = myIterationCount;
+    }
 }
 
 function myReset() {
@@ -74,4 +79,3 @@ updateSierpinskiColor();
 toggle.addEventListener('change', () => {
     updateSierpinskiColor();
 });
-

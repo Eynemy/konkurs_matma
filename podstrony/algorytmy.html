@@ -43,7 +43,7 @@
                 <button onclick="myNextIteration()">Następna iteracja</button>
                 <button onclick="myReset()">Resetuj</button>
                 <input type="color" id="myColorPicker" onchange="myChangeColor()"><br>
-                <p>Licznik iteracji:</p>
+                <p>Licznik iteracji: <span id="myIterationCount">0</span> / 8</p>
                 <p>Kliknij "Następna iteracja" by zobaczyć następny krok budowy Trójkąta Sierpińskiego, lub "Resetuj" by zresetować obraz do stanu początkowego. Możesz także zmienić kolor konstrukcji.</p>
             </div>
             <h3>Zbiór Cantora</h3>
@@ -88,9 +88,6 @@
                 <p>Kliknij "Następna iteracja" by zobaczyć następny krok budowy Krzywej Kocha, lub "Resetuj" by zresetować obraz do stanu początkowego. Możesz także zmienić kolor konstrukcji.</p>
             </div>
 
-
-           
-           
         </div>
         
         <div id="footer">Mateusz Zimny &copy; 2023</div><!--footer-->
@@ -100,7 +97,6 @@
         <script src="../skrypty/stickynav.js"></script>
         <script src="../skrypty/darkmode.js"></script>
         <script src="../skrypty/trojkat.js"></script>
-
         <script src="../skrypty/edycja/trojkat_sierpinskiego.js"></script>
         <script src="../skrypty/edycja/Cantor.js"></script>
         <script src="../skrypty/edycja/carpet.js"></script>

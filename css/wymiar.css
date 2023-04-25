@@ -3,19 +3,16 @@ body{
     color: rgb(0, 0, 0);
     font-size: 22px;
     font-family: 'Nunito', sans-serif
-
 }
 
 h1, h2{
     font-family: 'Lato', sans-serif;
     color: rgb(8, 61, 11);
-    text-align: center;
-    
+    text-align: center; 
 }
 
 p{
-    text-align: center;
-   
+    text-align: center;  
 }
 
 h3{

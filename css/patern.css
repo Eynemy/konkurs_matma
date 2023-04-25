@@ -7,24 +7,22 @@ body{
   margin: 0 !important;
 
 }
-/*-----------------STYLIZACJĄ NAGŁÓWKÓW-----------------*/
 h1, h2{
   font-family: 'Lato', sans-serif;
   color: rgb(8, 61, 11);
 }
-/*-----------------SYLIZACJA NAGŁÓWKÓW V2(FIGURY)-----------------*/
-h3{/*
-  color: rgb(116, 7, 7);*/
+
+h3{
   color: rgb(19, 18, 18);
 }
-/*-----------------SYLIZACJA OPISÓW ZDJĘĆ-----------------*/
+
 h4{
   text-align: center;
   vertical-align: middle;
   font-size: medium;
   color: dimgrey;
 }
-/*-----------------DODANIE ANIMACJI PRZYBLIŻENIA-----------------*/
+
 img{
   transition: transform 0.5s ease;    /* dodanie przybliżenia */
 }
@@ -41,7 +39,7 @@ img:hover{
     width: 100% 0;
     background-color:  #1b1b1b;
 }
-/*stylizacja trojkata obok log*/
+
 #myCanvas {
   float: left;
   margin-right: -10px;
@@ -64,7 +62,7 @@ img:hover{
     margin-right: auto;
     text-align: justify;
 }
-/*stylizacja oddzielaczy*/
+
 hr{
   border: none;
   height: 1px;
@@ -72,7 +70,6 @@ hr{
   linear-gradient(to right, #ffffff,grey, #000000);
 }
 
-/*-------------KOLORY NAWIGACJI-------------*/
 .nav{
     background-color: rgb(255, 255, 255); 
     padding: 10px 0;
@@ -81,7 +78,7 @@ hr{
     border-bottom: 1px solid black;
 
 }
-/*-------------STYL STOPKI-------------*/
+
 #footer{
     text-align: center;
     background-color: #30313f;
@@ -89,7 +86,6 @@ hr{
     color: white;
 }
 
-/*-------------ZAWARTOSC MENU NAWIGACYJNEGO-------------*/
 .sticky{
 
     width: 100%;
@@ -99,41 +95,37 @@ hr{
     z-index: 100; /* aby element byl nad wszystkim */
 }
 .nav > ol{
-    padding: 0;
-    margin:0;
-    list-style-type: none; /* usuwa elementy stylizowania listy np. 1 */
-    font-size: 18px;
-    height: 35px;
-    line-height: 200%; /* jak wiele mkiejsca w pionie zajmuje jedna linia */
-    display: inline-block; /* tworzenie elementów blokowych które będą się układać obok siebie tak jakby miały (float:left;) przywraca wartość z .nav text-align: center; */
+  padding: 0;
+  margin:0;
+  list-style-type: none; 
+  font-size: 18px;
+  height: 35px;
+  line-height: 200%; 
+  display: inline-block; 
+}
 
+.nav > ol a{
+  color: rgb(39, 37, 37);
+  text-decoration: none; 
+  display: block; 
+}
+.nav > ol > li{
+  float: left;
+  width: 150px;
+  height: 40px;
+  border-right: 1px dashed #183f0e;
  }
-.nav > ol a{ /* stytlizowanie hiperłącz elementu ol */
-    color: rgb(39, 37, 37);
-    text-decoration: none; /* usunięcie dekorowania tekstu (usuwa podkreślenia itp */
-    display: block; /*ustawienie żeby ten element zachowywał się jak element blokowy */
- }
- .nav > ol > li{ /*stylizujemy element li, którego rodzicem jest element ol( stylizujemy tylko potomków ol) */
-    float: left;
-    width: 150px;
-    height: 40px;
-    border-right: 1px dashed #183f0e;
- }
-.nav > ol > li:first-child{ /* zastosowanie opcji do pierwszego elementu w kodzie od li */
+.nav > ol > li:first-child{ 
     border-left: 1px dashed #183f0e;
 }
-.nav > ol > li:hover{ /* co ma się stać po najechaniu li */
-    /*background-color: #111; */
-    background-color: white;
-    cursor: pointer;
+.nav > ol > li:hover{ 
+  background-color: white;
+  cursor: pointer;
 }
-.nav > ol > li:hover > a{ /*stylizacja linku w li */
-    color: black;
+.nav > ol > li:hover > a{ 
+  color: black;
 }
 
-/*-------------ANIMACJA PODKREŚLENIA PO NAJECHANIU-------------*/
-
-/* Domyślny styl dla elementu tekstu */
 .text-underline {
   position: relative;
   display: inline-block;
@@ -141,7 +133,6 @@ hr{
   text-decoration: none;
 }
   
-  /* Styl dla animacji podkreślenia */
 .text-underline::before, .text-underline::after {
   content: "";
   position: absolute;
@@ -151,7 +142,6 @@ hr{
   background-color: black;
 }
   
-  /*Animacja podkreślenia*/
 .text-underline::before {
   right: 50%;
   transition: width 0.3s ease-out, right 0.3s ease-out;
@@ -162,7 +152,7 @@ hr{
   transition: width 0.3s ease-out, left 0.3s ease-out;
 }
   
-  /* Efekt animacji */
+
 .text-underline:hover::before {
   width: 50%;
   right: 0;
@@ -172,9 +162,6 @@ hr{
   left: 0;
 }
 
-
-
-/*-----------------ANIMACJA PISANIA - LOGO-----------------*/
 .fade-in {
   animation: fadeIn ease 3s;
   -webkit-animation: fadeIn ease 3s;
@@ -209,15 +196,13 @@ hr{
   padding-left: 20%;
 }
 
-/* opcje dla dark mode*/
-/*color: rgb(228, 65, 65);  linear-gradient(to right, #51ff00, #1ec4da, #2500fa);*/
 body {
   transition: background-color 0.5s ease;
 }
 .dark-mode {
   background-color: #2a2a2a;
   color: #e2e2e2;
- 
+
 }
 .dark-mode h1{
   color:white;

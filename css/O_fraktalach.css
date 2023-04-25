@@ -1,6 +1,6 @@
 
 
-/*-----------------STYLIZACJA 1 ELEMENTU(CO TO FRAKTALE?)-----------------*/
+
 .prawo-fraktal{
       float: right; 
       text-align: center;
@@ -24,9 +24,9 @@
       width: 60%;
       
 }
-/*stylizacja canvas 2(iteracyjny)*/
+
 #trojkat{
-    transform: rotate(180deg);/* obrocenie trojkaata o 180 stopni*/
+    transform: rotate(180deg);
 }
 .draw_sierpinski {
     display: grid;
@@ -77,7 +77,7 @@
     text-align: center; 
 }
 
-/*-------------FRAKTALE PRZEDSTAWIENIE-------------*/
+
 .triangle, .Krzywa, .Mandelbrot, .drzewo, .dywan, .Smok-Heighwaya, .Krzywa-Levy, .Kostka-Mengera, .Julii, .Weierstrass{
     text-align: left;
     float: left;
@@ -90,13 +90,8 @@
     vertical-align: top;
     width: 40%;               
     position: relative;
-    top:  90px;              
-    
+    top:  90px;               
 }
-
-
-
-/*ustawianie wielkosci zdjec fraktali*/
 
 .triangle-picture > img{
     width: 350px;
@@ -147,7 +142,7 @@
     border-radius: 10px;  
     
 }
-/* zdjecia fraktale przedstawienie */
+
 .trojkat_tryb img {
     content: url('../obrazy/SIrpinski_triangle_light.svg');
     width: 350px;
@@ -163,8 +158,6 @@
     content: url('../obrazy/fract0.png');
 }
 
-
-/* fraktale w grafice komputerowej */
 .computer{
     display: inline-block;
 }
@@ -173,7 +166,7 @@
     border-radius: 10px;
     height: 300px;
 }
-/*-----------------Fraktale w naturze-----------------*/
+
 .real{
     display: inline-block;
 }
@@ -182,45 +175,45 @@
     border-radius: 10px;
     height: 300px;
 }
-/* definicja z obrazem */
+
 .definitionimg {
-    position: relative; /* ustawienie pozycji względem rodzica */
-    display: inline-block; /* ustawienie elementu jako blok inline */
-    margin-right: 10px; /* margines z prawej strony */
-    margin-bottom: 10px; /* margines na dole */
+    position: relative;
+    display: inline-block; 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
     text-align: right;
 }
 
 .definitionimg .definition-text {
-    display: inline-block; /* ustawienie tekstu definicji jako blok inline */
+    display: inline-block;
 }
 .definitionimg:hover .definition-text { 
-    text-decoration: underline; /* dodanie podkreslenia po najechaniu na tekst z definicja*/
+    text-decoration: underline; 
 }
 
 .definitionimg .definition-tooltip {
-    position: absolute; /* ustawienie pozycji absolutnej względem rodzica */
-    top: 0; /* odległość od góry */
-    left: 100%; /* odległość od lewej strony */
-    width: 310px; /* szerokość */
-    padding: 10px; /* wewnętrzny padding */
-    background-color: white; /* tło tooltipa */
-    border: 1px solid black; /* obramowanie tooltipa */
-    font-size: medium; /* rozmiar czcionki */
-    text-align: justify; /* justowanie tekstu */
-    display: none; /* ukrycie tooltipa */
-    background-repeat: no-repeat; /* nie powtarzaj tła */
-    z-index: 1; /* ustawienie poziomu elementu */
-    margin-right: 110px; /* margines z prawej strony */
+    position: absolute; 
+    top: 0; 
+    left: 100%; 
+    width: 310px; 
+    padding: 10px; 
+    background-color: white; 
+    border: 1px solid black; 
+    font-size: medium; 
+    text-align: justify; 
+    display: none; 
+    background-repeat: no-repeat; 
+    z-index: 1; 
+    margin-right: 110px;
 }
 
 .definitionimg:hover .definition-tooltip {
-    display: block; /* pojawienie się tooltipa po najechaniu myszą */
+    display: block; 
 }
 
 .definitionimg:hover {
-    cursor: pointer; /* zmiana kursora na "wskaźnik" */
-    text-decoration: underline; /* podkreślenie tekstu */
+    cursor: pointer; 
+    text-decoration: underline; 
 }
 
 .definition-text > u {
@@ -229,62 +222,59 @@
 }
 
 .definitionimg::before {
-    content: "?"; /* Symbol, który pojawi się przed tekstem */
+    content: "?"; 
     position: absolute;
-    top: -8px; /* Odległość od góry */
-    right: -7px; /* Odległość od prawej strony */
-    font-size: 20px; /* Rozmiar czcionki */
-    color: #174626; /* Kolor symbolu */
-    opacity: 0; /* Początkowa wartość przezroczystości */
-    transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
+    top: -8px; 
+    right: -7px; 
+    font-size: 20px; 
+    color: #174626; 
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
 }
 .definitionimg:hover::before {
-    opacity: 1; /* Przezroczystość przy najechaniu */
+    opacity: 1; 
 }
 
 .definitionimg .definition-tooltip {
-    background-position: top right; /* położenie obrazka w tle tooltipa */
-    padding-right: 230px; /* odstęp od prawej strony dla tekstu tooltipa */
-    border-radius: 10px; /* zaokrąglenie narożników obramowania tooltipa */
-    left: 0; /* odległość od lewej strony */
-    top: 100%; /* odległość od góry */
+    background-position: top right; 
+    padding-right: 230px; 
+    border-radius: 10px; 
+    left: 0; 
+    top: 100%; 
 }
 .definitionimg[data-definition="Mandelbrot"] .definition-tooltip {
     background-image: url('../obrazy/Mandelbrot.jpg');
-    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 230px; 
 }
 .definitionimg[data-definition="Weierstrass"] .definition-tooltip {
     background-image: url('../obrazy/Weierstrass.jpg');
-    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 230px; 
 }
 .definitionimg[data-definition="Cantor"] .definition-tooltip {
     background-image: url('../obrazy/Cantor.jpg');
-    background-size: 220px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 220px; 
 }
 .definitionimg[data-definition="Sierpinski"] .definition-tooltip {
     background-image: url('../obrazy/Sierpinski.jpg');
-    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 230px; 
 }
 .definitionimg[data-definition="Koch"] .definition-tooltip {
     background-image: url('../obrazy/Koch.jpg');
-    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 230px; 
 }
 .definitionimg[data-definition="Menger"] .definition-tooltip {
     background-image: url('../obrazy/Menger.jpg');
-    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 230px; 
 }
 .definitionimg[data-definition="Paproc"] .definition-tooltip {
     background-image: url('../obrazy/paproc.png');
-    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 230px; 
 }
 .definitionimg[data-definition="Juli"] .definition-tooltip {
     background-image: url('../obrazy/Gustav_Herglotz\,_Gaston_Julia.jpeg');
-    background-size: 230px; /* rozmiar obrazka w tle tooltipa */
+    background-size: 230px; 
 }
 
-
-
-/* zwykła definicja */
 .definition {
     position: relative;
 }
@@ -292,10 +282,10 @@
     content: attr(data-tooltip);
     display: none;
     position: absolute;
-    top: 30px;  /* ILE PONIŻEJ TEKSTU MA SIĘ POJAWIĆ DEFINICJA*/
+    top: 30px;  
     left: 0;
     padding: 5px;
-    width: 250px;   /* SZEROKOŚĆ BLOKU DEFINICJI */ /* było 150 px */
+    width: 250px;   
     background-color: white;
     border: 1px solid black;
     text-align: center;
@@ -303,7 +293,7 @@
     font-size: medium;
 
   } 
-.definition:hover::after {  /* ODPOWADA TO BLOKOWI DEFINICJI*/
+.definition:hover::after { 
     display: block;
     color: black;
     font-weight: normal;
@@ -318,17 +308,17 @@
     text-decoration-color: rgb(23, 75, 25);
 }
 .definition::before {
-  content: "?"; /* Symbol, który pojawi się przed tekstem */
+  content: "?"; 
   position: absolute;
-  top: -8px; /* Odległość od góry */
-  right: -7px; /* Odległość od prawej strony */
-  font-size: 20px; /* Rozmiar czcionki */
-  color: #174626; /* Kolor symbolu */
-  opacity: 0; /* Początkowa wartość przezroczystości */
-  transition: opacity 0.3s ease-in-out; /* Efekt przejścia */
+  top: -8px; 
+  right: -7px;
+  font-size: 20px; 
+  color: #174626; 
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
 }
 .definition:hover::before {
-  opacity: 1; /* Przezroczystość przy najechaniu */
+  opacity: 1; 
 }
 
 
