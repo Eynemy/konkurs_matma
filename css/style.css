@@ -2,7 +2,7 @@
 
 .cytat{
     color: white;
-    font-size: 2.5em;
+    font-size: 32px;
 }
 body{
     background-image: url(../obrazy/tlo-glowne.jpg);
@@ -60,7 +60,7 @@ button {
 .znapis    {
   display: inline-block;
   animation: reveal 1s ease-in-out forwards;
-  font-size: 5em;
+  font-size: 48px;
   display: block;
   color: rgb(255, 255, 255); 
   font-weight: bold;
