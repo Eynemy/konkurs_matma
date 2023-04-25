@@ -56,11 +56,11 @@ img:hover{
   color: rgb(255, 255, 255);
 }
 #content{
-    padding: 20px 0;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
+  padding: 20px 0;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
 }
 
 hr{
@@ -71,19 +71,19 @@ hr{
 }
 
 .nav{
-    background-color: rgb(255, 255, 255); 
-    padding: 10px 0;
-    text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+  background-color: rgb(255, 255, 255); 
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 
 }
 
 #footer{
-    text-align: center;
-    background-color: #30313f;
-    font-size: 20px;
-    color: white;
+  text-align: center;
+  background-color: #30313f;
+  font-size: 20px;
+  color: white;
 }
 
 .sticky{
